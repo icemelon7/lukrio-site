@@ -1,0 +1,82 @@
+.App {
+    text-align: center;
+  }
+  
+  .Header--container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .Header--spacer {
+    width: 792px;
+  }
+  
+  .Main{
+    background-image: url(./assets/background.jpg);
+    height: 850px;
+  }
+  
+  .Main--container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .Main--text {
+    margin-right: 125px;
+    display: inline-block;
+    padding-top: 175px;
+    padding-left: 50px;
+    width: 600px;
+  }
+  
+  .Main--text__title{
+    font-size: 56px;
+    color:white;
+    font-weight: bold;
+  
+  }
+  
+  .Main--text__subtitle {
+    font-size: 18px;
+    color:white;
+  }
+  
+  .Main--text__button {
+    margin-top: 25px;
+    height: 45px;
+  }
+  
+  .Header--logo__image {
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .Main--mockup__image {
+    position: relative;
+    top: -60px;
+    width: 350px;
+    display: inline-block;
+    transition: transform 0.45s;
+    transform: perspective(1400px) rotateY(
+        -20deg
+        ) rotateX(
+        10deg
+        ) rotateZ(
+        6deg
+        ) scale(0.8) translateY(6%);
+  }
+
+  .Main--mockup__image:hover {
+    transform: perspective(1000px) rotateY(
+        0deg
+        ) rotateX(
+        0deg
+        ) rotateZ(
+        0deg
+        ) scale(0.95) translateY(8%);
+    }
+  
+  
+  
