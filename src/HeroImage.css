@@ -14,7 +14,7 @@
   
   .Main{
     background-image: url(./assets/background.jpg);
-    height: 850px;
+    height: 900px;
   }
   
   .Main--container {
@@ -32,14 +32,14 @@
   }
   
   .Main--text__title{
-    font-size: 56px;
+    font-size: 62px;
     color:white;
     font-weight: bold;
   
   }
   
   .Main--text__subtitle {
-    font-size: 18px;
+    font-size: 20px;
     color:white;
   }
   
@@ -49,14 +49,14 @@
   }
   
   .Header--logo__image {
-    width: 200px;
+    width: 220px;
     padding: 10px;
   }
   
   .Main--mockup__image {
     position: relative;
     top: -60px;
-    width: 350px;
+    width: 400px;
     display: inline-block;
     transition: transform 0.45s;
     transform: perspective(1400px) rotateY(
