@@ -1,0 +1,102 @@
+.FeatureIconDisplay--wrapper {
+    background-color: black;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.FeatureIconBlock--wrapper {
+    height: 275px;
+    width: 300px;
+    margin: 100px 50px 50px 50px;
+    text-align: center;
+    padding: 15px;
+    transition: all 1.2s ease 0s;
+}
+
+.FeatureIconBlock--wrapper:hover {
+    transform: translateY(-3px);
+    /* box-shadow: #28A745 0px 5px 4px, #eafaee 0px 1px 10px; /* stronger on the bottom */
+    box-shadow:#28A745 0px 5px 0px; /* underlined
+    /* box-shadow: 0 0 12px #adebbb; even shadow on all sides */
+}
+/* vv TEST TEST TEST vv*/
+.test1 {
+    height: 275px;
+    width: 300px;
+    margin: 100px 50px 50px 50px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease 0s; 
+}
+
+.test1:hover {
+    transform: translateY(-3px);
+    box-shadow:#28A745 0px 5px 0px; /* underlined */
+}
+
+
+.test2 {
+    height: 275px;
+    width: 300px;
+    margin: 100px 50px 50px 50px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease 0s; 
+}
+
+.test2:hover {
+    transform: translateY(-3px);
+    box-shadow: #28A745 0px 5px 4px, #eafaee 0px 1px 10px; /* stronger on the bottom */
+}
+
+.test3 {
+    height: 275px;
+    width: 300px;
+    margin: 100px 50px 50px 50px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease 0s; 
+}
+
+.test3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px #adebbb; /*even shadow on all sides */
+}
+
+.test4 {
+    height: 275px;
+    width: 300px;
+    margin: 100px 50px 50px 50px;
+    text-align: center;
+    padding: 15px;
+    transition: all 1.2s ease 0s;
+}
+
+.test4:hover {
+    transform: translateY(-3px);
+    box-shadow:#28A745 0px 5px 0px; /* underlined */
+}
+
+
+/* ^^ TEST TEST TEST ^^ */
+
+.FeatureIconBlock--icon {
+    width: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.FeatureIconBlock--text__header {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.FeatureIconBlock--text__subtitle {
+    color: #6c737d;
+    font-size: 16px;
+    width: 275px;
+}
