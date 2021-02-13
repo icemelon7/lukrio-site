@@ -18,7 +18,7 @@ class HeroImage extends React.Component {
           </span>
           <br/>
           <div class="Main--form__container">
-            <input type="text" class="Main--form__input" aria-label="Email" placeholder="Email" aria-describedby="inputGroup-sizing-default"></input>
+            <input type="text" class="Main--form__input rounded" aria-label="Email" placeholder="Email" aria-describedby="inputGroup-sizing-default"></input>
 
           <button type="button" class="btn btn-success Main--form__button">Sign up for the beta</button>
           </div>
