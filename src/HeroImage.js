@@ -17,7 +17,11 @@ class HeroImage extends React.Component {
           A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.
           </span>
           <br/>
-          <button type="button" class="btn btn-success Main--text__button">Sign up for the beta</button>
+          <div class="Main--form__container">
+            <input type="text" class="Main--form__input" aria-label="Email" placeholder="Email" aria-describedby="inputGroup-sizing-default"></input>
+
+          <button type="button" class="btn btn-success Main--form__button">Sign up for the beta</button>
+          </div>
         </div>
         <img className="Main--mockup__image" src={Mockup}/>
       </div>
