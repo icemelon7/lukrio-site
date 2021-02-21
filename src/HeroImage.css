@@ -6,7 +6,7 @@
   }
   
   .Header--spacer {
-    width: 792px;
+    width: 827px;
   }
   
   .Main{
@@ -68,7 +68,10 @@
   
   .Header--logo__image {
     width: 220px !important;
-    padding: 10px;
+    padding: 10px !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
   }
   
   .Main--mockup__image {
