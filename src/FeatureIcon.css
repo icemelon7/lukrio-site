@@ -68,6 +68,7 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 300px;
+    padding-bottom: 50px;
 }
 
 .FeatureIconBlock--wrapper {
