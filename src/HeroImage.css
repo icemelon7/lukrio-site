@@ -1,7 +1,4 @@
-.App {
-    text-align: center;
-  }
-  
+@media only screen and (min-width: 1024px) {
   .Header--container {
     display: flex;
     justify-content: center;
@@ -26,47 +23,51 @@
   
   .Main--text {
     margin-right: 125px;
-    display: inline-block;
+    display: inline-block !important;
     padding-top: 175px;
     padding-left: 50px;
-    width: 600px;
+    width: 600px !important;
   }
   
   .Main--text__title{
-    font-size: 62px;
-    color:white;
-    font-weight: bold;
+    font-size: 62px !important;
+    color:white !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    width: 100% !important;
   
   }
   
   .Main--text__subtitle {
-    font-size: 20px;
-    color:white;
+    font-size: 20px !important;
+    color:white !important;
+    width: 100% !important;
+    padding: 0 !important;
   }
 
   .Main--form__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
   }
   
   .Main--form__button {
-    margin-top: 25px;
-    height: 45px;
-    width: 200px;
+    height: 45px !important;
+    width: 200px !important;
+    margin: 0 0 0 0 !important;
   }
 
   .Main--form__input {
-    margin-top: 25px;
+    margin-top: 25px !important;
     height: 45px !important;
-    width: 350px;
-    padding-left: 10px;
-    margin-right: 15px;
-    border-width: 0px;
+    width: 350px !important;
+    padding-left: 10px !important;
+    border-width: 0px !important ;
+    margin: 0 10px 0 0 !important;
   }
   
   
   .Header--logo__image {
-    width: 220px;
+    width: 220px !important;
     padding: 10px;
   }
   
@@ -94,6 +95,87 @@
         0deg
         ) scale(0.95) translateY(8%);
     }
+}
+
+.Header--container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.Header--logo__image {
+  width: 40%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.Main{
+  background-image:linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url(./assets/unsplash_background.jpg);
+  width: 100%;
+  height: 1000px;
+}
+
+.Main--mockup__image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-top: 15px;
+}
+
+.Main--text {
+  display: inline-block;
+  width: 100%;
+}
+
+.Main--text__title{
+  padding-top: 100px;
+  font-size: 35px;
+  color:white;
+  font-weight: bold;
+  padding-left: 20px;
+  width: 90%;
+
+}
+
+.Main--text__subtitle {
+  font-size: 16px;
+  margin: 5px;
+  color:white;
+  display: block;
+  width: 90%;
+  padding-left: 15px;
+
+}
+
+.Main--text__subtitle {
+  font-size: 16px;
+  color:white;
+}
+
+.Main--form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main--form__button {
+  margin-top: 10px;
+  height: 45px;
+  width: 90%;
+  margin: auto;
+}
+
+.Main--form__input {
+  height: 45px !important;
+  width: 90%;
+  margin: auto;
+  padding-left: 10px;
+  border-width: 0px;
+  margin-bottom: 10px;
+}
+
+  
+  
   
   
   
