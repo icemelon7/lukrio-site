@@ -39,7 +39,7 @@ class FeatureIconDisplay extends React.Component {
             <FeatureIconBlock
                 icon={Usability} 
                 header="Smart and Intuitive"
-                subtitle="TradingFloor’s newsfeed provides you with real-time market news and user posts aligned with your interests"
+                subtitle="Lukrio's newsfeed provides you with real-time market news and user posts aligned with your interests"
                 class="test1" //DEMO
             >
             </FeatureIconBlock>
