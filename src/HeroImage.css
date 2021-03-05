@@ -166,6 +166,7 @@
   height: 45px;
   width: 90%;
   margin: auto;
+  background-color: #52b69a !important;
 }
 
 .Main--form__input {
