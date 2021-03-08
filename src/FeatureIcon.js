@@ -46,7 +46,7 @@ class FeatureIconDisplay extends React.Component {
             <FeatureIconBlock
              icon={Education}
             header="Portfolio Feedback"
-            subtitle="Our proprietary technology analyzes your trades and portfolio to provide you with tips and advice to become a better investor"
+            subtitle="Our proprietary technology analyzes your portfolio to provide you with tips and advice to become a better investor"
             > 
             </FeatureIconBlock>
 
