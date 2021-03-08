@@ -15,13 +15,12 @@ class FeatureIconBlock extends React.Component {
         // this.props.class
         return (
             <div className="FeatureIconBlock--wrapper">
-            {/* </div> <div className={this.props.class}> */}
                 <img className="FeatureIconBlock--icon" src={this.props.icon}></img>
                 <br/>
-                <span class="FeatureIconBlock--text__header">{this.props.header}</span>
+                <span className="FeatureIconBlock--text__header">{this.props.header}</span>
                 <br/>
                 <br/>
-                <span class="FeatureIconBlock--text__subtitle">{this.props.subtitle}</span>
+                <span className="FeatureIconBlock--text__subtitle">{this.props.subtitle}</span>
             </div>
         );
     }
