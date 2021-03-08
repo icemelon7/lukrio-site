@@ -2,7 +2,7 @@ import React from 'react';
 import "./FeatureIcon.css";
 import ToTheMoon from "./assets/featureIcons/tothemoon.png";
 import Usability from "./assets/featureIcons/usability.png";
-import Integration from "./assets/featureIcons/integration.png";
+import Education from "./assets/featureIcons/education.png";
 import Conversation from "./assets/featureIcons/conversation.png";
 
 
@@ -39,24 +39,21 @@ class FeatureIconDisplay extends React.Component {
             <FeatureIconBlock
                 icon={Usability} 
                 header="Smart and Intuitive"
-                subtitle="Lukrio's newsfeed provides you with real-time market news and user posts aligned with your interests"
-                class="test1" //DEMO
+                subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
-             icon={Integration}
-            header="Easy Integration"
-            subtitle="Link your account with nearly every brokerage and show off your gains to your community"
-            class="test2" //DEMO
+             icon={Education}
+            header="Portfolio Feedback"
+            subtitle="Our proprietary technology analyzes your trades and portfolio to provide you with tips and advice to become a better investor"
             > 
             </FeatureIconBlock>
 
             <FeatureIconBlock
             icon={Conversation}
             header="Powerful Chat"
-            subtitle="Draw charts, import real-time market data, create memes in two clicks, and much more "
-            class="test3" //DEMO
+            subtitle="Discuss stocks, draw charts, import real-time market data, create memes in two clicks, and so much more "
             >
             </FeatureIconBlock>
 
@@ -64,7 +61,6 @@ class FeatureIconDisplay extends React.Component {
              icon={ToTheMoon}
              header="Shoot for the Moon"
              subtitle="Compete with others in paper trading and launch your investment portfolio into outer space"
-             class="test4" //DEMO
              >
              </FeatureIconBlock>
         </div>);

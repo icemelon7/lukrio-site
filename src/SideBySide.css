@@ -10,7 +10,7 @@
 }
 
 .SideBySide--text {
-    max-width: 350px;
+    max-width: 500px;
 
 }
 .SideBySide--text__header {
@@ -25,11 +25,15 @@
 }
 
 .SideBySide--spacer {
-    width: 300px;
+    width: 200px;
+}
+
+.SideBySide--spacer__flipped {
+    width: 325px;
 }
 
 .SideBySide--image__container {
-    width: 450px;
+    width: 500px;
 }
 
 .SideBySide--image__container--flipped {

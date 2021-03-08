@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1024px) {
     .FeatureIconDisplay--wrapper {
-        background-color: black;
+        background-color: #1e2d5e;
         height: 500px !important;
         display: flex;
         justify-content: center;
@@ -63,7 +63,7 @@
 }
 
 .FeatureIconDisplay--wrapper {
-    background-color: black;
+    background-color: #1e2d5e;
     display: flex;
     justify-content: center;
     flex-direction: column;
