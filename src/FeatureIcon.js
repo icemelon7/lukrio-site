@@ -39,14 +39,14 @@ class FeatureIconDisplay extends React.Component {
             <FeatureIconBlock
                 icon={Usability} 
                 header="Smart and Intuitive"
-                subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
+            subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
              icon={Education}
             header="Portfolio Feedback"
-            subtitle="Our proprietary technology analyzes your portfolio to provide you with tips and advice to become a better investor"
+            subtitle="Our cutting-edge technology analyzes your portfolio to generate tips and advice, helping you become a better investor"
             > 
             </FeatureIconBlock>
 
