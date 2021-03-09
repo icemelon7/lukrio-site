@@ -59,7 +59,6 @@ class HeroImage extends React.Component {
       
       xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-          console.log(this.responseText);
           self.setState({isLoading: false, email: "", submitted: true});
         }
       });
@@ -74,7 +73,6 @@ class HeroImage extends React.Component {
 
     onChange(event) {
       this.setState({email: event.target.value});
-      console.log(this.state.email);
     }
   }
 
