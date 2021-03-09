@@ -7,7 +7,8 @@ class HeroImage extends React.Component {
     constructor() {
       super();
       this.state = {
-        email: ""
+        email: "",
+        submitted: false,
       };
       this.onSubmit = this.onSubmit.bind(this);
       this.onChange = this.onChange.bind(this);
@@ -29,6 +30,7 @@ class HeroImage extends React.Component {
             <input type="text" className="Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={this.state.email} onChange={this.onChange}></input>
             <button type="button" className="btn btn-success Main--form__button" onClick={this.onSubmit}>Sign up for the beta</button>
           </div>
+          <div className="Main--form__postsubmit" hidden={!this.state.submitted}>Thanks, we'll be in touch!</div>
         </div>
         <img className="Main--mockup__image" src={Mockup}/>
       </div>
@@ -37,23 +39,35 @@ class HeroImage extends React.Component {
 
 
     onSubmit() {
-      fetch('https://script.google.com/a/macros/berkeley.edu/s/AKfycbybWl4bYKv4oDe4olBOU_sTADgZsx-Av-Ug0TJWXaAjfttesPfD8rPyaM0TZfIeO752/exec', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: this.state.email
-        })
-      })
-      .then((res) => res.text())
-      .then(console.log)
-      .catch(console.error);
+      if (this.state.email == "") {
+        return;
+      }
+      var data = JSON.stringify({
+        "email": this.state.email
+      });
+      
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = false;
+      
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          console.log(this.responseText);
+        }
+      });
+      
+      xhr.open("POST", "https://lukrio-ae06.restdb.io/rest/emails");
+      xhr.setRequestHeader("content-type", "application/json");
+      xhr.setRequestHeader("x-apikey", "6046fb74acc40f765fede55e");
+      xhr.setRequestHeader("cache-control", "no-cache");
+  
+      xhr.send(data);
+
+      this.setState({email: "", submitted: true});
     }
 
     onChange(event) {
       this.setState({email: event.target.value});
+      console.log(this.state.email);
     }
   }
 

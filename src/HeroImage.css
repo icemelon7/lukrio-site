@@ -151,11 +151,6 @@
 
 }
 
-.Main--text__subtitle {
-  font-size: 16px;
-  color:white;
-}
-
 .Main--form__container {
   display: flex;
   flex-direction: column;
@@ -176,6 +171,12 @@
   padding-left: 10px;
   border-width: 0px;
   margin-bottom: 10px;
+}
+
+.Main--form__postsubmit {
+  font-size: 16px;
+  color:white;
+  padding-top: 10px;
 }
 
   
