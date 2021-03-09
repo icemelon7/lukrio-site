@@ -9,6 +9,7 @@ class HeroImage extends React.Component {
       this.state = {
         email: "",
         submitted: false,
+        isLoading: false,
       };
       this.onSubmit = this.onSubmit.bind(this);
       this.onChange = this.onChange.bind(this);
@@ -28,7 +29,12 @@ class HeroImage extends React.Component {
           <br/>
           <div className="Main--form__container">
             <input type="text" className="Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={this.state.email} onChange={this.onChange}></input>
-            <button type="button" className="btn btn-success Main--form__button" onClick={this.onSubmit}>Sign up for the beta</button>
+            <button type="button"
+             className="btn btn-success Main--form__button"
+             onClick={!this.state.isLoading ? this.onSubmit : null}
+             disabled={this.state.isLoading}
+             >{this.state.isLoading ? 'Sending...' : 'Sign up for the beta'}
+             </button>
           </div>
           <div className="Main--form__postsubmit" hidden={!this.state.submitted}>Thanks, we'll be in touch!</div>
         </div>
@@ -42,6 +48,8 @@ class HeroImage extends React.Component {
       if (this.state.email == "") {
         return;
       }
+      this.setState({isLoading: true});
+      const self = this;
       var data = JSON.stringify({
         "email": this.state.email
       });
@@ -52,6 +60,7 @@ class HeroImage extends React.Component {
       xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
           console.log(this.responseText);
+          self.setState({isLoading: false, email: "", submitted: true});
         }
       });
       
@@ -61,8 +70,6 @@ class HeroImage extends React.Component {
       xhr.setRequestHeader("cache-control", "no-cache");
   
       xhr.send(data);
-
-      this.setState({email: "", submitted: true});
     }
 
     onChange(event) {
