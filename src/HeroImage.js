@@ -1,8 +1,6 @@
 import React from 'react';
-import Lottie from 'react-lottie'
 import Logo from "./assets/logo.png";
 import Mockup from "./assets/mockup.png";
-import animation from "./assets/animations/top-graphic-text.json"
 import "./HeroImage.css";
 
 class HeroImage extends React.Component {
@@ -10,40 +8,38 @@ class HeroImage extends React.Component {
       super();
       this.state = {
         email: "",
-        submitted: false,
+        submitted: "⠀⠀⠀⠀",
         isLoading: false,
       };
       this.onSubmit = this.onSubmit.bind(this);
       this.onChange = this.onChange.bind(this);
     }
     render() {
-      const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animation,
-        rendererSettings: {
-          preserveAspectRatio: 'xMidYMid slice'
-        }
-      };
-
       return <div className="Main">
-                <Lottie options={defaultOptions}></Lottie>
-                <img className="Header--logo__image" src={Logo}/>
-                <div className="Main--form__group">
-                  <div className="Main--form__container">
-                    <input type="text" className="Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={this.state.email} onChange={this.onChange}></input>
-                    <button type="button"
-                    className="btn btn-success Main--form__button"
-                    onClick={!this.state.isLoading ? this.onSubmit : null}
-                    disabled={this.state.isLoading}
-                    >{this.state.isLoading ? 'Sending...' : 'Sign up for the beta'}
-                    </button>
-                  </div>
-                  <div className="Main--form__postsubmit" hidden={!this.state.submitted}>Thanks, we'll be in touch!</div>
-                </div>
-      {/* <div className="Main--container">
+      <div className="Header--container">
+        <img className="Header--logo__image" src={Logo}/>
+        <span className="Header--spacer"></span>
+      </div>
+      <div className="Main--container">
+        <div className="Main--text">
+          <h1 className="Main--text__title">Creating a new generation of investors</h1>
+          <span className="Main--text__subtitle">
+          A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.
+          </span>
+          <br/>
+          <div className="Main--form__container">
+            <input type="text" className="Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={this.state.email} onChange={this.onChange}></input>
+            <button type="button"
+             className="btn btn-success Main--form__button"
+             onClick={!this.state.isLoading ? this.onSubmit : null}
+             disabled={this.state.isLoading}
+             >{this.state.isLoading ? 'Sending...' : 'Sign up for the beta'}
+             </button>
+          </div>
+          <div className="Main--form__postsubmit">{this.state.submitted}</div>
+        </div>
         <img className="Main--mockup__image" src={Mockup}/>
-      </div> */}
+      </div>
     </div>;
     }
 
@@ -63,7 +59,7 @@ class HeroImage extends React.Component {
       
       xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-          self.setState({isLoading: false, email: "", submitted: true});
+          self.setState({isLoading: false, email: "", submitted: "Thanks, we'll be in touch!"});
         }
       });
       

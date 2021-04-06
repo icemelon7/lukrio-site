@@ -34,7 +34,7 @@
     width: 400px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1650px) {
     .SideBySide--container {
         padding-top: 150px;
         padding-bottom: 150px;

@@ -12,7 +12,7 @@ import Rocket from './assets/rocket.png';
 function App() {
   return (
     <div className="LandingPage">
-      {/* <HeroImage></HeroImage> */}
+      <HeroImage></HeroImage>
       <SideBySide
       header="Compete with friends"
       text="Prove your mettle and compete for prizes against investors from around the world in skill-based competitions designed for all types of investors."

@@ -40,7 +40,7 @@
     height: 300px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1650px) {
     .SideBySide--container {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -92,8 +92,8 @@
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-        max-width: 250px;
-        max-height: 250px;
+        max-width: 200px;
+        max-height: 200px;
 
     }
     
