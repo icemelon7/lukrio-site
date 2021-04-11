@@ -14,7 +14,7 @@ function App() {
     <div className="LandingPage">
       <HeroImage></HeroImage>
       <SideBySide
-      header="Compete with friends TEST"
+      header="Compete with friends"
       text="Prove your mettle and compete for prizes against investors from around the world in skill-based competitions designed for all types of investors."
       image={Podium}
       ></SideBySide>
