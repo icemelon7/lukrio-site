@@ -37,29 +37,29 @@ class FeatureIconDisplay extends React.Component {
         <div className="FeatureIconDisplay--wrapper">
             <FeatureIconBlock
                 icon={Usability} 
-                header="Smart and Intuitive"
-            subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
+                header="Two-Part Platform"
+            subtitle="Come for the fast-paced investing games, stay for the social platform and learning potential"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
              icon={Education}
             header="Portfolio Feedback"
-            subtitle="Our cutting-edge technology analyzes your portfolio to generate tips and advice, helping you become a better investor"
+            subtitle="Our cutting-edge technology analyzes your actions within the game to generate advice, helping you become a better investor"
             > 
             </FeatureIconBlock>
 
             <FeatureIconBlock
             icon={Conversation}
-            header="Powerful Chat"
-            subtitle="Discuss stocks, draw charts, import real-time market data, create memes in two clicks, and so much more "
+            header="Engaging Community"
+            subtitle="Discuss stocks, draw charts, and learn from the top tier players on our tailored social platform"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
              icon={ToTheMoon}
              header="Shoot for the Moon"
-             subtitle="Compete with others in paper trading and launch your investment portfolio into outer space"
+             subtitle="Compete against your friends in your inner circle, then advance to public matches to prove your skill, all while earning real money"
              >
              </FeatureIconBlock>
         </div>);
