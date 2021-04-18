@@ -22,9 +22,9 @@ class HeroImage extends React.Component {
       </div>
       <div className="Main--container">
         <div className="Main--text">
-          <h1 className="Main--text__title">Creating a new generation of investors</h1>
+          <h1 className="Main--text__title">Be a part of a new generation of investors</h1>
           <span className="Main--text__subtitle">
-          A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.
+          Lukrio is an exciting new gamified social investing platform established with the goals of enabling low-risk competition and helping new investors become smarter.
           </span>
           <br/>
           <div className="Main--form__container">
@@ -75,8 +75,5 @@ class HeroImage extends React.Component {
       this.setState({email: event.target.value});
     }
   }
-
-
-  
 
   export default HeroImage;
