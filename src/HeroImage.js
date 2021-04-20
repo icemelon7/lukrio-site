@@ -22,9 +22,9 @@ class HeroImage extends React.Component {
       </div>
       <div className="Main--container">
         <div className="Main--text">
-          <h1 className="Main--text__title">Be a part of a new generation of investors</h1>
+          <h1 className="Main--text__title">Join a new generation of investors</h1>
           <span className="Main--text__subtitle">
-          Lukrio is an exciting new gamified social investing platform established with the goals of enabling low-risk competition and helping new investors become smarter.
+          Lukrio is an exciting new gamified social investing platform established with the goals of enabling low-risk competition and helping new investors get smarter.
           </span>
           <br/>
           <div className="Main--form__container">
@@ -53,21 +53,21 @@ class HeroImage extends React.Component {
       var data = JSON.stringify({
         "email": this.state.email
       });
-      
+
       var xhr = new XMLHttpRequest();
       xhr.withCredentials = false;
-      
+
       xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
           self.setState({isLoading: false, email: "", submitted: "Thanks, we'll be in touch!"});
         }
       });
-      
+
       xhr.open("POST", "https://lukrio-ae06.restdb.io/rest/emails");
       xhr.setRequestHeader("content-type", "application/json");
       xhr.setRequestHeader("x-apikey", "6046fb74acc40f765fede55e");
       xhr.setRequestHeader("cache-control", "no-cache");
-  
+
       xhr.send(data);
     }
 
