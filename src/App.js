@@ -38,7 +38,7 @@ function App() {
 
       <SideBySideFlipped
       header="Discover New Ideas and Share your Progress"
-      text="Maybe you have an idea you want to share with others. Or maybe you want to find the next big thing. Our community to designed to provide you with the hottest stock picks in a visual way."
+      text="Maybe you have an idea you want to share with others. Or maybe you want to find the next big thing. Our community to designed to provide you with the hottest stock picks in a visual way. No more walls of text!"
       image={Social}
       ></SideBySideFlipped>
       <FeatureIconDisplay></FeatureIconDisplay>
