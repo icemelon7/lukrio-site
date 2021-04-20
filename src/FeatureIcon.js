@@ -36,30 +36,30 @@ class FeatureIconDisplay extends React.Component {
         // this.props.icon
         <div className="FeatureIconDisplay--wrapper">
             <FeatureIconBlock
-                icon={Usability} 
+                icon={Usability}
                 header="Two-Part Platform"
-            subtitle="Come for the fast-paced investing games, stay for the social platform and learning potential"
+            subtitle="Come for the competitions, stay for the education and social experience!"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
              icon={Education}
             header="Portfolio Feedback"
-            subtitle="Our cutting-edge technology analyzes your actions within the game to generate advice, helping you become a better investor"
-            > 
+            subtitle="Our cutting-edge technology analyzes your actions within the game to generate tips that help you become a better investor"
+            >
             </FeatureIconBlock>
 
             <FeatureIconBlock
             icon={Conversation}
             header="Engaging Community"
-            subtitle="Discuss stocks, draw charts, and learn from the top tier players on our tailored social platform"
+            subtitle="Discuss stocks, analyze charts, and learn from the top players in our community on our tailored social platform"
             >
             </FeatureIconBlock>
 
             <FeatureIconBlock
              icon={ToTheMoon}
              header="Shoot for the Moon"
-             subtitle="Compete against your friends in your inner circle, then advance to public matches to prove your skill, all while earning real money"
+             subtitle="Compete against friends, or challenge investors from around the world - all while earning real money"
              >
              </FeatureIconBlock>
         </div>);

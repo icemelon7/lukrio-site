@@ -11,7 +11,7 @@ import Education from './assets/Education.png';
 import Tournaments from './assets/Tournaments.png';
 import Social from './assets/Social.png';
 
-import Podium from './assets/podium.png'; 
+import Podium from './assets/podium.png';
 import Rocket from './assets/rocket.png';
 
 function App() {
@@ -20,19 +20,19 @@ function App() {
       <HeroImage></HeroImage>
       <SideBySide
       header="Gamified Investing"
-      text="Prove your mettle and compete with your friends in fantasy football for stocks. Pay a small buy-in to compete, make trades that outperform, and win the cash pot!"
+      text="Prove your mettle and compete with your friends in fantasy sports for stocks. Join with entry fees as low as $1, make trades that outperform, and win cash!"
       image={GamifiedInvesting}
       ></SideBySide>
 
       <SideBySideFlipped
       header="Learn, Play, and Earn"
-      text="With education tailored to your personal decisions within the game, become a better and smarter investor while earning money in the process."
+      text="With feedback tailored to your in-game decisions, become a smarter and better investor while earning money in the process."
       image={Education}
       ></SideBySideFlipped>
 
       <SideBySide
       header="Compete in Tournaments Large and Small"
-      text="If you're ready for the big leagues, play online in public games to truly prove your skill. Follow in the footsteps of top-tier players to gain the prize and show off your skills!"
+      text="If you're ready for the big leagues, play online in public games to truly prove your skill. Follow in the footsteps of top-tier players to earn cash and show off your skills!"
       image={Tournaments}
       ></SideBySide>
 
