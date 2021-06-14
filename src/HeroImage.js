@@ -2,13 +2,16 @@ import React from 'react';
 import Logo from "./assets/logo.png";
 import Mockup from "./assets/mockup.png";
 import "./HeroImage.css";
+import Lottie from 'react-lottie';
+import * as animationData from './assets/animations/graphic.json'
+import video from './assets/backdrop.mp4'
 
 class HeroImage extends React.Component {
     constructor() {
       super();
       this.state = {
         email: "",
-        submitted: "⠀⠀⠀⠀",
+        submitted: "",
         isLoading: false,
       };
       this.onSubmit = this.onSubmit.bind(this);
@@ -16,13 +19,10 @@ class HeroImage extends React.Component {
     }
     render() {
       return <div className="Main">
-      <div className="Header--container">
-        <img className="Header--logo__image" src={Logo}/>
-        <span className="Header--spacer"></span>
-      </div>
-      <div className="Main--container">
+      <video id="background-video" muted autoplay="autoplay" loop>
+        <source src={video} type="video/mp4"/>
+      </video>
         <div className="Main--text">
-          <h1 className="Main--text__title">Join a new generation of investors</h1>
           <span className="Main--text__subtitle">
           Lukrio is an exciting new gamified social investing platform established with the goals of enabling low-risk competition and helping new investors get smarter.
           </span>
@@ -36,11 +36,23 @@ class HeroImage extends React.Component {
              >{this.state.isLoading ? 'Sending...' : 'Sign up for the beta'}
              </button>
           </div>
+          {
+            this.state.submitted === "" ?
+            <div/>
+            :
+            <div className="Main--form__postcontainer">
+              <div className="Main--form_posttext">Thank you! We will be in touch</div>
+              <div className="Main--form_postnumber">{this.state.data.number}</div>
+              <div className="Main--form_postoptions">
+                <div className="Main--form_postsocial">
+                  
+                </div>
+              </div>
+            </div>
+          }
           <div className="Main--form__postsubmit">{this.state.submitted}</div>
         </div>
-        <img className="Main--mockup__image" src={Mockup}/>
-      </div>
-    </div>;
+      </div>;
     }
 
 
@@ -49,7 +61,7 @@ class HeroImage extends React.Component {
         return;
       }
       this.setState({isLoading: true});
-      const self = this;
+      /*const self = this;
       var data = JSON.stringify({
         "email": this.state.email
       });
@@ -68,7 +80,11 @@ class HeroImage extends React.Component {
       xhr.setRequestHeader("x-apikey", "6046fb74acc40f765fede55e");
       xhr.setRequestHeader("cache-control", "no-cache");
 
-      xhr.send(data);
+      xhr.send(data); */
+
+      setTimeout(() => {
+        this.setState({isLoading: false, email: "", submitted: "Thanks, we'll be in touch!"});
+      }, 2000);
     }
 
     onChange(event) {

@@ -14,6 +14,10 @@ import Social from './assets/Social.png';
 import Podium from './assets/podium.png';
 import Rocket from './assets/rocket.png';
 
+import Lottie from 'react-lottie';
+import animationData from './assets/animations/graphic.json'
+import video from './assets/animations/splash.gif';
+
 function App() {
   return (
     <div className="LandingPage">
