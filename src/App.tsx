@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Desktop from './desktop/Desktop';
+import Mobile from './mobile/Mobile';
 
 function App() {
 

@@ -1,0 +1,99 @@
+@media only screen and (min-width: 1650px) {
+    .FeatureIconDisplay--wrapper {
+        background-color: #1e2d5e;
+        height: 500px !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: row !important;
+        padding-top: 0 !important;
+    }
+
+
+    .FeatureIconBlock--wrapper {
+        height: 300px !important;
+        width: 300px !important;
+        margin: 100px 50px 50px 50px !important;
+        text-align: center !important;
+        padding: 15px !important;
+        transition: all 0.3s ease 0s; 
+    }
+
+    .FeatureIconBlock--wrapper:hover {
+        transform: translateY(-3px);
+        /* box-shadow:#28A745 0px 5px 0px; */
+        box-shadow: 0 0.313rem 0.875rem rgb(255 255 255  / 30%);
+    }
+
+    .FeatureIconBlock--wrapper:hover::after {
+        opacity: 1;
+    }
+
+    .FeatureIconBlock--wrapper::after {
+    transition: all 0.3s ease;
+    top: 100%;
+    left: 48px;
+    border: transparent;
+    content: " ";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background-color: #28A745;
+    opacity: 0;
+    margin-left: -48px;
+    }
+    .FeatureIconBlock--icon {
+        width: 65px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .FeatureIconBlock--text__header {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+
+    .FeatureIconBlock--text__subtitle {
+        color: #6c737d;
+        font-size: 16px;
+        width: 275px;
+    }
+
+}
+
+.FeatureIconDisplay--wrapper {
+    background-color: #1e2d5e;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.FeatureIconBlock--wrapper {
+    height: 275px;
+    width: 80%;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+}
+
+.FeatureIconBlock--icon {
+    width: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.FeatureIconBlock--text__header {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.FeatureIconBlock--text__subtitle {
+    color: #6c737d;
+    font-size: 16px;
+    width: 275px;
+}
