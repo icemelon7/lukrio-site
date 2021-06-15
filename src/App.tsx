@@ -20,7 +20,7 @@ function App() {
     setWidth(window.innerWidth);
   }
 
-  if (width >= 500) {
+  if (width >= 1024) {
     return <Desktop />
   } else {
     return <Mobile />
