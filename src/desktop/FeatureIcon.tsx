@@ -7,13 +7,13 @@ import Conversation from "../assets/featureIcons/conversation.png";
 
 const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: string, subtitle: string}) => {
     return (
-        <div className="FeatureIconBlock--wrapper">
-            <img className="FeatureIconBlock--icon" src={icon}></img>
+        <div className="Desktop--FeatureIconBlock--wrapper">
+            <img className="Desktop--FeatureIconBlock--icon" src={icon}></img>
             <br/>
-            <span className="FeatureIconBlock--text__header">{header}</span>
+            <span className="Desktop--FeatureIconBlock--text__header">{header}</span>
             <br/>
             <br/>
-            <span className="FeatureIconBlock--text__subtitle">{subtitle}</span>
+            <span className="Desktop--FeatureIconBlock--text__subtitle">{subtitle}</span>
         </div>
     );
 }
@@ -24,7 +24,7 @@ const FeatureIconDisplay = ({}) => {
     // this.props.header
     // this.props.subtitle
     // this.props.icon
-    <div className="FeatureIconDisplay--wrapper">
+    <div className="Desktop--FeatureIconDisplay--wrapper">
         <FeatureIconBlock
             icon={Usability} 
             header="Smart and Intuitive"

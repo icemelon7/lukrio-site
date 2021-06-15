@@ -16,6 +16,7 @@ function App() {
   });
 
   const _handleResize = () => {
+    console.log(window.innerWidth);
     setWidth(window.innerWidth);
   }
 

@@ -1,0 +1,91 @@
+  .Desktop--Main--form__container {
+    display: flex;
+    flex-direction: row !important;
+  }
+  
+  .Desktop--Main--form__button {
+    height: 45px !important;
+    width: 200px !important;
+    margin: 0 0 0 0 !important;
+  }
+
+  .Desktop--Main--form__input {
+    margin-top: 25px !important;
+    height: 45px !important;
+    width: 350px !important;
+    padding-left: 10px !important;
+    border-width: 0px !important ;
+    margin: 0 10px 0 0 !important;
+  }
+  
+  
+  .Desktop--Header--logo__image {
+    width: 220px !important;
+    padding: 10px !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  
+  .Desktop--Main--mockup__image {
+    position: relative;
+    margin-top: -50px;
+    width: 250px;
+    margin-left: 125px;
+    margin-right: 125px;
+    display: inline-block;
+    transition: transform 0.45s;
+    transform: perspective(1400px) rotateY(
+        -20deg
+        ) rotateX(
+        10deg
+        ) rotateZ(
+        6deg
+        ) scale(0.8) translateY(6%);
+  }
+
+  .Desktop--Main--mockup__image:hover {
+    transform: perspective(1000px) rotateY(
+        0deg
+        ) rotateX(
+        0deg
+        ) rotateZ(
+        0deg
+        ) scale(0.95) translateY(8%);
+  }
+
+.Desktop--Main--mockup__image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.Desktop--Main--form__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.Desktop--Main--form__button {
+  margin-top: 10px;
+  height: 45px;
+  width: 90%;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #52b69a !important;
+}
+
+.Desktop--Main--form__input {
+  height: 45px !important;
+  width: 90%;
+  margin: auto;
+  padding-left: 10px;
+  border-width: 0px;
+  margin-bottom: 10px;
+}
+
+.Desktop--Main--form__postsubmit {
+  font-size: 16px;
+  color:white;
+  padding-top: 10px;
+}

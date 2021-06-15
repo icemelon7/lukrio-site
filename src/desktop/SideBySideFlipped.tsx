@@ -3,13 +3,13 @@ import './SideBySide.css';
 
 const SideBySideFlipped = ({header, text, image} : {header: string, text: string, image: string}) => {
     return (
-    <div className="SideBySide--container">
-        <div className="SideBySide--wrapper">
-            <img className="SideBySide--image__container--flipped" src={image}/>
-            <div className="SideBySide--spacer__flipped"></div>
-            <div className="SideBySide--text">
-                <div className="SideBySide--text__header">{header}</div>
-                <div className="SideBySide--text__main">{text}</div>
+    <div className="Desktop--SideBySide--container">
+        <div className="Desktop--SideBySide--wrapper">
+            <img className="Desktop--SideBySide--image__container--flipped" src={image}/>
+            <div className="Desktop--SideBySide--spacer__flipped"></div>
+            <div className="Desktop--SideBySide--text">
+                <div className="Desktop--SideBySide--text__header">{header}</div>
+                <div className="Desktop--SideBySide--text__main">{text}</div>
             </div>
         </div>
     </div>

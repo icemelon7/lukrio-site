@@ -6,13 +6,15 @@ import FeatureIconDisplay from "./FeatureIcon";
 import SideBySide from './SideBySide';
 import SideBySideFlipped from './SideBySideFlipped';
 
-import Podium from './assets/podium.png'; 
-import Rocket from './assets/rocket.png';
+import Podium from '../assets/podium.png'; 
+import Rocket from '../assets/rocket.png';
+import SignupSideBySide from './SignupSideBySide';
 
 function Desktop() {
   return (
     <div className="LandingPage">
       <HeroImage></HeroImage>
+      <SignupSideBySide />
       <SideBySide
       header="Compete with friends"
       text="Prove your mettle and compete for prizes against investors from around the world in skill-based competitions designed for all types of investors."

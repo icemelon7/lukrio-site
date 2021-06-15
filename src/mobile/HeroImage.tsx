@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Logo from "./assets/logo.png";
-import Mockup from "./assets/mockup.png";
+import Logo from "../assets/logo.png";
+import Mockup from "../assets/mockup.png";
 import "./HeroImage.css";
 
 const HeroImage = ({}) => {
@@ -37,7 +37,7 @@ const HeroImage = ({}) => {
     xhr.send(data);
   }
 
-  const onChange = (event) => {
+  const onChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setEmail(event.target.value);
   }
     return (
