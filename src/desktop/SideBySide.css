@@ -1,5 +1,6 @@
 .Desktop--SideBySide--container {
     padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #f6f6f6;
     display: flex;
     justify-content: center;

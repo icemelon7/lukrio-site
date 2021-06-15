@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Mockup from "../assets/mockup.png";
+import video from '../assets/mockup_video.mp4';
 import './SignupSideBySide.css';
 
 const SignupSideBySide = () => {
@@ -59,7 +60,9 @@ const SignupSideBySide = () => {
                 <div className="Desktop--Main--form__postsubmit" hidden={!submitted}>Thanks, we'll be in touch!</div>
             </div>
             <div className="Desktop--SideBySide--spacer"></div>
-            <img className="Desktop--Main--mockup__image" src={Mockup}/>
+            <video className="Desktop--Main--mockup__image" autoPlay muted loop>
+                <source src={video} type="video/mp4"/>
+            </video>
         </div>
             
     </div>
