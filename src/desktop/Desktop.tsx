@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React from 'react';
-import HeroImage from "./HeroImage.js";
-import FeatureIconDisplay from "./FeatureIcon.js";
-import SideBySide from './SideBySide.js';
-import SideBySideFlipped from './SideBySideFlipped.js';
+import HeroImage from "./HeroImage";
+import FeatureIconDisplay from "./FeatureIcon";
+import SideBySide from './SideBySide';
+import SideBySideFlipped from './SideBySideFlipped';
 
 import Podium from './assets/podium.png'; 
 import Rocket from './assets/rocket.png';
 
-function App() {
+function Desktop() {
   return (
     <div className="LandingPage">
       <HeroImage></HeroImage>
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Desktop;

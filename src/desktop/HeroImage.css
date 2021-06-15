@@ -1,4 +1,3 @@
-@media only screen and (min-width: 1024px) {
   .Header--container {
     display: flex;
     justify-content: center;
@@ -8,21 +7,24 @@
   .Header--spacer {
     width: 827px;
   }
-  
-  .Main{
-    background-image:linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url(./assets/unsplash_background.jpg);
-    background-size: 2000px;
-    height: 1000px;
-  }
-  
-  .Main--container {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+
+  #background-video {
+    overflow: hidden;
+    clear: both;
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
   }
   
   .Main--text {
-    margin-right: 125px;
+    position: absolute;
+    top: 27vh;
+    right: 55vw;
     display: inline-block !important;
     padding-top: 175px;
     padding-left: 50px;
@@ -97,8 +99,7 @@
         ) rotateZ(
         0deg
         ) scale(0.95) translateY(8%);
-    }
-}
+  }
 
 .Header--container {
   display: flex;
@@ -114,9 +115,8 @@
 }
 
 .Main{
-  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0) ), url(./assets/bluebackground2.jpg);
   width: 100%;
-  height: 1000px;
+  height: 100vh;
 }
 
 .Main--mockup__image {
