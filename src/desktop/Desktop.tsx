@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import React from 'react';
+import React, { useRef } from 'react';
 import HeroImage from "./HeroImage";
 import FeatureIconDisplay from "./FeatureIcon";
 import SideBySide from './SideBySide';
@@ -11,11 +11,15 @@ import Rocket from '../assets/rocket.png';
 import SignupSideBySide from './SignupSideBySide';
 
 function Desktop() {
+
+  const demoRef = useRef();
+  const detailsRef = useRef();
   return (
     <div className="LandingPage">
-      <HeroImage></HeroImage>
-      <SignupSideBySide />
+      <HeroImage demoRef={demoRef} detailsRef={detailsRef}/>
+      <SignupSideBySide demoRef={demoRef}/>
       <SideBySide
+      detailsRef={detailsRef}
       header="Compete with friends"
       text="Prove your mettle and compete for prizes against investors from around the world in skill-based competitions designed for all types of investors."
       image={Podium}

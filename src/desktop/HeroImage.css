@@ -1,22 +1,59 @@
-  #background-video {
-    overflow: hidden;
-    clear: both;
-    position: relative; 
-    right: 0; 
-    bottom: 0;
-    width: 100%;
-    height: 100;
-    z-index: -100;
-    background-size: cover;
-    overflow: hidden;
-  }
-  
-  .Desktop--Main{
-    width: 100%;
-    height: auto;
-    max-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  
+#background-video {
+  overflow: hidden;
+  clear: both;
+  position: relative; 
+  right: 0; 
+  bottom: 0;
+  width: 100%;
+  height: 100;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.Desktop--Main{
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.Desktop--TextBox {
+  position: absolute;
+  width: 45vw;
+  height: 30vw;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Desktop--Fill {
+  background-color: #4d1168;
+}
+
+.Desktop--Button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: aqua;
+  border-width: 2px;
+  border-radius: 25px;
+  border-style: solid;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Desktop--Button:hover {
+  opacity: 1;
+}

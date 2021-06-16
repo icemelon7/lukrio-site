@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Mockup from "../assets/mockup.png";
-import video from '../assets/mockup_video.MP4';
+import video from '../assets/mockup_video.mp4';
 import './SignupSideBySide.css';
 
-const SignupSideBySide = () => {
+const SignupSideBySide = ({demoRef} : {demoRef: any}) => {
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -41,12 +41,12 @@ const SignupSideBySide = () => {
     setEmail(event.target.value);
   }
     return (
-    <div className="Desktop--SideBySide--container">
+    <div ref={demoRef} className="Desktop--SideBySide--container Desktop--mockup--background">
         <div className="Desktop--SideBySide--wrapper">
             <div className="Desktop--SideBySide--vertical">
                 <div className="Desktop--SideBySide--text">
-                    <div className="Desktop--SideBySide--text__header">Join a new generation of investors</div>
-                    <div className="Desktop--SideBySide--text__main">A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.</div>
+                    <div className="Desktop--SideBySide--text__header text__white">Join a new generation of investors</div>
+                    <div className="Desktop--SideBySide--text__main text__white">A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.</div>
                 </div>
                 <div className="Desktop--Main--form__container">
                 <input type="text" className="Desktop--Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={email} onChange={onChange}></input>

@@ -3,6 +3,10 @@
     height: 500px;
 }
 
+.html {
+    scroll-behavior: smooth;
+}
+
 .hello {
     color: black;
     font-size: 32px;
