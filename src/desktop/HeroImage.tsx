@@ -7,16 +7,11 @@ import video from '../assets/backdrop.mp4';
 const HeroImage = ({demoRef, detailsRef} : {demoRef: any, detailsRef: any}) => {
 
   const _handleDemoScroll = () => {
-    console.log("SCROLL");
-    window.scrollTo({
-      top: window.innerHeight,
-      left: 0,
-      behavior: 'smooth'
-    });
+    demoRef.current?.scrollIntoView({behavior: 'smooth'});
   }
 
   const _handleDetailsScroll = () => {
-    detailsRef.current.scrollIntoView({behavior: 'smooth'});
+    detailsRef.current?.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
