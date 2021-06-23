@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Mockup from "../assets/mockup.png";
-import video from '../assets/mockup_video.mp4';
+import video from '../assets/mockup_video.MP4';
 import './SignupSideBySide.css';
 
 const SignupSideBySide = ({demoRef} : {demoRef: any}) => {
