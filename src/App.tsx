@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Desktop from './desktop/Desktop';
 import Mobile from './mobile/Mobile';
+import {CookiesProvider} from 'react-cookie';
 
 function App() {
 
@@ -21,9 +22,9 @@ function App() {
   }
 
   if (width >= 1024) {
-    return <Desktop />
+    return <CookiesProvider><Desktop /></CookiesProvider>
   } else {
-    return <Mobile />
+    return <CookiesProvider><Mobile /></CookiesProvider>
   }
 }
 
