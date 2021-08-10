@@ -10,14 +10,14 @@ const Footer = () => {
         <div className="footer">
             <div className="footer__row">
                 <Section title="About" links={[
-                    {name: "How To Play", url: "www.lukrio.com/about/how-to-play"},
-                    {name: "The Vision", url: "www.lukrio.com/about/vision"},
-                    {name: "FAQ", url: "www.lukrio.com/about/faq"},
-                    {name: "Lukrio Leagues", url: "www.lukrio.com/about/leagues"},
-                    {name: "Lukrio Analytics", url: "www.lukrio.com/about/analytics"},
+                    {name: "How To Play", url: "about/how-to-play"},
+                    {name: "The Vision", url: "about/vision"},
+                    {name: "FAQ", url: "about/faq"},
+                    {name: "Lukrio Leagues", url: "about/leagues"},
+                    {name: "Lukrio Analytics", url: "about/analytics"},
                 ]}/>
                 <Section title="Play" links={[
-                    {name: "Download Lukrio (iOS)", url: "appstore.com"},
+                    {name: "Download Lukrio (iOS)", url: "https://www.appstore.com"},
                     {name: "Coming Soon: Lukrio (Anroid)", url: "", deactivated: true},
                     {name: "Coming Soon: Lukrio (Web)", url: "", deactivated: true},
                 ]}/>
@@ -25,9 +25,9 @@ const Footer = () => {
             <Line/>
             <div className="footer__row">
                 <Section title="Support" links={[
-                    {name: "Responsible Gaming", url: "www.lukrio.com/about/responsible-gaming"},
-                    {name: "Restrictions", url: "www.lukrio.com/play/restrictions"},
-                    {name: "Rules TL;DR", url: "www.lukrio.com/play/rules"}
+                    {name: "Responsible Gaming", url: "support/responsible-gaming"},
+                    {name: "Restrictions", url: "support/restrictions"},
+                    {name: "Rules TL;DR", url: "support/rules"}
                 ]}/>
                 <div className="footer__copyright">
                     <Logo style={{width: '10vw', marginBottom: '1vh'}} />

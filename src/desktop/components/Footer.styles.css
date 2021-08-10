@@ -34,7 +34,7 @@
     background: var(--liquidPurple);
     color: white;
     padding-left: 17.5vw;
-    padding-right: 17.5vw;
+    padding-right: 12.5vw;
 }
 
 .footer__row {
@@ -47,6 +47,7 @@
 
 .footer__line {
     width: 99vw;
+    margin-left: -5vw;
     height: 2px;
     background-color: var(--teal-color);
 }
