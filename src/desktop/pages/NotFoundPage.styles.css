@@ -1,0 +1,42 @@
+
+.not-found {
+    width: 100vw;
+    height: 44.7vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found__container {
+    width: 35vw;
+    margin-right: 10vw;
+}
+
+.not-found__container__header {
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+.not-found__container__text {
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-top: 5vh;
+    font-style: italic;
+}
+
+.not-found__container__return {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5vh;
+    cursor: pointer;
+}
+
+.not-found__container__return__link {
+    color: black;
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-left: 1vw;
+}

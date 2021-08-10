@@ -1,3 +1,31 @@
+:root {
+    --teal-color: #51b69a;
+    --lightTeal-color: #96fee2;
+    --darkTeal: #549885;
+    --yellow: #fcec20;
+    --orange: #f7931e;
+    --grey: #e6e6e6;
+    --darkGrey: #7e7e7e;
+    --lightBlack: #5d5d5d;
+    --white: #fff;
+    --darkWhite: #f3f3f3;
+    --red: #E33F64;
+    --green: #36b26f;
+    --richBlack: #051923;
+    --darkBlue: #1e6091;
+    --lightBlue: #4aabad;
+    --darkPurple: #662D91;
+    --lightPurple: #D4145A;
+    --search: #9596a8;
+    --liquidPurple: #4d1168;
+    --linkBlue: #147EFB;
+    --slackDarkBlue: #1264a3;
+    --slackLightBlue: #e2eff4;
+    --lightRed: #FF9696;
+    --venmoBlue: #3191c7
+}
+
+
 .Desktop--SideBySide--container {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -8,15 +36,20 @@
     width: 99vw;
 }
 
-.Desktop--SideBySide--text {
-
-}
-
-.Desktop--SideBySide--text__header {
+.Desktop--SideBySide--header {
     line-height: normal;
     font-size: 50px;
     font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
 }
+
+.Desktop--SideBySide--header:hover {
+    text-decoration: none;
+    color: var(--teal-color);
+}
+
 .Desktop--SideBySide--text__main {
     font-size: 24px;
     padding-top: 30px;

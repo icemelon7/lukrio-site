@@ -22,7 +22,8 @@ const Footer = () => {
                     {name: "Coming Soon: Lukrio (Web)", url: "", deactivated: true},
                 ]}/>
             </div>
-            <Line/>
+            {//<Line />
+            }
             <div className="footer__row">
                 <Section title="Support" links={[
                     {name: "Responsible Gaming", url: "support/responsible-gaming"},

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./FeatureIcon.css";
-import ToTheMoon from "../assets/featureIcons/tothemoon.png";
-import Usability from "../assets/featureIcons/usability.png";
-import Education from "../assets/featureIcons/education.png";
-import Conversation from "../assets/featureIcons/conversation.png";
+import ToTheMoon from "../../assets/featureIcons/tothemoon.png";
+import Usability from "../../assets/featureIcons/usability.png";
+import Education from "../../assets/featureIcons/education.png";
+import Conversation from "../../assets/featureIcons/conversation.png";
 
 const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: string, subtitle: string}) => {
     return (

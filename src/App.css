@@ -1,3 +1,8 @@
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+
 .FeatureIcon--background {
     /* background-color: black; */
     height: 500px;
@@ -6,4 +11,26 @@
 .hello {
     color: black;
     font-size: 32px;
+}
+
+.link{
+    position: relative;
+  }
+  
+.link:after{
+content: '';
+position: absolute;
+width: 0; height: 3px;
+display: block;
+margin-top: 5px;
+right: 0;
+background: #000;
+transition: width .2s ease;
+-webkit-transition: width .2s ease;
+}
+
+.link:hover:after{
+width: 100%;
+left: 0;
+background: #000;
 }

@@ -26,13 +26,13 @@
 }
 
 .nav-bar {
-    width: 95%;
-    height: 15%;
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    height: 10vh;
     min-height: 100px;
     display: flex;
     justify-content: space-between;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
     align-items: center;
     position: relative;
 }

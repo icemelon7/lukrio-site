@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './SideBySide.css';
-
+import '../App.css';
 const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header: string, image: string}) => {
     const [activeNum, setActiveNum] = useState<number>(1);
     const [clicked, setClicked] = useState<boolean>(false);
@@ -26,7 +27,7 @@ const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header:
     return (
     <div ref={detailsRef} className="Desktop--SideBySide--container">
         <div className="Desktop--SideBySide--text">
-            <div className="Desktop--SideBySide--text__header">{header}</div>
+        <a href="how-to-play" className="Desktop--SideBySide--header link">{header}</a>
             <div className="Desktop--SideBySide--text__main">
                 <Row index={1} key={`HomeRow.1`} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Choose one of many daily games"/>
                 <Row index={2} key={`HomeRow.2`} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Pay a cash buyin (e.g. $5) to join the game"/>
