@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './SideBySide.css';
 import '../App.css';
+import Redirect from './components/Redirect';
 const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header: string, image: string}) => {
     const [activeNum, setActiveNum] = useState<number>(1);
     const [clicked, setClicked] = useState<boolean>(false);
@@ -26,6 +27,7 @@ const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header:
 
     return (
     <div ref={detailsRef} className="Desktop--SideBySide--container">
+        <Redirect text="Learn more on how to play" url="how-to-play"/>
         <div className="Desktop--SideBySide--text">
         <a href="how-to-play" className="Desktop--SideBySide--header link">{header}</a>
             <div className="Desktop--SideBySide--text__main">

@@ -5,13 +5,14 @@
         justify-content: center;
         flex-direction: row !important;
         padding-top: 0 !important;
-        width: 99vw;
+        width: 100vw;
+        position: relative;
     }
 
     .Desktop--FeatureIconBlock--wrapper {
         height: 290px !important;
         width: 19vw !important;
-        margin: 50px 50px 1vw 1vw !important;
+        margin: 70px 50px 1vw 1vw !important;
         text-align: center !important;
         padding: 15px !important;
         transition: all 0.3s ease 0s; 

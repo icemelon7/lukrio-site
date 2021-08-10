@@ -15,15 +15,15 @@ const LandingPage = () => {
     const detailsRef = useRef();
     return (
         <div className="LandingPage">
-        <HeroImage demoRef={demoRef} detailsRef={detailsRef}/>
-        {//<SignupSideBySide demoRef={demoRef}/>
-        }
-        <SideBySideHome
-        detailsRef={detailsRef}
-        header="How To Play?"
-        image={Podium}
-        ></SideBySideHome>
-        <FeatureIconDisplay/>
+          <HeroImage demoRef={demoRef} detailsRef={detailsRef}/>
+          {//<SignupSideBySide demoRef={demoRef}/>
+          }
+          <SideBySideHome
+          detailsRef={detailsRef}
+          header="How To Play?"
+          image={Podium}
+          ></SideBySideHome>
+          <FeatureIconDisplay/>
         </div>
   );
 }

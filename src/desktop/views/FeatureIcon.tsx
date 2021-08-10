@@ -4,6 +4,8 @@ import ToTheMoon from "../../assets/featureIcons/tothemoon.png";
 import Usability from "../../assets/featureIcons/usability.png";
 import Education from "../../assets/featureIcons/education.png";
 import Conversation from "../../assets/featureIcons/conversation.png";
+import Redirect from '../components/Redirect';
+import { LightMode } from '../../Colors';
 
 const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: string, subtitle: string}) => {
     return (
@@ -21,10 +23,8 @@ const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: stri
 // display s
 const FeatureIconDisplay = ({}) => {
     return (
-    // this.props.header
-    // this.props.subtitle
-    // this.props.icon
     <div className="Desktop--FeatureIconDisplay--wrapper">
+        <Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/>
         <FeatureIconBlock
             icon={Usability} 
             header="Smart and Intuitive"
