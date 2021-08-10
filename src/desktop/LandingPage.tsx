@@ -4,6 +4,7 @@ import Rocket from '../assets/rocket.png';
 import FeatureIconDisplay from './FeatureIcon';
 import HeroImage from './HeroImage';
 import SideBySide from './SideBySide';
+import SideBySideHome from './SideBySideHome';
 import SideBySideFlipped from './SideBySideFlipped';
 import SignupSideBySide from './SignupSideBySide';
 import './App.css';
@@ -15,20 +16,14 @@ const LandingPage = () => {
     return (
         <div className="LandingPage">
         <HeroImage demoRef={demoRef} detailsRef={detailsRef}/>
-        <SignupSideBySide demoRef={demoRef}/>
-        <SideBySide
+        {//<SignupSideBySide demoRef={demoRef}/>
+        }
+        <SideBySideHome
         detailsRef={detailsRef}
-        header="Compete with friends"
-        text="Prove your mettle and compete for prizes against investors from around the world in skill-based competitions designed for all types of investors."
+        header="How To Play?"
         image={Podium}
-        ></SideBySide>
-
-        <SideBySideFlipped
-        header="Discover new investing ideas"
-        text="Maybe you have an idea you want to share with others. Or maybe you want to find the next big thing. Our community to designed to provide you with the hottest stock picks in a visual way."
-        image={Rocket}
-        ></SideBySideFlipped>
-        <FeatureIconDisplay></FeatureIconDisplay>
+        ></SideBySideHome>
+        <FeatureIconDisplay/>
         </div>
   );
 }

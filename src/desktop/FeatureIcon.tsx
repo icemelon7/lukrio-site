@@ -31,20 +31,21 @@ const FeatureIconDisplay = ({}) => {
             subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
         />
         <FeatureIconBlock
+            icon={ToTheMoon}
+            header="Shoot for the Moon"
+            subtitle="Launch your investment portfolio into outer space and make cash beating other investors, not the market"
+        />
+        <FeatureIconBlock
             icon={Education}
-            header="Portfolio Feedback"
-            subtitle="Our cutting-edge technology analyzes your portfolio to generate tips and advice, helping you become a better investor"
+            header="Learn by Investing"
+            subtitle="Develop your investing skill through hands-on experience in a low-stakes but still cash-incentivized environment"
         /> 
         <FeatureIconBlock
             icon={Conversation}
-            header="Powerful Chat"
-            subtitle="Discuss stocks, draw charts, import real-time market data, create memes in two clicks, and so much more "
+            header="Join a Community"
+            subtitle="Discuss stocks, investments and trades with fellow investors. Meet mentors and buddies along your journey"
         />
-        <FeatureIconBlock
-            icon={ToTheMoon}
-            header="Shoot for the Moon"
-            subtitle="Compete with others in paper trading and launch your investment portfolio into outer space"
-        />
+        
     </div>);
 }
 
