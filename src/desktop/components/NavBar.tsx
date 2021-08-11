@@ -3,9 +3,9 @@ import Logo from './Logo';
 import { Link } from 'react-router-dom';
 import "./NavBar.styles.css";
 
-const NavBar = (props: {isHome?: boolean}) => {
+const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
     return (
-        <div style={{backgroundColor: props.isHome ? 'transparent' : '#092739'}} className="nav-bar">
+        <div style={{backgroundColor: props.isTransparent ? 'transparent' : '#092739', position: props.isRelative ? 'relative' : 'absolute'}} className="nav-bar">
             <Logo style={{width: '15vw'}}/>
             <div className="nav-bar__links">
                 <Link className="nav-bar__links__link" to="/referral">Get $5!</Link>

@@ -4,6 +4,7 @@ import './App.css';
 import Desktop from './desktop/Desktop';
 import Mobile from './mobile/Mobile';
 import {CookiesProvider} from 'react-cookie';
+import "@fontsource/dm-sans";
 
 function App() {
 

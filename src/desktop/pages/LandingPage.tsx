@@ -9,6 +9,7 @@ import SideBySideFlipped from '../SideBySideFlipped';
 import SignupSideBySide from '../SignupSideBySide';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Analytics from '../views/Analytics';
 
 const LandingPage = () => {
     const demoRef = useRef();
@@ -24,6 +25,7 @@ const LandingPage = () => {
           image={Podium}
           ></SideBySideHome>
           <FeatureIconDisplay/>
+          <Analytics moreLink />
         </div>
   );
 }

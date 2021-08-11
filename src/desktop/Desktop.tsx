@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import PrivacyPage from './legal/PrivacyPage';
 import TOSPage from './legal/TOSPage';
 import NotFoundPage from './pages/NotFoundPage';
+import AnalyticsPage from './pages/AnalyticsPage';
 
 function Desktop() {
 
@@ -15,11 +16,13 @@ function Desktop() {
     <div style={{overflowX: 'hidden'}}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <NavBar isHome />}/>
-          <Route path="*" render={() => <NavBar />}/>
+          <Route exact path="/" render={() => <NavBar isRelative isTransparent/>}/>
+          <Route path="/about/*" render={() => <NavBar isTransparent />}/>
+          <Route path="*" render={() => <NavBar isRelative/>}/>
         </Switch>
         <Switch>
           <Route exact path="/" render={() => <LandingPage/>}/>
+          <Route exact path="/about/analytics" render={()=> <AnalyticsPage />}/>
           <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
           <Route exact path="/tos" render={() => <TOSPage/>}/>
           <Route path="*" render={() => <NotFoundPage />}/>
