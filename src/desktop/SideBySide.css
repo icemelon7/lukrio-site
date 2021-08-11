@@ -69,7 +69,7 @@
     height: 375px;
 }
 
-.row {
+.home-row {
     display: flex;
     align-items: center;
     margin-top: 1.5vh;

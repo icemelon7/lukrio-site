@@ -46,7 +46,7 @@ const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header:
 const Row = ({activeNum, setActiveNum, setClicked, index, text} : {activeNum : number, setActiveNum: (x: number) => void, setClicked: (x: boolean) => void, index: number, text: string}) => {
 
     return (
-        <div onClick={() => {setActiveNum(index); setClicked(true)}} className={activeNum === index ? "row" : "row low-opacity"}>
+        <div onClick={() => {setActiveNum(index); setClicked(true)}} className={activeNum === index ? "home-row" : "home-row low-opacity"}>
             <div className="circle">{index}</div>
             <div>{text}</div>
         </div>

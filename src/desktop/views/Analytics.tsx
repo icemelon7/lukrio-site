@@ -1,10 +1,11 @@
-import React, { FunctionComponent } from 'react';
+import React, { ComponentType, FunctionComponent } from 'react';
 import Redirect from '../components/Redirect';
 import './Analytics.styles.css';
 import '../../devices.css';
 import '../App.css';
 import Logo from '../components/Logo';
 import Clock from 'react-live-clock';
+import AnalyticsPhone from './components/AnalyticsPhone';
 
 type AnalyticsProps = {
     moreLink?: boolean;
@@ -27,7 +28,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                 <div className="analytics__phone">
                     <div className="device device-iphone-x">
                         <div className="device-frame">
-                            
+                            <AnalyticsPhone />
                         </div>
                         <div className="device-stripe"></div>
                         <div className="device-header"></div>
@@ -63,7 +64,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                     Get a feel for bearish or bullish market sentiment and see what people's favourite stocks are.
                 </div>
                 <div className="analytics__container__text">
-                    Satisfy your curiosity or use as alternative data to inform your trades.
+                    Satisfy your curiosity or use Analytics as alternative data to make better trades.
                 </div>
                 <div className="analytics__container__demo">
                         Try out live interactive demo on the left
