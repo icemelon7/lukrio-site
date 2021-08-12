@@ -48,6 +48,15 @@
     align-items: center;
     float: left;
     width: 20%;
-    background-color: 'red';
     margin-left: 5%;
+}
+
+.selector-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-bottom: 2px solid var(--darkGrey);
 }
