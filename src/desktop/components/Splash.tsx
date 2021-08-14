@@ -10,14 +10,15 @@ type SplashProps = {
     leftWidth?: string;
     marginRight?: string;
     disclaimer?: JSX.Element;
+    paddingTop?: string;
 }
 
-const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, disclaimer}) => {
+const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer}) => {
 
     return (
-        <div className="splash">
-            <div style={{width: leftWidth ?? 'auto', marginRight: marginRight ?? '10vw'}} className="splash__left">
-                {disclaimer ?? <div/>}
+        <div className="splash" style={{paddingTop: paddingTop ?? '15vh'}}>
+            <div style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
+                {disclaimer ?? undefined}
                 <div className="splash__left__header">{header}{
                     subheader ?
                     <span className="splash__left__subheader">{subheader}</span>

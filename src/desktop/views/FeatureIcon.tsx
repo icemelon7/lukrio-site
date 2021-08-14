@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import "./FeatureIcon.css";
 import ToTheMoon from "../../assets/featureIcons/tothemoon.png";
 import Usability from "../../assets/featureIcons/usability.png";
@@ -20,11 +20,20 @@ const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: stri
     );
 }
 
+type FeatureIconDisplayProps = {
+    hideLink?: boolean
+}
+
 // display s
-const FeatureIconDisplay = ({}) => {
+const FeatureIconDisplay : FunctionComponent<FeatureIconDisplayProps> = ({hideLink}) => {
     return (
     <div className="Desktop--FeatureIconDisplay--wrapper">
-        <Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/>
+        {
+            !hideLink ? 
+            <Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/>    
+            :
+            <div/>
+        }
         <FeatureIconBlock
             icon={Usability} 
             header="Smart and Intuitive"

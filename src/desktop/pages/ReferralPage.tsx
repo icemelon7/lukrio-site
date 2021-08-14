@@ -19,6 +19,7 @@ const ReferralPage = () => {
             }
             marginRight="0vw"
             leftWidth="40vw"
+            paddingTop="0vh"
             right={<CompetitiveSplash style={{width: '35vw', height: '70vh', zoom: 1, objectFit: 'cover'}}/>}
             disclaimer={
                 <div className="disclaimer">
