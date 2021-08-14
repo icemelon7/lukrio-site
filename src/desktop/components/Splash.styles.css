@@ -10,7 +10,18 @@
     font-family: "DM Sans";
 }
 
+.disclaimer {
+    position: absolute;
+    bottom: -3vh;
+    left: 0;
+    color: white;
+    font-size: 0.7vw;
+    font-weight: 500;
+    font-style: italic;
+}
+
 .splash__left {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,9 +37,9 @@
 }
 
 .splash__left__subheader {
-    font-size: 1.6vw;
+    font-size: 4vw;
     font-weight: 600;
-    color: rgba(9,39,57,1);
+    color: var(--teal-color);
 }
 
 .splash__left__text {

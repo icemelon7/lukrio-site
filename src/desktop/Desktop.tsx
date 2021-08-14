@@ -9,6 +9,7 @@ import PrivacyPage from './legal/PrivacyPage';
 import TOSPage from './legal/TOSPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AnalyticsPage from './pages/AnalyticsPage';
+import ReferralPage from './pages/ReferralPage';
 
 function Desktop() {
 
@@ -23,6 +24,7 @@ function Desktop() {
         <Switch>
           <Route exact path="/" render={() => <LandingPage/>}/>
           <Route exact path="/about/analytics" render={()=> <AnalyticsPage />}/>
+          <Route exact path ="/referral" render={() => <ReferralPage/> }/>
           <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
           <Route exact path="/tos" render={() => <TOSPage/>}/>
           <Route path="*" render={() => <NotFoundPage />}/>
