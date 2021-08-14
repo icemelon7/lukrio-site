@@ -8,17 +8,7 @@ import Bear from '../../../assets/analytics/bear.png';
 import { LightMode } from '../../../Colors';
 import Header from './Header';
 import { getTradeStats } from '../../../fetchers/analytics';
-export type tradeStats = {
-    _id: string;
-    lA: number;
-    sA: number;
-    lV: number;
-    sV: number;
-    lU: string[];
-    sU: string[];
-    lN: number;
-    sN: number;
-}
+import { bearTrades, bearTradeTotals, bullTrades, bullTradeTotals, tradeStats } from '../data/trades';
 
 export const rowStyles = {
     first: {
@@ -108,7 +98,8 @@ const Trades = () => {
             setData(data.data);
             setLoading(false);
         } catch (e) {
-            alert(e);
+            setTotal(isBear ? bearTradeTotals[period] : bullTradeTotals[period]);
+            setData(isBear ? bearTrades[period][type] : bullTrades[period][type])
         }
     }
       _loadTradeStats();

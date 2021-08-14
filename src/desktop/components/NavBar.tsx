@@ -6,7 +6,7 @@ import "./NavBar.styles.css";
 const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
     return (
         <div style={{backgroundColor: props.isTransparent ? 'transparent' : '#092739', position: props.isRelative ? 'relative' : 'absolute'}} className="nav-bar">
-            <Logo style={{width: '15vw'}}/>
+            <Logo isLink style={{width: '15vw'}}/>
             <div className="nav-bar__links">
                 <Link className="nav-bar__links__link" to="/referral">Get $5!</Link>
                 <Link className="nav-bar__links__link" to="/about/how-to-play">How To Play</Link>
