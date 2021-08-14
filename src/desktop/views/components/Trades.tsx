@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { formatRoundUSD } from '../../../util/functions';
 import './Trades.styles.css';
 import Select from 'react-select';
@@ -7,6 +7,7 @@ import Bull from '../../../assets/analytics/bull.png';
 import Bear from '../../../assets/analytics/bear.png';
 import { LightMode } from '../../../Colors';
 import Header from './Header';
+import { getTradeStats } from '../../../fetchers/analytics';
 export type tradeStats = {
     _id: string;
     lA: number;
@@ -19,7 +20,7 @@ export type tradeStats = {
     sN: number;
 }
 
-const rowStyles = {
+export const rowStyles = {
     first: {
         width: '20%',
         height: '5%',
@@ -97,6 +98,24 @@ const Trades = () => {
         }
     }
 
+   
+    useEffect(() => {
+      const _loadTradeStats = async () => {
+        setLoading(true);
+        try {
+            let data = await getTradeStats(!isBear, type, period);
+            setTotal(data.total);
+            setData(data.data);
+            setLoading(false);
+        } catch (e) {
+            alert(e);
+        }
+    }
+      _loadTradeStats();
+    }, [isBear, type, period]);
+
+
+
     return (
         <>
             <div className="summary">
@@ -116,7 +135,7 @@ const Trades = () => {
                 </div>
                 <div style={{width: '35%'}}>
                     <Select
-                    options={[{value: "Today", label: "Today"}, {value: "Week", label: "Week"}, {value: "Month", label: "Month"}, {value: "3 Months", label: "3 Months"}, {value: "6 Months", label: "6 Months"}]}
+                    options={[{value: "Today", label: "Today"}, {value: "Week", label: "Week"}, {value: "Month", label: "Month"}, {value: "3 Months", label: "3 Months"}, {value: "6 Months", label: "6 Months"}, {value: "Year", label: "Year"}]}
                     onChange={(value) => setType(value?.value as string)}
                     defaultValue={{value: "Week", label: "Week"}}
                     style={{option: (provided: any, state: any) => ({ color: '#048320', fontSize: '30px'}),

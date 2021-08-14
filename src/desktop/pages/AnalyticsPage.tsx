@@ -9,7 +9,7 @@ const AnalyticsPage = () => {
         <div className="analytics-page">
             <Splash 
             header="Lukrio Analytics" 
-            text="See what others are investing in and get a feel for bull & bear market sentiment. Satisfy your curiosity or use as trade signals."
+            text="As part of the Lukrio platform, see what others are investing in. Aggregated statistics on trades and positions across all Lukrio users."
             right={<AnalyticsFigma style={{width: '100%', height: 'auto', objectFit: 'contain'}} />}
             />
             <Analytics />
