@@ -12,7 +12,7 @@ const Footer = () => {
                 <Section title="About" links={[
                     {name: "How To Play", url: "about/how-to-play"},
                     {name: "The Vision", url: "about/vision"},
-                    {name: "FAQ", url: "about/faq"},
+                    {name: "About Us", url: "about/lukrio"},
                     {name: "Lukrio Leagues", url: "about/leagues"},
                     {name: "Lukrio Analytics", url: "about/analytics"},
                 ]}/>

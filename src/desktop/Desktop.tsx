@@ -19,7 +19,7 @@ function Desktop() {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <NavBar isRelative isTransparent/>}/>
-          <Route path="/about/*" render={() => <NavBar isTransparent />}/>
+          <Route path={["/about/analytics", "/about/lukrio", "/about/vision"]} render={() => <NavBar isTransparent />}/>
           <Route path="*" render={() => <NavBar isRelative/>}/>
         </Switch>
         <Switch>

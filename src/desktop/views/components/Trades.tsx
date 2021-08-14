@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import { formatRoundUSD } from '../../../util/functions';
+import { formatRoundUSD, numFormatter } from '../../../util/functions';
 import './Trades.styles.css';
 import Select from 'react-select';
 import Switch from 'react-switch';
@@ -9,6 +9,8 @@ import { LightMode } from '../../../Colors';
 import Header from './Header';
 import { getTradeStats } from '../../../fetchers/analytics';
 import { bearTrades, bearTradeTotals, bullTrades, bullTradeTotals, tradeStats } from '../data/trades';
+import { ActivityLoader1 } from '../../components/ActivityLoader';
+import AnalyticsRow from './AnalyticsRow';
 
 export const rowStyles = {
     first: {
@@ -88,15 +90,27 @@ const Trades = () => {
         }
     }
 
+    let timer: NodeJS.Timeout;
    
     useEffect(() => {
       const _loadTradeStats = async () => {
         setLoading(true);
         try {
-            let data = await getTradeStats(!isBear, type, period);
-            setTotal(data.total);
-            setData(data.data);
-            setLoading(false);
+            let res = await getTradeStats(!isBear, type, period);
+            const interval = 5000;
+            const _wait = () => {
+              if (data.length === 0) {
+                timer = setTimeout(() => _wait(), interval);
+              } else {
+                setLoading(false);
+              }
+            }
+            timer = setTimeout(() => _wait(), interval);
+            setTotal(res.total);
+            setData(res.data);
+            
+            setTimeout(() => setLoading(false), 1000);
+            return () => clearTimeout(timer);
         } catch (e) {
             setTotal(isBear ? bearTradeTotals[period] : bullTradeTotals[period]);
             setData(isBear ? bearTrades[period][type] : bullTrades[period][type])
@@ -114,7 +128,7 @@ const Trades = () => {
                     <div className="summary__left__header">Total {isBear ? "Bearish" : "Bullish"} Investment</div>
                     <div className="summary__left__sub">Top 10 assets sorted by investment amount</div>
                 </div>
-                <div style={total >= 0 ? {color: LightMode.green} : {color: LightMode.red}} className="summary__right">{formatRoundUSD(total)}</div>                
+                <div style={ !isBear ? {color: LightMode.green} : {color: LightMode.red}} className="summary__right">${numFormatter(total)}</div>                
             </div>
             <div className="trades-row">
                 <div style={{width: '35%', marginRight: '5%', fontSize: '30px !important'}}>
@@ -153,7 +167,25 @@ const Trades = () => {
             </div>
             <div className="table">
                 {
-
+                  loading ? 
+                  <ActivityLoader1 
+                  />
+                  :
+                  <div className="table__actual">
+                    {
+                      data.map((value, index) => <AnalyticsRow
+                      key={`analyticsRow.${index}`}
+                      symbol={value._id}
+                      isUser={type==='Users'}
+                      bullAmount={value.lA}
+                      bearAmount={value.sA}
+                      bullUsers={value.lN}
+                      bearUsers={value.sN}
+                      bullTrades={value.lV}
+                      bearTrades={value.sV}
+                      />)
+                    }
+                  </div>
                 }
             </div>
         </>

@@ -10,7 +10,7 @@ const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
             <div className="nav-bar__links">
                 <Link className="nav-bar__links__link" to="/referral">Get $5!</Link>
                 <Link className="nav-bar__links__link" to="/about/how-to-play">How To Play</Link>
-                <Link className="nav-bar__links__link" to="/about/lukrio">The App</Link>
+                <Link className="nav-bar__links__link" to="/about/lukrio">About Us</Link>
                 <Link className="nav-bar__links__link" to="/about/vision">The Vision</Link>
                 <Link className="nav-bar__links__link" to="/about/leagues">For Students</Link>
                 <div className="nav-bar__links__button">
