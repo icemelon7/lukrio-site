@@ -1,0 +1,21 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__idea {
+
+}
+
+.about__timeline {
+
+}
+
+.about__timeline__header {
+    
+}
+
+.about__features {
+
+}

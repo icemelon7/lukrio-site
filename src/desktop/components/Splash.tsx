@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import './Splash.styles.css';
 
 type SplashProps = {
-    header: string;
+    header: string | JSX.Element;
     text: string | JSX.Element;
     subheader?: string;
     right: ReactElement;
@@ -19,13 +19,18 @@ const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right,
         <div className="splash" style={{paddingTop: paddingTop ?? '15vh'}}>
             <div style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
                 {disclaimer ?? undefined}
-                <div className="splash__left__header">{header}{
-                    subheader ?
-                    <span className="splash__left__subheader">{subheader}</span>
+                {
+                    typeof header === 'string' ? 
+                    <div className="splash__left__header">{header}{
+                        subheader ?
+                        <span className="splash__left__subheader">{subheader}</span>
+                        :
+                        <div/>
+                    }
+                    </div>
                     :
-                    <div/>
-                }</div>
-                
+                    header
+                }
                 <div className="splash__left__text">{text}</div>
             </div>
             <div className="splash__right">
