@@ -6,6 +6,7 @@ import {ReactComponent as Cycling} from '../../assets/figmaIcons/cycling.svg';
 import { LightMode } from '../../Colors';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import Founders from '../views/Founders';
 
 
 const AboutPage = () => {
@@ -23,6 +24,10 @@ const AboutPage = () => {
             marginRight="3vw"
             />
             <div className="about__idea">
+
+            </div>
+            <Founders />
+            <div className="about__features">
 
             </div>
             <div className="about__timeline">
@@ -120,9 +125,6 @@ const AboutPage = () => {
                         <h3 className="vertical-timeline-element-title link about__timeline__title">Lukrio Social</h3>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
-            </div>
-            <div className="about__features">
-
             </div>
         </div>
     )
