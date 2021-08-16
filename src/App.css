@@ -10,7 +10,7 @@
 
 .link{
     position: relative;
-  }
+}
   
 .link:after{
 content: '';
@@ -22,6 +22,28 @@ right: 0;
 background: var(--teal-color);
 transition: width .2s ease;
 -webkit-transition: width .2s ease;
+}
+
+.altLink {
+    position: relative;
+}
+
+.altLink:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--darkBlue);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.altLink:hover:after {
+    width: 100%;
+    left: 0;
+    background: var(--darkBlue);
 }
 
 .link:hover:after{
