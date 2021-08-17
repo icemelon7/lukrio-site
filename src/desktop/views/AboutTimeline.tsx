@@ -89,7 +89,7 @@ const AboutTimeline = () => {
             className="timeline__element"
             contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
-            date="October 2021"
+            date="December 2021"
             dateClassName="about__timeline__date__live"
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<School />}
@@ -100,7 +100,7 @@ const AboutTimeline = () => {
             className="timeline__element"
             contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
-            date="October 2021"
+            date="January 2022"
             dateClassName="about__timeline__date__live"
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<Social />}

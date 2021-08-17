@@ -1,5 +1,4 @@
 .splash {
-    background: rgb(15,95,95);
     background: linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%);
     width: 100vw;
     display: flex;

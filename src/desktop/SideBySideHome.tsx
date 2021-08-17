@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './SideBySide.css';
 import '../App.css';
 import Redirect from './components/Redirect';
-const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header: string, image: string}) => {
+const SideBySideHome = ({detailsRef, header, image, splashBackground, noLink} : {detailsRef?: any, header: string, image: string, splashBackground?: boolean, noLink?: boolean}) => {
     const [activeNum, setActiveNum] = useState<number>(1);
     const [clicked, setClicked] = useState<boolean>(false);
     let timer = useRef<NodeJS.Timeout>();
@@ -26,11 +26,16 @@ const SideBySideHome = ({detailsRef, header, image} : {detailsRef?: any, header:
     }, [activeNum, clicked]);
 
     return (
-    <div ref={detailsRef} className="Desktop--SideBySide--container">
-        <Redirect text="Learn more on how to play" url="how-to-play"/>
+    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
+        {
+            noLink ? 
+            <div />
+            :
+            <Redirect text="Learn more on how to play" url="how-to-play"/>
+        }
         <div className="Desktop--SideBySide--text">
-        <a href="how-to-play" className="Desktop--SideBySide--header link">{header}</a>
-            <div className="Desktop--SideBySide--text__main">
+        <a href="how-to-play" style={splashBackground ? {color: 'aqua', cursor: 'auto'} : {}} className={`Desktop--SideBySide--header ${splashBackground ? "" : "link"}`}>{header}</a>
+            <div className="Desktop--SideBySide--text__main" style={splashBackground ? {color: 'white'} : {}}>
                 <Row index={1} key={`HomeRow.1`} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Choose one of many daily games"/>
                 <Row index={2} key={`HomeRow.2`} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Pay a cash buyin (e.g. $5) to join the game"/>
                 <Row index={3} key={`HomeRow.3`} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Make smart trades to grow your portfolio"/>

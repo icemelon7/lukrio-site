@@ -15,6 +15,7 @@ import AboutPage from './pages/AboutPage';
 import RulesPage from './support/RulesPage';
 import RestrictionsPage from './support/RestrictionsPage';
 import ResponsibleGamingPage from './support/ResponsibleGamingPage';
+import HowToPlayPage from './pages/HowToPlayPage';
 
 function Desktop() {
 
@@ -29,6 +30,7 @@ function Desktop() {
         <Switch>
           <Route exact path="/" render={() => <LandingPage/>}/>
           <Route exact path ="/referral" render={() => <ReferralPage/> }/>
+          <Route exact path="/about/how-to-play" render={() => <HowToPlayPage/>}/>
           <Route exact path="/about/analytics" render={()=> <AnalyticsPage />}/>
           <Route exact path="/about/vision" render={() => <VisionPage/>}/>
           <Route exact path="/about/lukrio" render={() => <AboutPage />}/>
