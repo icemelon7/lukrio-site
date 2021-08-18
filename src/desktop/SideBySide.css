@@ -33,6 +33,7 @@
     background-color: #f6f6f6;
     display: flex;
     justify-content: center;
+    align-items: center;
     justify-self: center;
     width: 99vw;
 }
@@ -94,4 +95,17 @@
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 2.5vw;
+}
+
+.rotate-mockup {
+    margin-top: -70px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.45s;
+    transform: perspective(1400px) rotateY( -20deg) rotateX( 10deg) rotateZ( 6deg) scale(0.8) translateY(6%);
+  }
+  
+.rotate-mockup:hover {
+    transform: perspective(1000px) rotateY( 0deg) rotateX( 0deg) rotateZ( 0deg) scale(0.95) translateY(8%);
 }

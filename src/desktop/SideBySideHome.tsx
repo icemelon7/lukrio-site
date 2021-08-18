@@ -7,6 +7,8 @@ import Redirect from './components/Redirect';
 import Home from '../assets/mockups/home.png';
 import PortfolioPositions from '../assets/mockups/portfolioPositions.png';
 import Leaderboard from '../assets/mockups/leaderboard.png';
+import 'animate.css';
+
 //Need join pop up view, need result view
 
 type SideBySideHomeProps = {
@@ -21,26 +23,33 @@ type SideBySideHomeProps = {
 const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, header, image, splashBackground, noLink, responsiveImage}) => {
     const [activeNum, setActiveNum] = useState<number>(1);
     const [clicked, setClicked] = useState<boolean>(false);
+    const [flick, setFlick] = useState<boolean>(false);
+
     let timer = useRef<NodeJS.Timeout>();
+    let flickTimer = useRef<NodeJS.Timeout>();
     useEffect(() => {
 
         if (clicked) {
             setClicked(false);
             console.log("LONG");
             clearTimeout(timer?.current as NodeJS.Timeout);
-            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000);
+            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 6000);
         } else {
-            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 2000);
+            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000);
         }
+        setFlick(true);
+        flickTimer.current = setTimeout(() => setFlick(false), 1800);
         return () => {
-            if (timer) {
+            if (timer.current) {
                 clearTimeout(timer?.current as NodeJS.Timeout);
+            }
+            if (flickTimer.current) {
+                clearTimeout(flickTimer?.current as NodeJS.Timeout);
             }
         }
     }, [activeNum, clicked]);
-
     return (
-    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
+    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {paddingTop: '0px', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
         {
             noLink ? 
             <div />
@@ -48,8 +57,13 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             <Redirect text="Learn more on how to play" url="/about/how-to-play"/>
         }
         <div className="Desktop--SideBySide--text">
-        <a href="how-to-play" style={splashBackground ? {color: 'aqua', cursor: 'auto'} : {}} className={`Desktop--SideBySide--header ${splashBackground ? "" : "link"}`}>{header}</a>
-            <div className="Desktop--SideBySide--text__main" style={splashBackground ? responsiveImage ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: '85%'} : {color: 'white'} : {}}>
+            {splashBackground ? 
+            <div style={{color: 'var(--teal-color)', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
+            :
+            <a href={"/about/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
+            }
+            
+            <div className="Desktop--SideBySide--text__main" style={splashBackground ? responsiveImage ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {color: 'white'} : {}}>
                 <Row index={1} key={`HomeRow.1`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Choose one of many daily games"/>
                 <Row index={2} key={`HomeRow.2`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Pay a cash buyin (e.g. $5) to join the game"/>
                 <Row index={3} key={`HomeRow.3`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Make smart trades to grow your portfolio"/>
@@ -59,17 +73,20 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         </div>
         {
             responsiveImage ?
-            <div className="device device-iphone-x play-phone">
+            <div className="rotate-mockup" onClick={() => activeNum === 1 ? true : false}>
+                <div className="device device-iphone-x play-phone">
                 <div className="device-frame">
-                    <img src={
-                        activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard
-                    } alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>
+                    <img
+                    className={`animate__animated ${flick ? 'animate__fadeIn' : ''}`}
+                    src={activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard}
+                    alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>
                 </div>
                 <div className="device-stripe"></div>
                 <div className="device-header"></div>
                 <div className="device-sensors"></div>
                 <div className="device-btns"></div>
                 <div className="device-power"></div>
+                </div>
             </div>
             :
             typeof image === 'string' ?
