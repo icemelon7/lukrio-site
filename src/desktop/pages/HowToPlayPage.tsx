@@ -2,6 +2,8 @@ import React from 'react';
 import Splash from '../components/Splash';
 import SideBySideHome from '../SideBySideHome';
 import Podium from '../../assets/podium.png';
+import '../../devices.css';
+import './HowToPlayPage.styles.css';
 
 const HowToPlayPage = () => {
 
@@ -9,11 +11,11 @@ const HowToPlayPage = () => {
         <div className="play">
             <SideBySideHome
             header="How To Play"
-            image={Podium}
+            responsiveImage
             splashBackground
             noLink
             ></SideBySideHome>
-            
+
         </div>
     )
 }

@@ -2,3 +2,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.play-phone {
+    zoom: 0.6;
+    margin-left: 10vw;
+}
