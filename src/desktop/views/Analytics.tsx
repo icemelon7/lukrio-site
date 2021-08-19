@@ -22,7 +22,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
         <div className="analytics">
             {
                 moreLink ? 
-                <Redirect text="Learn more about Lukrio analytics" url="about/analytics"/>
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about Lukrio analytics" url="about/analytics"/></ScrollAnimation>
                 :
                 <div/>
             }

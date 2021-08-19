@@ -12,6 +12,7 @@ const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
                 <Link style={window.location.href.endsWith("/about/how-to-play") ? {color: 'var(--teal-color)'} : undefined} className="nav-bar__links__link" to="/about/how-to-play">How To Play</Link>
                 <Link  style={window.location.href.endsWith("/about/lukrio") ? {color: 'var(--teal-color)'} : undefined}className="nav-bar__links__link" to="/about/lukrio">About Us</Link>
                 <Link  style={window.location.href.endsWith("/about/vision") ? {color: 'var(--teal-color)'} : undefined}className="nav-bar__links__link" to="/about/vision">The Vision</Link>
+                <Link  style={window.location.href.endsWith("/about/analytics") ? {color: 'var(--teal-color)'} : undefined}className="nav-bar__links__link" to="/about/analytics">Analytics</Link>
                 <Link  style={window.location.href.endsWith("/about/leagues") ? {color: 'var(--teal-color)'} : undefined}className="nav-bar__links__link" to="/about/leagues">For Students</Link>
                 <div className="nav-bar__links__button">
                     <Link className="nav-bar__links__button__link" to="www.appstore.com">Play Now</Link>

@@ -32,7 +32,7 @@ const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right,
                     :
                     header
                 }
-                <div className="splash__left__text">{text}</div>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={800} className="splash__left__text">{text}</ScrollAnimation>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeInRight" animateOnce className="splash__right">
                 {right}

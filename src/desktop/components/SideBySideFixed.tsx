@@ -6,50 +6,78 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 type SideBySideFixedProps = {
-    header: string;
+    header: string | JSX.Element;
     imgPos: "left" | "right";
     firstMock: string;
+    firstMockIcon?: string;
     secondMock?: string;
+    secondMockIcon?: string;
     thirdMock?: string;
+    thirdMockIcon?: string;
     content: JSX.Element;
 }
 
-const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({header, imgPos, firstMock, secondMock, thirdMock, content, }) => {
+const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({header, imgPos, firstMock, firstMockIcon, secondMock, secondMockIcon, thirdMock, thirdMockIcon, content, }) => {
 
     return (
-        <ScrollAnimation animateIn="fadeInUp" >
         <div className="side-fixed">
             {
                 imgPos === 'right'
                 ?
                 <>
-                    <div className="side-fixed__content" style={{marginRight: '10vw'}}>
-                        <div className="side-fixed__content__header">{header}</div>
-                        {content}
-                    </div>
-                    {
-                        typeof secondMock === 'string' && typeof thirdMock === 'string' ?
-                        <TripleMockup firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock}/>
-                        :
-                        <MockupPhone content={<img src={firstMock} alt={firstMock} style={{width: '100%', height: '100%', borderRadius: '25px'}}/>}/>
-                    }
+                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+                        <div className="side-fixed__content" style={{marginRight: '5vw'}}>
+                            {
+                                typeof header === 'string' ? 
+                                <div className="side-fixed__content__header">{header}</div>
+                                :
+                                header
+                            }
+                            {content}
+                        </div>
+                    </ScrollAnimation>                    
+                    <Image firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock} firstMockIcon={firstMockIcon} secondMockIcon={secondMockIcon} thirdMockIcon={thirdMockIcon} />
                 </>
                 :
                 <>
-                    {
-                        typeof secondMock === 'string' && typeof thirdMock === 'string' ?
-                        <TripleMockup firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock}/>
-                        :
-                        <MockupPhone content={<img src={firstMock} alt={firstMock} style={{width: '100%', height: '100%', borderRadius: '25px'}}/>}/>
-                    }
-                    <div className="side-fixed__content" style={{marginLeft: '10vw'}}>
-                        <div className="side-fixed__content__header">{header}</div>
-                        {content}
-                    </div>
+                    <Image firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock} firstMockIcon={firstMockIcon} secondMockIcon={secondMockIcon} thirdMockIcon={thirdMockIcon} />
+                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+                        <div className="side-fixed__content" style={{marginLeft: '5vw'}}>
+                            {
+                                typeof header === 'string' ? 
+                                <div className="side-fixed__content__header">{header}</div>
+                                :
+                                header
+                            }
+                            {content}
+                        </div>
+                    </ScrollAnimation>
                 </>
             }
             </div>
-        </ScrollAnimation>
+    )
+}
+
+type FixedImageProps = {
+    firstMock: string;
+    firstMockIcon?: string;
+    secondMock?: string;
+    secondMockIcon?: string;
+    thirdMock?: string;
+    thirdMockIcon?: string;
+}
+
+const Image : FunctionComponent<FixedImageProps> = ({firstMock, secondMock, thirdMock, firstMockIcon, secondMockIcon, thirdMockIcon}) => {
+
+    return (
+        <>
+            {
+                        typeof secondMock === 'string' && typeof thirdMock === 'string' ?
+                        <TripleMockup firstMock={firstMock} firstMockIcon={firstMockIcon} secondMock={secondMock} secondMockIcon={secondMockIcon} thirdMock={thirdMock} thirdMockIcon={thirdMockIcon}/>
+                        :
+                        <MockupPhone content={<img src={firstMock} alt={firstMock} style={{width: '100%', height: '100%', borderRadius: '25px'}}/>}/>
+            }
+        </>
     )
 }
 

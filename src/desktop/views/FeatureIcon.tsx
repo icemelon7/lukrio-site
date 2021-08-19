@@ -6,6 +6,7 @@ import Education from "../../assets/featureIcons/education.png";
 import Conversation from "../../assets/featureIcons/conversation.png";
 import Redirect from '../components/Redirect';
 import { LightMode } from '../../Colors';
+import "animate.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const FeatureIconBlock = ({icon, header, subtitle, delay} : {icon: string, header: string, subtitle: string, delay: number}) => {
@@ -34,7 +35,7 @@ const FeatureIconDisplay : FunctionComponent<FeatureIconDisplayProps> = ({hideLi
     <div className="Desktop--FeatureIconDisplay--wrapper">
         {
             !hideLink ? 
-            <Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/>    
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/></ScrollAnimation>
             :
             <div/>
         }
