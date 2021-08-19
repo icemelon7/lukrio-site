@@ -8,6 +8,7 @@ import Home from '../assets/mockups/home.png';
 import PortfolioPositions from '../assets/mockups/portfolioPositions.png';
 import Leaderboard from '../assets/mockups/leaderboard.png';
 import 'animate.css';
+import MockupPhone from './components/mockupComponents/MockupPhone';
 
 //Need join pop up view, need result view
 
@@ -63,7 +64,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             <a href={"/about/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
             }
             
-            <div className="Desktop--SideBySide--text__main" style={splashBackground ? responsiveImage ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {color: 'white'} : {}}>
+            <div className="Desktop--SideBySide--text__main" style={responsiveImage ? splashBackground ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {}}>
                 <Row index={1} key={`HomeRow.1`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Choose one of many daily games"/>
                 <Row index={2} key={`HomeRow.2`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Pay a cash buyin (e.g. $5) to join the game"/>
                 <Row index={3} key={`HomeRow.3`} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Make smart trades to grow your portfolio"/>
@@ -73,21 +74,16 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         </div>
         {
             responsiveImage ?
-            <div className="rotate-mockup" onClick={() => activeNum === 1 ? true : false}>
-                <div className="device device-iphone-x play-phone">
-                <div className="device-frame">
-                    <img
-                    className={`animate__animated ${flick ? 'animate__fadeIn' : ''}`}
-                    src={activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard}
-                    alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>
-                </div>
-                <div className="device-stripe"></div>
-                <div className="device-header"></div>
-                <div className="device-sensors"></div>
-                <div className="device-btns"></div>
-                <div className="device-power"></div>
-                </div>
-            </div>
+            <MockupPhone 
+            style={{zoom: 0.7, marginLeft: '10vw'}}
+            content={
+                <img
+                className={`animate__animated ${flick ? 'animate__fadeInDown' : ''}`}
+                src={activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard}
+                alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>}
+            isRotate
+            onClick={() => activeNum === 1 ? true : false}
+            />
             :
             typeof image === 'string' ?
             <img className="Desktop--SideBySide--image__container" src={image} alt={image}/>

@@ -6,17 +6,21 @@ import Education from "../../assets/featureIcons/education.png";
 import Conversation from "../../assets/featureIcons/conversation.png";
 import Redirect from '../components/Redirect';
 import { LightMode } from '../../Colors';
+import ScrollAnimation from 'react-animate-on-scroll';
 
-const FeatureIconBlock = ({icon, header, subtitle} : {icon: string, header: string, subtitle: string}) => {
+const FeatureIconBlock = ({icon, header, subtitle, delay} : {icon: string, header: string, subtitle: string, delay: number}) => {
     return (
-        <div className="Desktop--FeatureIconBlock--wrapper">
-            <img className="Desktop--FeatureIconBlock--icon" src={icon}></img>
-            <br/>
-            <span className="Desktop--FeatureIconBlock--text__header">{header}</span>
-            <br/>
-            <br/>
-            <span className="Desktop--FeatureIconBlock--text__subtitle">{subtitle}</span>
-        </div>
+        <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={delay}>
+            <div className="Desktop--FeatureIconBlock--wrapper">
+                <img className="Desktop--FeatureIconBlock--icon" src={icon}></img>
+                <br/>
+                <span className="Desktop--FeatureIconBlock--text__header">{header}</span>
+                <br/>
+                <br/>
+                <span className="Desktop--FeatureIconBlock--text__subtitle">{subtitle}</span>
+            </div>
+        </ScrollAnimation>
+        
     );
 }
 
@@ -38,21 +42,25 @@ const FeatureIconDisplay : FunctionComponent<FeatureIconDisplayProps> = ({hideLi
             icon={Usability} 
             header="Smart and Intuitive"
             subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
+            delay={0}
         />
         <FeatureIconBlock
             icon={ToTheMoon}
             header="Shoot for the Moon"
             subtitle="Launch your investment portfolio into outer space and make cash beating other investors, not the market"
+            delay={250}
         />
         <FeatureIconBlock
             icon={Education}
             header="Learn by Investing"
             subtitle="Develop your investing skill through hands-on experience in a low-stakes but still cash-incentivized environment"
+            delay={500}
         /> 
         <FeatureIconBlock
             icon={Conversation}
             header="Join a Community"
             subtitle="Discuss stocks, investments and trades with fellow investors. Meet mentors and buddies along your journey"
+            delay={750}
         />
         
     </div>);

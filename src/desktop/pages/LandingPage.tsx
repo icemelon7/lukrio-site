@@ -12,13 +12,14 @@ const LandingPage = () => {
     const detailsRef = useRef();
     return (
         <div className="LandingPage">
-          <HeroImage demoRef={demoRef} detailsRef={detailsRef}/>
+          <HeroImage demoRef={demoRef} detailsRef={detailsRef} liveStore/>
           {//<SignupSideBySide demoRef={demoRef}/>
           }
           <SideBySideHome
           detailsRef={detailsRef}
           header="How To Play?"
           image={Podium}
+          responsiveImage
           ></SideBySideHome>
           <FeatureIconDisplay/>
           <Analytics moreLink />

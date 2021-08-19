@@ -1,0 +1,13 @@
+.side-fixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-fixed__content {
+
+}
+
+.side-fixed__content__header {
+
+}

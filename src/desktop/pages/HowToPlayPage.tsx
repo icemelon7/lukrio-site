@@ -1,8 +1,10 @@
 import React from 'react';
-import Splash from '../components/Splash';
-import SideBySideHome from '../SideBySideHome';
-import Podium from '../../assets/podium.png';
+import Create from '../../assets/mockups/create.png';
+import Home from '../../assets/mockups/home.png';
+import Lobby from '../../assets/mockups/lobby.png';
 import '../../devices.css';
+import SideBySideFixed from '../components/SideBySideFixed';
+import SideBySideHome from '../SideBySideHome';
 import './HowToPlayPage.styles.css';
 
 const HowToPlayPage = () => {
@@ -15,7 +17,18 @@ const HowToPlayPage = () => {
             splashBackground
             noLink
             ></SideBySideHome>
+            <SideBySideFixed
+            imgPos="right" 
+            firstMock={Home}
+            secondMock={Lobby}
+            thirdMock={Create}
+            header="Choosing a Game"
+            content={
+                <div>
 
+                </div>
+            }
+            />
         </div>
     )
 }
