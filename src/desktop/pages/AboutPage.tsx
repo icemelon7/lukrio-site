@@ -8,7 +8,6 @@ import AboutTimeline from '../views/AboutTimeline';
 import Founders from '../views/Founders';
 import './AboutPage.styles.css';
 
-
 const AboutPage = () => {
 
     return (
