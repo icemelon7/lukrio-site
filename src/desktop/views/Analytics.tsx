@@ -6,6 +6,8 @@ import '../App.css';
 import Logo from '../components/Logo';
 import Clock from 'react-live-clock';
 import AnalyticsPhone from './components/AnalyticsPhone';
+import ScrollAnimation from 'react-animate-on-scroll';
+import MockupPhone from '../components/mockupComponents/MockupPhone';
 
 type AnalyticsProps = {
     moreLink?: boolean;
@@ -24,19 +26,10 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                 :
                 <div/>
             }
-            <div className="analytics__left">
-                <div className="analytics__phone">
-                    <div className="device device-iphone-x">
-                        <div className="device-frame">
-                            <AnalyticsPhone />
-                        </div>
-                        <div className="device-stripe"></div>
-                        <div className="device-header"></div>
-                        <div className="device-sensors"></div>
-                        <div className="device-btns"></div>
-                        <div className="device-power"></div>
-                    </div>
-                </div>
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce className="analytics__left">
+                <MockupPhone 
+                content={<AnalyticsPhone />}
+                />
                 {
                         today.getDay() > 0 && today.getDay() < 6 && (((today.getHours() === 9 && today.getMinutes() >= 30) || today.getHours() > 9) && today.getHours() < 17)
                         ?
@@ -55,25 +48,28 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                             </div>
                         </div>
                 }
-            </div>
+            </ScrollAnimation>
             
             
             <div className="analytics__container">
-                <a href="/about/analytics" className="analytics__container__header link">Lukrio Analytics</a>
-                <div className="analytics__container__text">
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce><a href="/about/analytics" className="analytics__container__header link">Lukrio Analytics</a></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={150} className="analytics__container__text">
                     Get a feel for bearish or bullish market sentiment and see what people's favourite stocks are.
-                </div>
-                <div className="analytics__container__text">
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={300} className="analytics__container__text">
                     Satisfy your curiosity or use Analytics as alternative data to make better trades.
-                </div>
-                <div className="analytics__container__demo">
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={400} className="analytics__container__demo">
                         Try out live interactive demo on the left
-                </div>
+                </ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500}>
                 <a href="https://www.appstore.com" className="analytics__container__available">
                     Available in the
                     <Logo style={{height: '1.6vw', width: 'auto', objectFit: 'contain', marginLeft: '0.4vw', marginRight: '0.4vw'}}/>
                     App
                 </a>
+                </ScrollAnimation>
+                
             </div>
         </div>
     )

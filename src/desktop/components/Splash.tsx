@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
 import './Splash.styles.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 type SplashProps = {
     header: string | JSX.Element;
@@ -17,7 +18,7 @@ const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right,
 
     return (
         <div className="splash" style={{paddingTop: paddingTop ?? '15vh'}}>
-            <div style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
                 {disclaimer ?? undefined}
                 {
                     typeof header === 'string' ? 
@@ -32,10 +33,10 @@ const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right,
                     header
                 }
                 <div className="splash__left__text">{text}</div>
-            </div>
-            <div className="splash__right">
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeInRight" animateOnce className="splash__right">
                 {right}
-            </div>
+            </ScrollAnimation>
         </div>
     )
 }

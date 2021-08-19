@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import './FounderBlock.styles.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 type FounderBlockProps = {
     image: string | JSX.Element;
@@ -11,7 +12,7 @@ type FounderBlockProps = {
 const FounderBlock : FunctionComponent<FounderBlockProps> = ({image, name, title, text}) => {
 
     return (
-        <div className="founder__block">
+        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="founder__block">
             {
                 typeof image === 'string' ?
                 <div className="founder__block__image">
@@ -29,7 +30,7 @@ const FounderBlock : FunctionComponent<FounderBlockProps> = ({image, name, title
                 }
                 <div className="founder__block__right__text">{text}</div>
             </div>
-        </div>
+        </ScrollAnimation>
     )
 }
 
