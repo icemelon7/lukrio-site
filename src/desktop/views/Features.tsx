@@ -18,8 +18,8 @@ const Features = () => {
 
     return (
         <div className="features">
-            <div className="features__header">Upcoming <Logo style={{width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features</div>
-            <div className="features__selector">
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500} className="features__header">Upcoming <Logo style={{width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features</ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={750} className="features__selector">
                 <Feature 
                 index={1}
                 active={active}
@@ -44,8 +44,8 @@ const Features = () => {
                 header="Social"
                 text="Integrated Stock Pitch Feed"
                 />
-            </div>
-            <div className="features__content">
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="features__content">
                 {
                     active === 1 ?
                     <FeatureDetail
@@ -85,7 +85,7 @@ const Features = () => {
                     redirect={<Redirect bottomLeft noLink text="Learn more about Lukrio Social (Coming Soon)" url="" textColor={LightMode.darkGrey}/>}
                     />
                 }
-            </div>
+            </ScrollAnimation>
         </div>        
     )
 }

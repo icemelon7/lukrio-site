@@ -42,7 +42,7 @@ const FeatureIconDisplay : FunctionComponent<FeatureIconDisplayProps> = ({hideLi
         <FeatureIconBlock
             icon={Usability} 
             header="Smart and Intuitive"
-            subtitle="Lukrio's newsfeed provides you with the day's top stock pitches and user posts aligned with your interests"
+            subtitle="Lukrio's platform allows you to easily get started investing in a real live environment with market, limit and short sale orders."
             delay={0}
         />
         <FeatureIconBlock

@@ -16,6 +16,7 @@ import RulesPage from './support/RulesPage';
 import RestrictionsPage from './support/RestrictionsPage';
 import ResponsibleGamingPage from './support/ResponsibleGamingPage';
 import HowToPlayPage from './pages/HowToPlayPage';
+import LeaguesPage from './pages/LeaguesPage';
 
 function Desktop() {
 
@@ -24,7 +25,7 @@ function Desktop() {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <NavBar isRelative isTransparent/>}/>
-          <Route path={["/about/analytics", "/about/lukrio", "/about/vision"]} render={() => <NavBar isTransparent />}/>
+          <Route path={["/about/analytics", "/about/lukrio", "/about/vision", "/about/leagues"]} render={() => <NavBar isTransparent />}/>
           <Route path="*" render={() => <NavBar isRelative/>}/>
         </Switch>
         <Switch>
@@ -34,6 +35,7 @@ function Desktop() {
           <Route exact path="/about/analytics" render={()=> <AnalyticsPage />}/>
           <Route exact path="/about/vision" render={() => <VisionPage/>}/>
           <Route exact path="/about/lukrio" render={() => <AboutPage />}/>
+          <Route exact path="/about/leagues" render={() => <LeaguesPage />}/>
           <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
           <Route exact path="/tos" render={() => <TOSPage/>}/>
           <Route exact path="/support/rules" render={() => <RulesPage />}/>

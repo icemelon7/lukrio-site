@@ -11,10 +11,10 @@ const Footer = () => {
             <div className="footer__row">
                 <Section title="About" links={[
                     {name: "How To Play", url: "about/how-to-play"},
-                    {name: "The Vision", url: "about/vision"},
                     {name: "About Us", url: "about/lukrio"},
-                    {name: "Lukrio Leagues", url: "about/leagues"},
+                    {name: "The Vision", url: "about/vision"},
                     {name: "Lukrio Analytics", url: "about/analytics"},
+                    {name: "Lukrio Leagues", url: "about/leagues"},
                 ]}/>
                 <Section title="Play" links={[
                     {name: "Download Lukrio (iOS)", url: "https://www.appstore.com"},
@@ -37,9 +37,9 @@ const Footer = () => {
                     <div className="footer__copyright__row">
                         
                         <div className="footer__copyright__row__legal">
-                            <a className="footer__copyright__row__legal__link" href="www.lukrio.com/privacy">Privacy Policy</a>
+                            <a className="footer__copyright__row__legal__link" href="/privacy">Privacy Policy</a>
                             <div className="footer__copyright__row__legal__spacer">|</div>
-                            <a className="footer__copyright__row__legal__link" href="www.lukrio.com/tou">Terms of Use</a>
+                            <a className="footer__copyright__row__legal__link" href="/tou">Terms of Use</a>
                         </div>
                         <div className="footer__copyright__row__socials">
                             <div className="footer__copyright__row__socials__outer">
