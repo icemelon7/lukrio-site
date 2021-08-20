@@ -9,12 +9,13 @@ import {ReactComponent as Rocket} from '../../assets/ionicons/rocket.svg';
 import {ReactComponent as School} from '../../assets/ionicons/school.svg';
 import {ReactComponent as BarChart} from '../../assets/ionicons/bar-chart.svg';
 import './AboutTimeline.styles.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const AboutTimeline = () => {
 
     return (
         <div className="about__timeline">
-        <h1 className="about__timeline__header">Our Journey & Next Steps</h1>
+        <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce><h1 className="about__timeline__header">Our Journey & Next Steps</h1></ScrollAnimation>
         <VerticalTimeline>
             <VerticalTimelineElement
             className="timeline__element"

@@ -5,5 +5,23 @@
 }
 
 .about__idea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.about__idea__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35vw;
+    margin-right: 10vw;
+}
+
+.about__idea__content__header {
+    font-size: 2.6vw;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }

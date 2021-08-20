@@ -7,12 +7,13 @@ type FounderBlockProps = {
     name: string;
     title: string;
     text: string;
+    delay: number;
 }
 
-const FounderBlock : FunctionComponent<FounderBlockProps> = ({image, name, title, text}) => {
+const FounderBlock : FunctionComponent<FounderBlockProps> = ({image, name, title, text, delay}) => {
 
     return (
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="founder__block">
+        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="founder__block" delay={delay}>
             {
                 typeof image === 'string' ?
                 <div className="founder__block__image">

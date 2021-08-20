@@ -37,7 +37,7 @@ const HowToPlayPage = () => {
     return (
         <div className="play">
             <SideBySideHome
-            header="How To Play"
+            header="How To Play 🚀"
             responsiveImage
             splashBackground
             noLink
@@ -200,7 +200,7 @@ type RowProps = {
     delay: number;
 }
 
-const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji}) => {
+export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji}) => {
 
     return (
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={delay} className="play__row">
