@@ -26,7 +26,7 @@ import {TimelineMax, TweenMax} from 'gsap';
 import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 
 const HowToPlayPage = () => {
-
+    /*
     const updateXarrow = useXarrow();
 
     useEffect(() => {
@@ -53,11 +53,11 @@ const HowToPlayPage = () => {
             var xc = (points[i].getBoundingClientRect().left + points[i + 1].getBoundingClientRect().left) / 2;
             var yc = (points[i].getBoundingClientRect().top + points[i + 1].getBoundingClientRect().top) / 2;
             ctx.quadraticCurveTo(points[i].getBoundingClientRect().left, points[i].getBoundingClientRect().top, xc, yc);
-        } */
+        }
         // curve through the last two points
         //ctx.quadraticCurveTo(points[i].x, points[i].y, points[i+1].x,points[i+1].y);
     }, []);
-
+    */
     return (
         <Xwrapper>
         <div className="play">
@@ -226,7 +226,7 @@ const HowToPlayPage = () => {
             ///>  
             }
             {//</ScrollAnimation>            
-            <canvas id="canvas" style={{position: 'absolute', width: '100vw', height: '100vh'}} />
+            //<canvas id="canvas" style={{position: 'absolute', width: '100vw', height: '100vh'}} />
             }
         </div>
         </Xwrapper>

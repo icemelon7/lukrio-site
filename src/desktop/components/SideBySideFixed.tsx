@@ -42,7 +42,7 @@ const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({index, heade
                 :
                 <>
                     <Image firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock} firstMockIcon={firstMockIcon} secondMockIcon={secondMockIcon} thirdMockIcon={thirdMockIcon} />
-                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+                    <ScrollAnimation animateIn="animate__fadeInRight" animateOnce>
                         <div className="side-fixed__content" style={{marginLeft: '5vw'}}>
                             {
                                 typeof header === 'string' ? 
