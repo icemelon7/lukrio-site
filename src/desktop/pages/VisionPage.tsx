@@ -8,19 +8,21 @@ import {ReactComponent as BankShake} from '../../assets/figmaIcons/BankShake.svg
 import {ReactComponent as TeamWork} from '../../assets/figmaIcons/TeamWork.svg';
 import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Features from '../views/Features';
 
 const VisionPage = () => {
 
     return (
         <div className="vision">
-                <Splash
-                header="Join a new Generation of "
-                subheader="Investors"
-                text="A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level."
-                right={<img className="vision__img" src={Rocket} alt="Vision Rocket Emoji" />}
-                leftWidth='45vw'
-                marginRight='0vw'
-                />
+            <Splash
+            header="Join a new Generation of "
+            subheader="Investors"
+            text="A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level."
+            right={<img className="vision__img" src={Rocket} alt="Vision Rocket Emoji" />}
+            leftWidth='45vw'
+            marginRight='0vw'
+            />
+            <Features />
             <div className="vision__block">
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
                 <VisionRow 

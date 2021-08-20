@@ -5,7 +5,7 @@
     padding-right: 15vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    background-color: var(--lightBlack);
+    background-color: rgba(9,39,57,1);
 }
 
 .about__timeline__header {

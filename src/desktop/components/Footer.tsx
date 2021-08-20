@@ -28,7 +28,8 @@ const Footer = () => {
                 <Section title="Support" links={[
                     {name: "Responsible Gaming", url: "support/responsible-gaming"},
                     {name: "Restrictions", url: "support/restrictions"},
-                    {name: "Rules TL;DR", url: "support/rules"}
+                    {name: "Rules TL;DR", url: "support/rules"},
+                    {name: "Careers", url: ""}
                 ]}/>
                 <div className="footer__copyright">
                     <Logo style={{width: '10vw', marginBottom: '1vh'}} />

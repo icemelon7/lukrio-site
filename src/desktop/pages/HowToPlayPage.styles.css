@@ -22,6 +22,7 @@
 
 .play__row__icon-emoji {
     font-size: 2vw;
+    width: 2vw;
 }
 
 .play__row__text {
@@ -29,9 +30,4 @@
     font-weight: 400;
     font-style: italic;
     margin-left: 3vw;
-}
-
-.canvas {
-    position: absolute;
-    
 }

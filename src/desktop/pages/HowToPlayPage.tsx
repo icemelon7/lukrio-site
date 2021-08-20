@@ -23,18 +23,43 @@ import Gambling from '../../assets/playIcons/gambling.png';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollMagic from 'scrollmagic';
 import {TimelineMax, TweenMax} from 'gsap';
+import Xarrow, { useXarrow, Xwrapper } from 'react-xarrows';
 
 const HowToPlayPage = () => {
 
+    const updateXarrow = useXarrow();
+
     useEffect(() => {
-        //const canvas = document.getElementById('canvas') as any
-        //const ctx = canvas.getContext('2d');
-        //const points = document.getElementsByClassName('play__point');
+        const canvas = document.getElementById('canvas') as any;
+        const ctx = canvas.getContext('2d');
+        canvas.width = '100vw';
+        canvas.height = '100vh';
+        const points = document.getElementsByClassName('play__point');
+        let x1 = points[0].getBoundingClientRect().left;
+        let y1 = points[0].getBoundingClientRect().top;
+        let x2 = points[1].getBoundingClientRect().left;
+        let y2 = points[1].getBoundingClientRect().top;
+        console.log(x1, y1, x2, y2);
         // use points to draw curve
         // to add scroll, maybe add div with lower zIndex and reduce height on scroll, position absolute on bottom
+        ctx.strokeStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(points[0].getBoundingClientRect().left, points[0].getBoundingClientRect().top);
+        ctx.bezierCurveTo(0, 100, 200, 100, 300, 0);
+        ctx.stroke();
+        /*ctx.moveTo(points[0].getBoundingClientRect().left, points[0].getBoundingClientRect().top);
+        for (let i = 1; i < points.length - 2; i ++)
+        {
+            var xc = (points[i].getBoundingClientRect().left + points[i + 1].getBoundingClientRect().left) / 2;
+            var yc = (points[i].getBoundingClientRect().top + points[i + 1].getBoundingClientRect().top) / 2;
+            ctx.quadraticCurveTo(points[i].getBoundingClientRect().left, points[i].getBoundingClientRect().top, xc, yc);
+        } */
+        // curve through the last two points
+        //ctx.quadraticCurveTo(points[i].x, points[i].y, points[i+1].x,points[i+1].y);
     }, []);
 
     return (
+        <Xwrapper>
         <div className="play">
             <SideBySideHome
             header="How To Play 🚀"
@@ -42,7 +67,9 @@ const HowToPlayPage = () => {
             splashBackground
             noLink
             ></SideBySideHome>
+            <div style={{position: 'relative'}}>
             <SideBySideFixed
+            index={1}
             imgPos="right" 
             firstMock={Home}
             firstMockIcon="🕹️"
@@ -52,7 +79,7 @@ const HowToPlayPage = () => {
             thirdMock={Create}
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
-                    <img src={Game} alt="Game Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Game} alt="Game Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__1"/>
                     Choosing a Game
                 </div>
             }
@@ -65,6 +92,7 @@ const HowToPlayPage = () => {
             }
             />
             <SideBySideFixed
+            index={2}
             imgPos="left"
             firstMock={CreatePrizes}
             firstMockIcon="🏆"
@@ -74,7 +102,7 @@ const HowToPlayPage = () => {
             thirdMockIcon="💸"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__2"/>
                     Joining a Game
                 </div>
             }
@@ -88,6 +116,7 @@ const HowToPlayPage = () => {
             }
             />
             <SideBySideFixed
+            index={3}
             imgPos="right"
             firstMock={Search}
             firstMockIcon="🔍"
@@ -99,7 +128,7 @@ const HowToPlayPage = () => {
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__3"/>
                     Make Smart Trades
                 </div>
             }
@@ -112,6 +141,7 @@ const HowToPlayPage = () => {
             }
             />            
             <SideBySideFixed
+            index={4}
             imgPos="left"
             firstMock={PortfolioChart}
             firstMockIcon="📈"
@@ -123,7 +153,7 @@ const HowToPlayPage = () => {
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__4"/>
                     Generate Returns
                 </div>
             }
@@ -136,6 +166,7 @@ const HowToPlayPage = () => {
             }
             />
             <SideBySideFixed
+            index={5}
             imgPos="right"
             firstMock={Leaderboard}
             firstMockIcon="👑"
@@ -147,7 +178,7 @@ const HowToPlayPage = () => {
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__5"/>
                     Profit & Learn
                 </div>
             }
@@ -160,6 +191,7 @@ const HowToPlayPage = () => {
             }
             />
              <SideBySideFixed
+             index={6}
             imgPos="left"
             firstMock={Analytics}
             firstMockIcon="🔮"
@@ -171,7 +203,7 @@ const HowToPlayPage = () => {
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point"/>
+                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__6"/>
                     Extra Tools
                 </div>
             }
@@ -184,12 +216,21 @@ const HowToPlayPage = () => {
                     <Row emoji="🧰" text="In our beta test everything worked. Nonetheless, if something breaks let us know and we will fix it asap." delay={750}/>
                 </div>
             }
-            />                      
-            {
-                //<canvas id="canvas" />
-            }
+            />    
+            </div>
+            {//<ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={2500}>
             
+            //<Xarrow 
+            //start={'play__point__1'}
+            //end={'play__point__2'}
+            ///>  
+            }
+            {//</ScrollAnimation>            
+            <canvas id="canvas" style={{position: 'absolute', width: '100vw', height: '100vh'}} />
+            }
         </div>
+        </Xwrapper>
+        
     )
 }
 
@@ -198,12 +239,13 @@ type RowProps = {
     emoji?: string;
     text: string | JSX.Element;
     delay: number;
+    multi?: boolean;
 }
 
-export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji}) => {
+export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji, multi}) => {
 
     return (
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={delay} className="play__row">
+        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={multi ? false : true} delay={delay} className="play__row">
             {
                 icon 
                 ?

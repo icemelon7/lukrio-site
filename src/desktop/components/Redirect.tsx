@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import '../../App.css';
 import './Redirect.styles.css';
 
-const Redirect = (props: {text: string, textColor?: string, url: string}) => {
+type RedirectProps = {
+    text: string;
+    textColor?: string;
+    url: string;
+    bottomLeft?: boolean;
+    noLink?: boolean;
+}
 
-    return (
-        <a href={props.url} style={{color: props.textColor ? props.textColor : 'black'}}className="redirect">
-            <span className="redirect__text link">{props.text} ⟶</span>
-        </a>
-    )
+const Redirect : FunctionComponent<RedirectProps> = ({text, textColor, url, bottomLeft, noLink}) => {
+
+    if (noLink) {
+        return (
+            <div style={bottomLeft ? {color: textColor ? textColor : 'black', bottom: '3.5vh', left: '2vw'} : {color: textColor ? textColor : 'black', top: '1.5vh', right: '2vw'}} className="redirect">
+                <span className="redirect__text link">{text} ⟶</span>
+            </div>
+        )
+    } else {
+        return (
+            <a href={url} style={bottomLeft ? {color: textColor ? textColor : 'black', bottom: '3.5vh', left: '2vw'} : {color: textColor ? textColor : 'black', top: '1.5vh', right: '2vw'}} className="redirect">
+                <span className="redirect__text link">{text} ⟶</span>
+            </a>
+        )    
+    }
+    
 }
 
 export default Redirect;

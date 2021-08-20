@@ -6,6 +6,7 @@ import 'animate.css/animate.min.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 type SideBySideFixedProps = {
+    index: number;
     header: string | JSX.Element;
     imgPos: "left" | "right";
     firstMock: string;
@@ -17,7 +18,7 @@ type SideBySideFixedProps = {
     content: JSX.Element;
 }
 
-const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({header, imgPos, firstMock, firstMockIcon, secondMock, secondMockIcon, thirdMock, thirdMockIcon, content, }) => {
+const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({index, header, imgPos, firstMock, firstMockIcon, secondMock, secondMockIcon, thirdMock, thirdMockIcon, content, }) => {
 
     return (
         <div className="side-fixed">
