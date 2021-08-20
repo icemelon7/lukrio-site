@@ -28,17 +28,17 @@ const AboutPage = () => {
             marginRight="3vw"
             />
             <div className="about__idea">
-                <div className="about__idea__content">
-                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce delay={500} className="about__idea__content__header">Why <Logo style={{width: 'auto', height: '2.6vw', objectFit: 'contain', marginLeft: '0.8vw', marginRight: '0.4vw'}}/>? Our Mission</ScrollAnimation>
+            <div className="about__idea__content">
+                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce delay={100} className="about__idea__content__header">Why <Logo style={{width: 'auto', height: '2.6vw', objectFit: 'contain', marginLeft: '0.8vw', marginRight: '0.4vw'}}/>? Our Mission</ScrollAnimation>
                     <div className="about__idea__content__inner">
-                        <Row emoji="" text="Even the investing playing field and help people learn investing in a fun and effective way." delay={600}/>
-                        <Row emoji="" text="Create a new asset class minimally correlated with market. Make money beating real people not the market." delay={800}/>
-                        <Row emoji="" text="Make investing social. Meet new friends, learn from successful mentors and represent your university or club." delay={1000}/>
+                        <Row emoji="🕹️" text="Even the investing playing field and help people learn investing in a fun and effective way." delay={200}/>
+                        <Row emoji="💎" text="Create a new asset class minimally correlated with market. Make money beating real people not the market." delay={400}/>
+                        <Row emoji="🍪" text="Make investing social. Meet new friends, learn from successful mentors and represent your university or club." delay={600}/>
                     </div>
                 </div>
                 <MockupPhone 
                 content={
-                    <video className="about__idea__video" autoPlay muted loop>
+                    <video className="about__idea__video" autoPlay muted loop style={{width: '100%', height: '100%'}}>
                         <source src={HomeMockup} type="video/mp4" />
                     </video>
                 }
@@ -46,8 +46,8 @@ const AboutPage = () => {
                 delay={500}
                 />
             </div>
-            <AboutTimeline />
             <Founders />
+            <AboutTimeline />
         </div>
     )
 }

@@ -94,7 +94,7 @@ const HowToPlayPage = () => {
             secondMock={StockCandleChart}
             secondMockIcon="🚀"
             thirdMock={BuyOrder}
-            thirdMockIcon="💸"
+            thirdMockIcon="📦"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
@@ -107,18 +107,18 @@ const HowToPlayPage = () => {
                 <div className="play__content">
                     <Row emoji="🔍"text="Search for US and EU equities (stocks) or ETFs to go long or short. Options, Crypto and more coming soon." delay={250}/>
                     <Row emoji="🚀" text="Find the next GME using candlestick chart and stock feed to discuss with competitors and see their trades." delay={500}/>
-                    <Row emoji="👑🍪" text="Submit market or limit orders to buy or sell (including short sell) based on real live market data." delay={750}/>
+                    <Row emoji="📦" text="Submit market or limit orders to buy or sell (including short sell) based on real live market data." delay={750}/>
                 </div>
             }
             />            
             <SideBySideFixed
             imgPos="left"
             firstMock={PortfolioChart}
-            firstMockIcon="🔍"
+            firstMockIcon="📈"
             secondMock={PortfolioPositions}
-            secondMockIcon="🤝"
+            secondMockIcon="🧭"
             thirdMock={Leaderboard}// single position view, ENSURE order of images and order of rows, and update icons
-            thirdMockIcon="💸"
+            thirdMockIcon="🗺️"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
@@ -129,20 +129,20 @@ const HowToPlayPage = () => {
             }
             content={
                 <div className="play__content">
-                    <Row emoji="🔍"text="Analyze your portfolio and trade to maximize your performance metric (absolute return or sharpe ratio)." delay={250}/>
-                    <Row emoji="🚀" text="Track performance of each position and see in one glance who your winners and losers are." delay={500}/>
-                    <Row emoji="👑🍪" text="View, modify or cancel trades for any position and manage your exposure to sectors and factors." delay={750}/>
+                    <Row emoji="📈"text="Analyze your portfolio and trade to maximize your performance metric (absolute return or sharpe ratio)." delay={250}/>
+                    <Row emoji="🧭" text="Track performance of each position and see in one glance who your winners and losers are." delay={500}/>
+                    <Row emoji="🗺️" text="View, modify or cancel trades for any position and manage your exposure to sectors and factors." delay={750}/>
                 </div>
             }
             />
             <SideBySideFixed
             imgPos="right"
             firstMock={Leaderboard}
-            firstMockIcon="🔍"
+            firstMockIcon="👑"
             secondMock={PortfolioPositions}//resultView
-            secondMockIcon="🤝"
+            secondMockIcon="💡"
             thirdMock={Analytics} // Balance View with modal showing Venmo and other options
-            thirdMockIcon="💸"
+            thirdMockIcon="💎"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
@@ -153,20 +153,20 @@ const HowToPlayPage = () => {
             }
             content={
                 <div className="play__content">
-                    <Row emoji="🔍"text="Win a percentage of the cash prize pool based on your performance tracked in the game's leaderboard." delay={250}/>
-                    <Row emoji="🚀" text="Receive customized portfolio feedback based on your trades in game and view statistics on your investing style." delay={500}/>
-                    <Row emoji="🍪" text="Withdraw or Deposit cash into Lukrio via Venmo. Turn your free $5 starting balance into $5,000." delay={750}/>
+                    <Row emoji="👑"text="Win a percentage of the cash prize pool based on your performance tracked in the game's leaderboard." delay={250}/>
+                    <Row emoji="💡" text="Receive customized portfolio feedback based on your trades and view statistics on your investing style." delay={500}/>
+                    <Row emoji="💎" text="Withdraw or Deposit cash into Lukrio via Venmo. Turn your free $5 starting balance into $5,000." delay={750}/>
                 </div>
             }
             />
              <SideBySideFixed
             imgPos="left"
             firstMock={Analytics}
-            firstMockIcon="🔍"
+            firstMockIcon="🔮"
             secondMock={Notifications}//resultView
-            secondMockIcon="🤝"
+            secondMockIcon="🛎️"
             thirdMock={Error}
-            thirdMockIcon="💸"
+            thirdMockIcon="🧰"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
@@ -179,9 +179,9 @@ const HowToPlayPage = () => {
                 <div className="play__content">
                     {//bell emoji 2nd
                     }
-                    <Row emoji="🔍"text="See what others on the Lukrio platform are investing in and get a feel for market sentiment." delay={250}/>
-                    <Row emoji="🚀" text="Get live notifications when your orders are filled, players join, competitors make large trades and more. " delay={500}/>
-                    <Row emoji="👑🍪" text="In our beta test everything worked. Nonetheless, if something breaks let us know and we will fix it asap." delay={750}/>
+                    <Row emoji="🔮"text="See what others on the Lukrio platform are investing in and get a feel for market sentiment." delay={250}/>
+                    <Row emoji="🛎️" text="Get live notifications when your orders are filled, players join, competitors make large trades and more. " delay={500}/>
+                    <Row emoji="🧰" text="In our beta test everything worked. Nonetheless, if something breaks let us know and we will fix it asap." delay={750}/>
                 </div>
             }
             />                      
