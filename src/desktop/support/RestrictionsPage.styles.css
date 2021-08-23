@@ -1,3 +1,46 @@
 .restrictions {
     position: relative;
 }
+
+.restrictions__content {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.restrictions__column {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    font-size: 1.2vw;
+    font-style: italic;
+}
+
+.restrictions__row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-style: normal !important;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.restrictions__row__emoji {
+    font-size: 3vw;
+    width: 5vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.restrictions__row__text {
+    font-size: 2.5vw;
+}
+
+.restrictions__location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
