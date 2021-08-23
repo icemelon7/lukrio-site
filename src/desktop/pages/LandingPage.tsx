@@ -6,6 +6,7 @@ import HeroImage from '../HeroImage';
 import SideBySideHome from '../SideBySideHome';
 import Analytics from '../views/Analytics';
 import FeatureIconDisplay from '../views/FeatureIcon';
+import Features from '../views/Features';
 
 const LandingPage = () => {
     const demoRef = useRef();
@@ -23,6 +24,7 @@ const LandingPage = () => {
           ></SideBySideHome>
           <FeatureIconDisplay/>
           <Analytics moreLink />
+          <Features moreLink />
         </div>
   );
 }

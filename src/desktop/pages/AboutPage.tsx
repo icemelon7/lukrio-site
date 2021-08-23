@@ -12,6 +12,7 @@ import HomeMockup from '../../assets/mockup_video.MP4';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Logo from '../components/Logo';
 import { Row } from './HowToPlayPage';
+import FeatureIconDisplay from '../views/FeatureIcon';
 
 const AboutPage = () => {
 
@@ -28,7 +29,7 @@ const AboutPage = () => {
             marginRight="3vw"
             />
             <div className="about__idea">
-            <div className="about__idea__content">
+                <div className="about__idea__content">
                     <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce delay={100} className="about__idea__content__header">Why <Logo style={{width: 'auto', height: '2.6vw', objectFit: 'contain', marginLeft: '0.8vw', marginRight: '0.4vw'}}/>? Our Mission</ScrollAnimation>
                     <div className="about__idea__content__inner">
                         <Row emoji="🕹️" text="Even the investing playing field and help people learn investing in a fun and effective way." delay={200}/>
@@ -46,8 +47,8 @@ const AboutPage = () => {
                 delay={500}
                 />
             </div>
+            <FeatureIconDisplay hideLink />
             <Founders />
-            <AboutTimeline />
         </div>
     )
 }

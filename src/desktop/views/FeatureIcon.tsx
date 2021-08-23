@@ -35,7 +35,7 @@ const FeatureIconDisplay : FunctionComponent<FeatureIconDisplayProps> = ({hideLi
     <div className="Desktop--FeatureIconDisplay--wrapper">
         {
             !hideLink ? 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about the vision" url="about/vision" textColor={LightMode.darkWhite}/></ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about about us" url="about/lukrio" textColor={LightMode.darkWhite}/></ScrollAnimation>
             :
             <div/>
         }

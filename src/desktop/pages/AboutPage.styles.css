@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
 }
 
 .about__idea__content {

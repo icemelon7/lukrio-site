@@ -9,6 +9,7 @@ import {ReactComponent as TeamWork} from '../../assets/figmaIcons/TeamWork.svg';
 import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Features from '../views/Features';
+import AboutTimeline from '../views/AboutTimeline';
 
 const VisionPage = () => {
 
@@ -23,6 +24,7 @@ const VisionPage = () => {
             marginRight='0vw'
             />
             <Features />
+            <AboutTimeline />
             <div className="vision__block">
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
                 <VisionRow 
@@ -43,7 +45,6 @@ const VisionPage = () => {
                 />
                 </ScrollAnimation>
             </div>
-            <FeatureIconDisplay hideLink />
         </div>
     )
 }

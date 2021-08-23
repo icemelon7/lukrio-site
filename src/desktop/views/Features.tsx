@@ -12,13 +12,27 @@ import {ReactComponent as Social} from '../../assets/figmaIcons/BankShake.svg';
 import Redirect from '../components/Redirect';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Features = () => {
+type FeaturesProps = {
+    moreLink?: boolean;
+}
+
+const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
 
     const [active, setActive] = useState<number>(1);
 
     return (
-        <div className="features">
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500} className="features__header">Upcoming <Logo style={{width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features</ScrollAnimation>
+        <div className="features-outer">
+            {
+                moreLink ?
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="about/vision" /></ScrollAnimation>
+                :
+                <div />
+            }
+            <div className="features">
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500} className="features__header">
+                Upcoming <Logo style={{width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features
+                
+            </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={750} className="features__selector">
                 <Feature 
                 index={1}
@@ -87,6 +101,7 @@ const Features = () => {
                 }
             </ScrollAnimation>
         </div>        
+        </div>
     )
 }
 
