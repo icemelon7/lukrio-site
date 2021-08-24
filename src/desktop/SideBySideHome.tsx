@@ -29,6 +29,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
     let first = true;
     let timer = useRef<NodeJS.Timeout>();
     let flickTimer = useRef<NodeJS.Timeout>();
+    console.log(window.innerHeight);
     useEffect(() => {
 
         if (clicked) {
@@ -52,14 +53,14 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         }
     }, [activeNum, clicked]);
     return (
-    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
+    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {maxHeight: '80vh', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
         {
             noLink ? 
             <div />
             :
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1200}><Redirect text="Learn more on how to play" url="/about/how-to-play"/></ScrollAnimation>
         }
-        <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce className="Desktop--SideBySide--text">
+        <ScrollAnimation offset={0} animateIn="animate__fadeInLeft" animateOnce className="Desktop--SideBySide--text">
             {splashBackground ? 
             <div style={{color: 'var(--teal-color)', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
             :
@@ -78,7 +79,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         {
             responsiveImage ?
             <MockupPhone 
-            style={{zoom: 0.7, marginLeft: '10vw'}}
+            style={{zoom: 0.7 * (window.innerHeight / 900), marginLeft: '10vw'}}
             content={
                 <img
                 className={`animate__animated ${flick ? 'animate__fadeInDown' : ''}`}

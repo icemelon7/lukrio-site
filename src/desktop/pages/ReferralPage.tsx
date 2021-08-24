@@ -25,7 +25,7 @@ const ReferralPage = () => {
             paddingTop="0vh"
             right={<CompetitiveSplash style={{width: '35vw', height: '70vh', zoom: 1, objectFit: 'cover'}}/>}
             disclaimer={
-                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={1600} className="disclaimer">
+                <ScrollAnimation offset={0} animateIn="animate__fadeInUp" animateOnce delay={1600} className="disclaimer">
                 *, ** Free starting balance and free referral bonuses requires verified email ending in .edu (e.g. joe@school.edu).
                 </ScrollAnimation>
             }
