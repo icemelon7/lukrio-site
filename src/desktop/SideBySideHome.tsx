@@ -52,7 +52,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         }
     }, [activeNum, clicked]);
     return (
-    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {paddingTop: '0px', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
+    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
         {
             noLink ? 
             <div />
@@ -66,7 +66,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             <a href={"/about/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
             }
             
-            <div className="Desktop--SideBySide--text__main" style={responsiveImage ? splashBackground ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'space-between', height: `${868*0.6-30-100}px`} : {}}>
+            <div className="Desktop--SideBySide--text__main" style={responsiveImage ? splashBackground ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {}}>
                 <Row index={1} key={`HomeRow.1`} delay={200} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Choose one of many daily games"/>
                 <Row index={2} key={`HomeRow.2`} delay={400} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Pay a cash buyin (e.g. $5) to join the game"/>
                 <Row index={3} key={`HomeRow.3`} delay={600} splashBackground={splashBackground} responsiveImage={responsiveImage} activeNum={activeNum} setActiveNum={setActiveNum} setClicked={setClicked} text="Make smart trades to grow your portfolio"/>

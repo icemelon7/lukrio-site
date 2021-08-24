@@ -245,7 +245,7 @@ type RowProps = {
 export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji, multi}) => {
 
     return (
-        <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={multi ? false : true} delay={delay} className="play__row">
+        <ScrollAnimation offset={0} animateIn="animate__fadeInUp" animateOnce={multi ? false : true} delay={delay} className="play__row">
             {
                 icon 
                 ?
