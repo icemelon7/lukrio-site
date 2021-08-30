@@ -2,6 +2,7 @@ import React from 'react';
 import Splash from '../components/Splash';
 import {ReactComponent as AnalyticsFigma} from '../../assets/figmaIcons/analytics.svg';
 import Analytics from '../views/Analytics';
+import Counters from '../views/Counters';
 
 const AnalyticsPage = () => {
 
@@ -13,6 +14,7 @@ const AnalyticsPage = () => {
             right={<AnalyticsFigma style={{width: '100%', height: 'auto', objectFit: 'contain'}} />}
             />
             <Analytics />
+            <Counters />
         </div>
     )
 }
