@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
@@ -18,32 +18,36 @@ import ResponsibleGamingPage from './support/ResponsibleGamingPage';
 import HowToPlayPage from './pages/HowToPlayPage';
 import LeaguesPage from './pages/LeaguesPage';
 
-function Desktop() {
+type DesktopProps = {
+  isBeta?: boolean;
+}
+
+const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
 
   return (
     <div style={{overflowX: 'hidden'}}>
       <Router>
         <Switch>
           <Route exact path="/" render={() => <NavBar isRelative isTransparent/>}/>
-          <Route path={["/about/analytics", "/about/lukrio", "/about/vision", "/about/leagues"]} render={() => <NavBar isTransparent />}/>
+          <Route path={["/analytics", "/lukrio", "/vision", "/leagues"]} render={() => <NavBar isTransparent />}/>
           <Route path="*" render={() => <NavBar isRelative/>}/>
         </Switch>
         <Switch>
-          <Route exact path="/" render={() => <LandingPage/>}/>
-          <Route exact path ="/referral" render={() => <ReferralPage/> }/>
-          <Route exact path="/about/how-to-play" render={() => <HowToPlayPage/>}/>
-          <Route exact path="/about/analytics" render={()=> <AnalyticsPage />}/>
-          <Route exact path="/about/vision" render={() => <VisionPage/>}/>
-          <Route exact path="/about/lukrio" render={() => <AboutPage />}/>
-          <Route exact path="/about/leagues" render={() => <LeaguesPage />}/>
+          <Route exact path="/" render={() => <LandingPage isBeta={isBeta}/>}/>
+          <Route exact path ="/referral" render={() => <ReferralPage isBeta={isBeta}/> }/>
+          <Route exact path="/how-to-play" render={() => <HowToPlayPage/>}/>
+          <Route exact path="/analytics" render={()=> <AnalyticsPage />}/>
+          <Route exact path="/vision" render={() => <VisionPage/>}/>
+          <Route exact path="/lukrio" render={() => <AboutPage />}/>
+          <Route exact path="/leagues" render={() => <LeaguesPage />}/>
           <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
           <Route exact path="/tos" render={() => <TOSPage/>}/>
-          <Route exact path="/support/rules" render={() => <RulesPage />}/>
-          <Route exact path="/support/restrictions" render={() => <RestrictionsPage/>}/>
-          <Route exact path="/support/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>
+          <Route exact path="/rules" render={() => <RulesPage />}/>
+          <Route exact path="/restrictions" render={() => <RestrictionsPage/>}/>
+          <Route exact path="/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>
           <Route path="*" render={() => <NotFoundPage />}/>
         </Switch>
-        <Footer/>
+        <Footer isBeta={isBeta}/>
       </Router>
     </div>
     

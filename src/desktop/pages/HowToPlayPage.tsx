@@ -20,6 +20,9 @@ import SideBySideHome from '../SideBySideHome';
 import './HowToPlayPage.styles.css';
 import Game from '../../assets/playIcons/gaming.png';
 import Gambling from '../../assets/playIcons/gambling.png';
+import {ReactComponent as AbsReturn } from '../../assets/playIcons/abs_return_color_bg.svg';
+import {ReactComponent as Equities } from '../../assets/playIcons/equities_color_bg.svg';
+
 import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollMagic from 'scrollmagic';
 import {TimelineMax, TweenMax} from 'gsap';
@@ -125,10 +128,10 @@ const HowToPlayPage = () => {
             thirdMock={BuyOrder}
             thirdMockIcon="📦"
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', width: '100%', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__3"/>
+                    <AbsReturn style={{marginRight: '1vw', width: '30%', height: 'auto', objectFit: 'contain'}} className="play__point" id="play__point__3"/>
                     Make Smart Trades
                 </div>
             }
@@ -153,7 +156,7 @@ const HowToPlayPage = () => {
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
-                    <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__4"/>
+                    <Equities style={{marginRight: '1vw', width: '30%', height: 'auto', objectFit: 'contain'}} className="play__point" id="play__point__4"/>
                     Generate Returns
                 </div>
             }

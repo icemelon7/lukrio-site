@@ -22,7 +22,7 @@ const RestrictionsPage = () => {
             />
             <div className="restrictions__content">
                 <div className="restrictions__column">
-                    <Row emoji="🕹️" text="Location Restrictions" delay={300}/>
+                    <Row emoji="🗺️" text="Location Restrictions" delay={300}/>
                     <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={400}>
                         <p>Unfortunately, you cannot play if you are located outside of Germany or the United States.</p>
                         <p>Within the US, you cannot play if you are located in one of the following states:</p>
@@ -48,9 +48,9 @@ const RestrictionsPage = () => {
                         
                 </div>
                 <div className="restrictions__column">
-                    <Row emoji="🕹️" text="Age Restrictions" delay={300}/>
+                    <Row emoji="🔞" text="Age Restrictions" delay={300}/>
                     <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500}>Users have to be 18 to play. To verify this, Lukrio asks you to confirm your date of birth during registration.</ScrollAnimation>
-                    <Row emoji="🕹️" text="Fraud Restrictions" delay={0}/>
+                    <Row emoji="🚫" text="Fraud Restrictions" delay={0}/>
                     <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={0}>
                         <p>We are committed to making Lukrio a fun and safe environment.</p>
                         <p>We proactively monitor for fraud, cheating, and collusion.</p>

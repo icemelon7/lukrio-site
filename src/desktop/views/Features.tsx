@@ -71,7 +71,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                         </>
                     }
                     right={<Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
-                    redirect={<Redirect bottomLeft text="Lean more about Lukrio Leagues" url="/about/leagues"/>}
+                    redirect={<Redirect bottomLeft text="Lean more about Lukrio Leagues" url="/leagues"/>}
                     />
                     :
                     active === 2 ? 

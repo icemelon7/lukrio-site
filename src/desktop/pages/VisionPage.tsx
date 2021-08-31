@@ -22,6 +22,7 @@ const VisionPage = () => {
             right={<img className="vision__img" src={Rocket} alt="Vision Rocket Emoji" />}
             leftWidth='45vw'
             marginRight='0vw'
+            height="80vh"
             />
             <Features />
             <AboutTimeline />

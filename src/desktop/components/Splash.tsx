@@ -12,12 +12,13 @@ type SplashProps = {
     marginRight?: string;
     disclaimer?: JSX.Element;
     paddingTop?: string;
+    height?: number | string;
 }
 
-const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer}) => {
+const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer, height}) => {
 
     return (
-        <div className="splash" style={{paddingTop: paddingTop ?? '15vh'}}>
+        <div className="splash" style={{paddingTop: paddingTop ?? '15vh', height: height ?? 'auto'}}>
             <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
                 {disclaimer ?? undefined}
                 {

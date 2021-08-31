@@ -16,12 +16,13 @@
   max-height: 90vh;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 .Desktop--TextBox {
   position: absolute;
-  width: 45vw;
-  height: 30vw;
+  top: 50vh;
+  left: 7.5vw;
   align-items: center;
   display: flex;
   align-items: center;

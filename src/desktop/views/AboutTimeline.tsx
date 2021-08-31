@@ -62,7 +62,7 @@ const AboutTimeline = () => {
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<Apple />}
             >
-                <h3 onClick={() => window.location.href = 'https://appstore.com'} className="vertical-timeline-element-title altLink about__timeline__title">App Store Launch</h3>
+                <h3 onClick={() => window.location.href = '/referral'} className="vertical-timeline-element-title altLink about__timeline__title">App Store Launch</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
@@ -73,7 +73,7 @@ const AboutTimeline = () => {
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<BarChart />}
             >
-                <h3 onClick={() => window.location.href = "/about/leagues"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Leagues</h3>
+                <h3 onClick={() => window.location.href = "/leagues"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Leagues</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"

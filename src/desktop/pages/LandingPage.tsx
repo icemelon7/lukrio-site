@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useRef } from 'react';
+import { FunctionComponent, useRef } from 'react';
 import Podium from '../../assets/podium.png';
 import '../App.css';
 import HeroImage from '../HeroImage';
@@ -8,12 +8,16 @@ import Analytics from '../views/Analytics';
 import FeatureIconDisplay from '../views/FeatureIcon';
 import Features from '../views/Features';
 
-const LandingPage = () => {
+type LandingPageProps = {
+  isBeta?: boolean;
+}
+
+const LandingPage : FunctionComponent<LandingPageProps> = ({isBeta}) => {
     const demoRef = useRef();
     const detailsRef = useRef();
     return (
         <div className="LandingPage">
-          <HeroImage demoRef={demoRef} detailsRef={detailsRef} liveStore/>
+          <HeroImage isBeta={isBeta} demoRef={demoRef} detailsRef={detailsRef} />
           {//<SignupSideBySide demoRef={demoRef}/>
           }
           <SideBySideHome

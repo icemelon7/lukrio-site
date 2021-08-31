@@ -17,15 +17,18 @@ function App() {
     }
   });
 
+  // Show Apple/Google Play or beta
+  const isBeta = true;
+
   const _handleResize = () => {
     console.log(window.innerWidth);
     setWidth(window.innerWidth);
   }
 
   if (width >= 1024) {
-    return <CookiesProvider><Desktop /></CookiesProvider>
+    return <CookiesProvider><Desktop isBeta={isBeta} /></CookiesProvider>
   } else {
-    return <CookiesProvider><Mobile /></CookiesProvider>
+  return <CookiesProvider><Mobile isBeta={isBeta} /></CookiesProvider>
   }
 }
 
