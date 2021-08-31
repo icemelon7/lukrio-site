@@ -13,6 +13,8 @@ import Social from '../assets/Social.png';
 
 import Podium from '../assets/podium.png';
 import Rocket from '../assets/rocket.png';
+import LandingBackground from './components/LandingBackground';
+import LandingPage from './pages/LandingPage';
 
 type MobileProps = {
   isBeta?: boolean;
@@ -20,6 +22,10 @@ type MobileProps = {
 
 const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
   return (
+    <LandingPage isBeta={isBeta}/>
+  );
+  /*
+  
     <div className="LandingPage">
       <HeroImage></HeroImage>
       <SideBySide
@@ -47,7 +53,8 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
       ></SideBySideFlipped>
       <FeatureIconDisplay></FeatureIconDisplay>
     </div>
-  );
+
+    */
 }
 
 export default Mobile;

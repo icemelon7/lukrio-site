@@ -1,7 +1,13 @@
 .SideBySide--container {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-color: #ffffff;
+    position: relative;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 99vw;
 }
 
 .SideBySide--wrapper {
