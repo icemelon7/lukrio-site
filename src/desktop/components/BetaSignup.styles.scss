@@ -17,6 +17,7 @@
     opacity: 0.3;
     transition: all 0.3s ease;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .betaSignup__button:hover {
@@ -37,12 +38,13 @@
   }
   
   .Desktop--Main--form__input {
-    margin-top: 25px !important;
+    position: relative !important;
     height: 45px !important;
     width: 350px !important;
     padding-left: 10px !important;
     border-width: 0px !important;
     margin: 0 10px 0 0 !important;
+    margin-right: 20px !important;
   }
   
   .Desktop--Header--logo__image {
@@ -91,7 +93,7 @@
   
   .Desktop--Main--form__input {
     height: 45px !important;
-    width: 90%;
+    width: 300px !important;
     margin: auto;
     padding-left: 10px;
     border-width: 0px;
@@ -161,3 +163,94 @@
     font-size: 16px;
     font-style: italic;
   }
+
+  .input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+  }
+  label {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+  }
+  input:invalid {
+    outline: 0;
+    color: aqua;
+    border-color: aqua;
+  }
+  input:focus,
+  input:valid {
+    border-color: aqua;
+  }
+  input:focus~label,
+  input:valid~label {
+    font-size: 18px;
+    top: -26px;
+    color: aqua;
+  }
+
+  .input {
+    position:relative;
+    font-size: 1em;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 3px;
+    display: inline-block;
+    border-radius: 9999em;
+    *:not(span) {
+      position: relative;
+      display: inherit;
+      border-radius: inherit;
+      margin: 0;
+      border: none;
+      outline: none;
+      padding: 0 .325em;
+      z-index: 1; // needs to be above the :focus span
+      
+      // summon fancy shadow styles when focussed
+      &:focus + span {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    // we don't animate box-shadow directly as that can't be done on the GPU, only animate opacity and transform for high performance animations.
+    span {
+      
+      transform: scale(.993, .94); // scale it down just a little bit
+      transition: transform .5s, opacity .25s;
+      opacity: 0; // is hidden by default
+      
+      position:absolute;
+      z-index: 0; // needs to be below the field (would block input otherwise)
+      margin:4px; // a bit bigger than .input padding, this prevents background color pixels shining through
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      border-radius: inherit;
+      pointer-events: none; // this allows the user to click through this element, as the shadow is rather wide it might overlap with other fields and we don't want to block those.
+      
+      // fancy shadow styles
+      box-shadow: inset 0 0 0 3px #fff,
+        0 0 0 4px #fff,
+        3px -3px 30px #1beabd, 
+        -3px 3px 30px #10abff;
+    }
+    
+  }
+  
