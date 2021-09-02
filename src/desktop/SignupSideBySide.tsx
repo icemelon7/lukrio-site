@@ -90,6 +90,7 @@ const SignupSideBySide = ({demoRef} : {demoRef: any}) => {
                 <div className="Desktop--SideBySide--text">
                     <div className="Desktop--SideBySide--text__header">Join a new generation of investors</div>
                     <div className="Desktop--SideBySide--text__main">A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level.</div>
+                    <div className="Desktop--SideBySide--text__main">Experience Fantasy Sports with Stocks</div>
                 </div>
                 {
                   (submitted && submitted?.status === 200) ?

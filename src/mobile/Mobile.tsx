@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Mobile.css';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import HeroImage from "./HeroImage";
 import FeatureIconDisplay from "./FeatureIcon";
 import SideBySide from './SideBySide';
@@ -14,7 +14,11 @@ import Social from '../assets/Social.png';
 import Podium from '../assets/podium.png';
 import Rocket from '../assets/rocket.png';
 
-function Mobile() {
+type MobileProps = {
+  isBeta?: boolean;
+}
+
+const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
   return (
     <div className="LandingPage">
       <HeroImage></HeroImage>

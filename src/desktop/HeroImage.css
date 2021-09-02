@@ -13,16 +13,16 @@
 
 .Desktop--Main{
   width: 100%;
-  height: auto;
-  max-height: 100vh;
+  max-height: 90vh;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 .Desktop--TextBox {
   position: absolute;
-  width: 45vw;
-  height: 30vw;
+  top: 50vh;
+  left: 7.5vw;
   align-items: center;
   display: flex;
   align-items: center;
@@ -31,6 +31,23 @@
 
 .Desktop--Fill {
   background-color: #4d1168;
+}
+
+.HeroImage__stores {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.store-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  zoom: 0.9;
+}
+
+.store-btn:hover {
+  opacity: 0.7;
 }
 
 .Desktop--Button {

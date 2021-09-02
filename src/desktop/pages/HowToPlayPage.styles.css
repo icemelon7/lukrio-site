@@ -1,0 +1,33 @@
+.play {
+    display: flex;
+    flex-direction: column;
+}
+
+.play-phone {
+    zoom: 0.7;
+    margin-left: 10vw;
+}
+
+.play__content {
+    padding-left: 4vw;
+    width: 40vw;
+}
+
+.play__row {
+    display: flex;
+    align-items: center;
+    margin-top: 4.5vh;
+    margin-bottom: 4.5vh;
+}
+
+.play__row__icon-emoji {
+    font-size: 2vw;
+    width: 2vw;
+}
+
+.play__row__text {
+    font-size: 1.3vw;
+    font-weight: 400;
+    font-style: italic;
+    margin-left: 3vw;
+}

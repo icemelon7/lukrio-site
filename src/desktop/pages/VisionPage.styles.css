@@ -1,0 +1,21 @@
+.vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vision__img {
+    width: 25vw;
+    height: 100%;
+    object-fit: contain;
+}
+
+.vision__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
