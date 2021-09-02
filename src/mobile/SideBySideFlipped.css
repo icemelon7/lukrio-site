@@ -1,0 +1,100 @@
+.SideBySide--container--flipped {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+}
+
+.SideBySide--container--flipped {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f6f6f6;
+}
+.SideBySide--wrapper--flipped {
+    display: flex;
+    justify-content: center;
+}
+
+.SideBySide--text--flipped {
+    max-width: 500px;
+    padding-left: 175px;
+
+}
+.SideBySide--text__header--flipped {
+    line-height: normal;
+    font-size: 48px;
+    font-weight: bold;
+    margin-left: -3px;
+}
+.SideBySide--text__main--flipped {
+    font-size: 20px;
+    padding-top: 25px;
+    width: 400px;
+}
+
+.SideBySide--spacer__flipped {
+    width: 200px;
+}
+
+.SideBySide--image__container--flipped {
+    width: 300px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 1650px) {
+    .SideBySide--container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: #ffffff;
+        justify-content: center;
+    }
+    
+    .SideBySide--container--flipped {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: #f6f6f6;
+    }
+    .SideBySide--wrapper--flipped {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .SideBySide--text--flipped {
+        max-width: 100%;
+        padding-left: 50px;
+        padding-right: 50px; 
+        padding-top: 50px;
+    }
+    .SideBySide--text__header--flipped {
+        line-height: normal;
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 0px;
+        text-align: center;
+        width: 100%;
+
+    }
+    .SideBySide--text__main--flipped {
+        font-size: 20px;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+
+    }
+    
+    .SideBySide--spacer__flipped {
+        width: 200px;
+    }
+    
+    .SideBySide--image__container--flipped {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        max-width: 200px;
+        max-height: 200px;
+
+    }
+    
+}
