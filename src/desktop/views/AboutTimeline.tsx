@@ -95,7 +95,7 @@ const AboutTimeline = () => {
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<School />}
             >
-                <h3 onClick={() => window.location.href="/about/vision"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Education</h3>
+                <h3 onClick={() => window.location.href="/vision"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Education</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
@@ -106,7 +106,7 @@ const AboutTimeline = () => {
             iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
             icon={<Social />}
             >
-                <h3 onClick={() => window.location.href = "/about/vision"}className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Social</h3>
+                <h3 onClick={() => window.location.href = "/vision"}className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Social</h3>
             </VerticalTimelineElement>
         </VerticalTimeline>
     </div>

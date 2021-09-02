@@ -1,5 +1,8 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import Create from '../../assets/mockups/create.png';
+import JoinGame from '../../assets/mockups/joinGame.png';
+import Balance from '../../assets/mockups/balance.png';
+import PositionView from '../../assets/mockups/positionView.png';
 import Home from '../../assets/mockups/home.png';
 import Lobby from '../../assets/mockups/lobby.png';
 import CreatePrizes from '../../assets/mockups/createPrizes.png';
@@ -101,7 +104,7 @@ const HowToPlayPage = () => {
             firstMockIcon="🏆"
             secondMock={InviteFriendsLoading}
             secondMockIcon="🤝"
-            thirdMock={Create} // join game view
+            thirdMock={JoinGame} // join game view
             thirdMockIcon="💸"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
@@ -150,7 +153,7 @@ const HowToPlayPage = () => {
             firstMockIcon="📈"
             secondMock={PortfolioPositions}
             secondMockIcon="🧭"
-            thirdMock={Leaderboard}// single position view, ENSURE order of images and order of rows, and update icons
+            thirdMock={PositionView}// single position view, ENSURE order of images and order of rows, and update icons
             thirdMockIcon="🗺️"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
@@ -173,9 +176,9 @@ const HowToPlayPage = () => {
             imgPos="right"
             firstMock={Leaderboard}
             firstMockIcon="👑"
-            secondMock={PortfolioPositions}//resultView
+            secondMock={PortfolioPositions}// TODO: ResultView
             secondMockIcon="💡"
-            thirdMock={Analytics} // Balance View with modal showing Venmo and other options
+            thirdMock={Balance} // Balance View with modal showing Venmo and other options
             thirdMockIcon="💎"
             header={
                 <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 

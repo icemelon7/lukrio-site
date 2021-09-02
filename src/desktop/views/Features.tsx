@@ -7,8 +7,8 @@ import { LightMode } from '../../Colors';
 import Logo from '../components/Logo';
 import { Row } from '../pages/HowToPlayPage';
 import {ReactComponent as Leagues} from '../../assets/figmaIcons/BankShake.svg';
-import {ReactComponent as Education} from '../../assets/figmaIcons/BankShake.svg';
-import {ReactComponent as Social} from '../../assets/figmaIcons/BankShake.svg';
+import {ReactComponent as Education} from '../../assets/figmaIcons/Budgeting.svg';
+import {ReactComponent as Social} from '../../assets/figmaIcons/CoinWall.svg';
 import Redirect from '../components/Redirect';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -24,7 +24,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
         <div className="features-outer">
             {
                 moreLink ?
-                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="about/vision" /></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="vision" /></ScrollAnimation>
                 :
                 <div />
             }
@@ -70,7 +70,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🚀" text="Increase your recruiting chances with investing clubs and hedge funds by developing a demonstrated track record." delay={400}/>
                         </>
                     }
-                    right={<Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={<Leagues style={{width: '25vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft text="Lean more about Lukrio Leagues" url="/leagues"/>}
                     />
                     :
@@ -83,7 +83,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🔮" text="Visualize the impact of your decisions through simulations showcasing different portfolio values as a result of key trades." delay={400}/>
                         </>
                     }
-                    right={<Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={<Education style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft noLink text="Learn more about Lukrio Education (Coming Soon)" url="" textColor={LightMode.darkGrey}/>}
                     />
                     :
@@ -95,7 +95,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🎉" text="Keep it fun with our easy to use finmeme maker. Find your favourite templates within seconds and edit as you please." delay={400}/>
                         </>
                     }
-                    right={<Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={<Social style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft noLink text="Learn more about Lukrio Social (Coming Soon)" url="" textColor={LightMode.darkGrey}/>}
                     />
                 }

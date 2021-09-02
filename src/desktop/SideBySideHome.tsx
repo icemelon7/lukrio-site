@@ -7,6 +7,8 @@ import Redirect from './components/Redirect';
 import Home from '../assets/mockups/home.png';
 import PortfolioPositions from '../assets/mockups/portfolioPositions.png';
 import Leaderboard from '../assets/mockups/leaderboard.png';
+import JoinGame from '../assets/mockups/joinGame.png';
+import Balance from '../assets/mockups/balance.png'
 import 'animate.css';
 import MockupPhone from './components/mockupComponents/MockupPhone';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -41,8 +43,9 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000 + (first ? 2000 : 0));
         }
         first = false;
+        setFlick(false);
         setFlick(true);
-        flickTimer.current = setTimeout(() => setFlick(false), 1800);
+        flickTimer.current = setTimeout(() => setFlick(false), 1500);
         return () => {
             if (timer.current) {
                 clearTimeout(timer?.current as NodeJS.Timeout);
@@ -58,13 +61,13 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             noLink ? 
             <div />
             :
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1200}><Redirect text="Learn more on how to play" url="/about/how-to-play"/></ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1200}><Redirect text="Learn more on how to play" url="/how-to-play"/></ScrollAnimation>
         }
         <ScrollAnimation offset={0} animateIn="animate__fadeInLeft" animateOnce className="Desktop--SideBySide--text">
             {splashBackground ? 
             <div style={{color: 'var(--teal-color)', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
             :
-            <a href={"/about/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
+            <a href={"/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
             }
             
             <div className="Desktop--SideBySide--text__main" style={responsiveImage ? splashBackground ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {}}>
@@ -82,8 +85,8 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             style={{zoom: 0.7 * (window.innerHeight / 900), marginLeft: '10vw'}}
             content={
                 <img
-                className={`animate__animated ${flick ? 'animate__fadeInDown' : ''}`}
-                src={activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard}
+                className={`animate__animated ${flick ? 'animate__zoomIn' : ''}`}
+                src={activeNum === 1 ? Home : activeNum === 2 ? JoinGame : activeNum === 3 ? PortfolioPositions : activeNum === 4 ? Leaderboard : activeNum === 5 ? Balance : Home}
                 alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>}
             isRotate
             onClick={() => activeNum === 1 ? true : false}
