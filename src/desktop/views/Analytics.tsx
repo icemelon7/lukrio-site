@@ -60,7 +60,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                     Satisfy your curiosity or use Analytics as alternative data to make better trades.
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={400} className="analytics__container__demo">
-                        Try out live interactive demo on the left
+                        Live Interactive Demo (Left) Coming Soon!
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500}>
                 <a href="referral" className="analytics__container__available">

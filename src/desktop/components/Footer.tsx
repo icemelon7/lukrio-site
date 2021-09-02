@@ -19,7 +19,7 @@ const Footer : FunctionComponent<FooterProps> = ({isBeta}) => {
                     {name: "About Us", url: "/lukrio"},
                     {name: "The Vision", url: "vision"},
                     {name: "Lukrio Analytics", url: "analytics"},
-                    {name: "Lukrio Leagues", url: "leagues"},
+                    //{name: "Lukrio Leagues", url: "leagues"},
                 ]}/>
                 <Section title="Play" links={[
                     isBeta ? {name: "Get Lukrio Beta (iOS)", url: "referral"} :
