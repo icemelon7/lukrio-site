@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import "./Footer.styles.css";
 import Logo from './Logo';
 import {ReactComponent as InstaLogo} from '../../assets/socials/logo-instagram.svg';
 import {ReactComponent as LinkedInLogo} from '../../assets/socials/logo-linkedin.svg';
 import {ReactComponent as TwitterLogo} from '../../assets/socials/logo-twitter.svg';
-const Footer = () => {
+
+type FooterProps = {
+    isBeta?: boolean;
+}
+
+const Footer : FunctionComponent<FooterProps> = ({isBeta}) => {
 
     return (
         <div className="footer">
             <div className="footer__row">
                 <Section title="About" links={[
-                    {name: "How To Play", url: "about/how-to-play"},
-                    {name: "The Vision", url: "about/vision"},
-                    {name: "FAQ", url: "about/faq"},
-                    {name: "Lukrio Leagues", url: "about/leagues"},
-                    {name: "Lukrio Analytics", url: "about/analytics"},
+                    {name: "How To Play", url: "/how-to-play"},
+                    {name: "About Us", url: "/lukrio"},
+                    {name: "The Vision", url: "vision"},
+                    {name: "Lukrio Analytics", url: "analytics"},
+                    //{name: "Lukrio Leagues", url: "leagues"},
                 ]}/>
                 <Section title="Play" links={[
+                    isBeta ? {name: "Get Lukrio Beta (iOS)", url: "referral"} :
                     {name: "Download Lukrio (iOS)", url: "https://www.appstore.com"},
                     {name: "Coming Soon: Lukrio (Anroid)", url: "", deactivated: true},
                     {name: "Coming Soon: Lukrio (Web)", url: "", deactivated: true},
@@ -26,9 +32,10 @@ const Footer = () => {
             }
             <div className="footer__row">
                 <Section title="Support" links={[
-                    {name: "Responsible Gaming", url: "support/responsible-gaming"},
-                    {name: "Restrictions", url: "support/restrictions"},
-                    {name: "Rules TL;DR", url: "support/rules"}
+                    {name: "Responsible Gaming", url: "responsible-gaming"},
+                    {name: "Restrictions", url: "restrictions"},
+                    //{name: "Rules TL;DR", url: "rules"},
+                    {name: "Careers", url: ""}
                 ]}/>
                 <div className="footer__copyright">
                     <Logo style={{width: '10vw', marginBottom: '1vh'}} />
@@ -36,9 +43,9 @@ const Footer = () => {
                     <div className="footer__copyright__row">
                         
                         <div className="footer__copyright__row__legal">
-                            <a className="footer__copyright__row__legal__link" href="www.lukrio.com/privacy">Privacy Policy</a>
+                            <a className="footer__copyright__row__legal__link" href="/privacy">Privacy Policy</a>
                             <div className="footer__copyright__row__legal__spacer">|</div>
-                            <a className="footer__copyright__row__legal__link" href="www.lukrio.com/tou">Terms of Use</a>
+                            <a className="footer__copyright__row__legal__link" href="/tou">Terms of Use</a>
                         </div>
                         <div className="footer__copyright__row__socials">
                             <div className="footer__copyright__row__socials__outer">

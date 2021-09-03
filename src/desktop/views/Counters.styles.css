@@ -1,0 +1,30 @@
+.counters {
+    display: flex;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+    background-color: var(--darkBlue);
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 25vw;
+}
+
+.counter__value {
+    font-size: 3.6vw;
+    font-weight: 700;
+    color: var(--darkWhite);
+}
+
+.counter__text {
+    font-size: 1.6vw;
+    color: var(--darkGrey);
+    text-align: center;
+}

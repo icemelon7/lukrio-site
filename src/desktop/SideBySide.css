@@ -33,13 +33,14 @@
     background-color: #f6f6f6;
     display: flex;
     justify-content: center;
+    align-items: center;
     justify-self: center;
     width: 99vw;
 }
 
 .Desktop--SideBySide--header {
     line-height: normal;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: bold;
     cursor: pointer;
     color: black;
@@ -52,7 +53,6 @@
 }
 
 .Desktop--SideBySide--text__main {
-    font-size: 24px;
     padding-top: 30px;
 }
 
@@ -69,7 +69,7 @@
     height: 375px;
 }
 
-.row {
+.home-row {
     display: flex;
     align-items: center;
     margin-top: 1.5vh;
