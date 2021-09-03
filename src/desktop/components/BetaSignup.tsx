@@ -120,7 +120,7 @@ const BetaSignup = ({}) => {
                 <div style={{display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center'}}>
                 <div style={{position: 'relative'}}>
                   <span className="input">
-                    <input style={{color: 'aqua' }} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
+                    <input style={{color: 'aqua'}} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
                     <span></span>
                   </span>
                   
