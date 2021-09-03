@@ -1,0 +1,33 @@
+.mockup-phone {
+  zoom: 0.6;
+}
+
+.mockup-icon {
+  position: relative;
+  margin-bottom: -50px;
+  margin-left: -10px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--teal-color);
+  border: 2px solid var(--darkBlue);
+  border-radius: 37.5px;
+  z-index: 999;
+}
+
+.rotate-mockup {
+    margin-top: -70px;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.45s;
+    transform: perspective(1400px) rotateY( -20deg) rotateX( 10deg) rotateZ( 6deg) scale(0.8) translateY(6%);
+  }
+  
+.rotate-mockup:hover {
+    transform: perspective(1000px) rotateY( 0deg) rotateX( 0deg) rotateZ( 0deg) scale(0.95) translateY(8%);
+}

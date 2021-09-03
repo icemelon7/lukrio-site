@@ -1,0 +1,80 @@
+@media only screen and (min-width: 1024px) {
+    .Desktop--FeatureIconDisplay--wrapper {
+        background-color: #1e2d5e;
+        display: flex;
+        justify-content: center;
+        flex-direction: row !important;
+        padding-top: 0 !important;
+        width: 100vw;
+        position: relative;
+    }
+
+    .Desktop--FeatureIconBlock--wrapper {
+        height: 290px !important;
+        width: 19vw !important;
+        margin: 70px 50px 1vw 1vw !important;
+        text-align: center !important;
+        padding: 15px !important;
+        transition: all 0.3s ease 0s; 
+    }
+
+    .Desktop--FeatureIconBlock--wrapper:hover {
+        transform: translateY(-3px);
+        /* box-shadow:#28A745 0px 5px 0px; */
+        box-shadow: 0 0.313rem 0.875rem rgb(255 255 255  / 30%);
+    }
+
+    .Desktop--FeatureIconBlock--wrapper:hover::after {
+        opacity: 1;
+    }
+
+    .Desktop--FeatureIconBlock--wrapper::after {
+    transition: all 0.3s ease;
+    top: 100%;
+    left: 48px;
+    border: transparent;
+    content: " ";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background-color: #28A745;
+    opacity: 0;
+    margin-left: -48px;
+    }
+}
+
+.Desktop--FeatureIconDisplay--wrapper {
+    background-color: #1e2d5e;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 300px;
+    padding-bottom: 50px;
+}
+
+.Desktop--FeatureIconBlock--wrapper {
+    height: 275px;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+}
+
+.Desktop--FeatureIconBlock--icon {
+    width: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.Desktop--FeatureIconBlock--text__header {
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+
+.Desktop--FeatureIconBlock--text__subtitle {
+    color: #6c737d;
+    font-size: 0.9vw;
+    width: 300px;
+}
