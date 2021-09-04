@@ -38,7 +38,7 @@ const Footer : FunctionComponent<FooterProps> = ({isBeta}) => {
                     {name: "Careers", url: ""}
                 ]}/>
                 <div className="footer__copyright">
-                    <Logo style={{width: '10vw', marginBottom: '1vh'}} />
+                    <Logo style={window.innerWidth < 1024 ? {width: '30vw', marginBottom: '1vh'} : {width: '10vw', marginBottom: '1vh'}} />
                     
                     <div className="footer__copyright__row">
                         

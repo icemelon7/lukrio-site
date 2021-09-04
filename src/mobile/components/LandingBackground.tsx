@@ -10,8 +10,8 @@ const LandingBackground : FunctionComponent<LandingBackgroundProps> = ({isBeta})
 
     return (
         <div className="landing">
-            <video id="background-video" autoPlay muted loop>
-            <source src={video} type="video/mp4"/>
+            <video id="background-video" playsInline autoPlay muted loop>
+                <source src={video} type="video/mp4"/>
             </video>
         </div>
     )
