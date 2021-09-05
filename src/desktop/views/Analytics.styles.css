@@ -32,13 +32,13 @@
     font-size: 3vw;
     font-weight: bold;
     cursor: pointer;
-    color: var(--darkBlue);
+    color: #1e6091;
     transition: all 0.3s ease-in-out;
     margin-bottom: 1vh;
 }
 
 .analytics__container__header:hover {
-    color: var(--teal-color);
+    color: #51b69a;
     text-decoration: none;
 }
 
@@ -52,7 +52,7 @@
     float: left;
     align-items: center;
     color: white;
-    background-color: var(--darkBlue);
+    background-color: #1e6091;
     border-radius: 50px;
     width: auto;
     font-size: 1.6vw;
@@ -61,7 +61,7 @@
 }
 
 .analytics__container__available:hover {
-    color: var(--teal-color);
+    color: #51b69a;
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin-top: 5vh;
-    background-color: var(--teal-color);
+    background-color: #51b69a;
     display: inline-block;
     color: white;
     font-size: 1.6vw;
@@ -91,7 +91,7 @@
     margin-top: 2vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    background-color: var(--red);
+    background-color: #E33F64;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,7 +143,7 @@
     margin-top: 2vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    background-color: var(--darkGrey);
+    background-color: #7e7e7e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,3 +159,146 @@
     margin-top: 2vh;
     font-style: italic;
 }
+
+@media only screen and (max-width: 1024px) {
+    .analytics {
+        width: 100vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .analytics__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10vw;
+    }
+    
+    .analytics__phone {
+        zoom: 0.6;
+    }
+    
+    .analytics__container {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .analytics__container__header {
+        line-height: normal;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+        color: #1e6091;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 1vh;
+    }
+    
+    .analytics__container__header:hover {
+        color: #51b69a;
+        text-decoration: none;
+    }
+    
+    .analytics__container__available {
+        margin-top: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        display: flex;
+        float: left;
+        align-items: center;
+        color: white;
+        background-color: #1e6091;
+        border-radius: 50px;
+        width: auto;
+        font-size: 0.5em;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .analytics__container__available:hover {
+        color: #51b69a;
+        text-decoration: none;
+    }
+    
+    .analytics__container__row {
+        display: flex;
+        align-items: center;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
+    
+    .analytics__container__demo {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        margin-top: 5vh;
+        background-color: #51b69a;
+        display: inline-block;
+        color: white;
+        font-size: 0.4em;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    
+    .analytics__container__row__live {
+        width: '100%';
+        margin-top: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: #E33F64;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 0.4em;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+  
+    .analytics__container__row__live__dot {
+        -webkit-animation: flickerAnimation 2s infinite;
+    -moz-animation: flickerAnimation 2s infinite;
+    -o-animation: flickerAnimation 2s infinite;
+        animation: flickerAnimation 2s infinite;
+        background-color: white;
+        width: 0.8vw;
+        height: 0.8vw;
+        border-radius: 0.8vw;
+        margin-right: 0.3vw;
+    }
+
+    .analytics__container__row__live__clock {
+        margin-left: 0.3vw;
+    }
+
+    .analytics__container__row__closed {
+        width: '100%';
+        margin-top: 2vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: #7e7e7e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 0.4em;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+
+    .analytics__container__text {
+        font-size: 0.6em;
+        font-weight: 500;
+        margin-top: 2vh;
+        font-style: italic;
+    }
+    }

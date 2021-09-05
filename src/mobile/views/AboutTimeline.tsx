@@ -55,55 +55,55 @@ const AboutTimeline = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
-            contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            contentStyle={{ background: '#51b69a', color: '#fff' }}
             contentArrowStyle={{ borderRight: '7px solid var(--teal-color' }}
             date="September 2021"
             dateClassName="about__timeline__date__live"
-            iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            iconStyle={{ background: '#51b69a', color: '#fff' }}
             icon={<Apple />}
             >
                 <h3 onClick={() => window.location.href = '/referral'} className="vertical-timeline-element-title altLink about__timeline__title">App Store Launch</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
-            contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
+            contentStyle={{ background: '#51b69a', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #51b69a' }}
             date="October 2021"
             dateClassName="about__timeline__date__live"
-            iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            iconStyle={{ background: '#51b69a', color: '#fff' }}
             icon={<BarChart />}
             >
                 <h3 onClick={() => window.location.href = "/leagues"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Leagues</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
-            contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
+            contentStyle={{ background: '#51b69a', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #51b69a' }}
             date="November 2021"
             dateClassName="about__timeline__date__live"
-            iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            iconStyle={{ background: '#51b69a', color: '#fff' }}
             icon={<Google />}
             >
                 <h3 className="vertical-timeline-element-title">Google Play Store Launch</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
-            contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
+            contentStyle={{ background: '#51b69a', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #51b69a' }}
             date="December 2021"
             dateClassName="about__timeline__date__live"
-            iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            iconStyle={{ background: '#51b69a', color: '#fff' }}
             icon={<School />}
             >
                 <h3 onClick={() => window.location.href="/about/vision"} className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Education</h3>
             </VerticalTimelineElement>
             <VerticalTimelineElement
             className="timeline__element"
-            contentStyle={{ background: 'var(--teal-color)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  var(--teal-color)' }}
+            contentStyle={{ background: '#51b69a', color: '#fff' }}
+            contentArrowStyle={{ borderRight: '7px solid  #51b69a' }}
             date="January 2022"
             dateClassName="about__timeline__date__live"
-            iconStyle={{ background: 'var(--teal-color)', color: '#fff' }}
+            iconStyle={{ background: '#51b69a', color: '#fff' }}
             icon={<Social />}
             >
                 <h3 onClick={() => window.location.href = "/about/vision"}className="vertical-timeline-element-title altLink about__timeline__title">Lukrio Social</h3>

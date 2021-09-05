@@ -10,7 +10,7 @@
 
 .about__timeline__header {
     font-size: 3vw;
-    color: var(--teal-color);
+    color: #51b69a;
     font-weight: 700;
     margin-bottom: 2vh;
 }
@@ -35,6 +35,6 @@
 }
 
 .about__timeline__title:hover {
-    color: var(--darkBlue);
+    color: #1e6091;
     text-decoration: none;
 }

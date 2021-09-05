@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 3vh;
-    color: var(--darkBlue);
+    color: #1e6091;
 }
 
 .features__selector {
@@ -47,11 +47,11 @@
 }
 
 .feature:hover {
-    border-left: 5px solid var(--darkGrey);
+    border-left: 5px solid #7e7e7e;
 }
 
 .selected {
-    border-left: 5px solid var(--teal-color) !important;
+    border-left: 5px solid #51b69a !important;
 }
 
 .feature__emoji {

@@ -43,7 +43,7 @@ transition: width .2s ease;
 .altLink:hover:after {
     width: 100%;
     left: 0;
-    background: var(--darkBlue);
+    background: #1e6091;
 }
 
 .link:hover:after{

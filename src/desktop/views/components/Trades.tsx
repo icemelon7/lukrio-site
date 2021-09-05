@@ -131,11 +131,12 @@ const Trades = () => {
                 <div style={ !isBear ? {color: LightMode.green} : {color: LightMode.red}} className="summary__right">${numFormatter(total)}</div>                
             </div>
             <div className="trades-row">
-                <div style={{width: '35%', marginRight: '5%', fontSize: '30px !important'}}>
+                <div style={{width: '35%', marginRight: '5%'}}>
                     <Select
                     options={[{value: "Amount", label: "Amount"}, {value: "Trades", label: "Trades"}, {value: "Users", label: "Users"}]}
                     onChange={(value) => setType(value?.value as string)}
                     defaultValue={{value: "Amount", label: "Amount"}}
+                    className="select"
                     />  
                 </div>
                 <div style={{width: '35%'}}>
@@ -143,6 +144,7 @@ const Trades = () => {
                     options={[{value: "Today", label: "Today"}, {value: "Week", label: "Week"}, {value: "Month", label: "Month"}, {value: "3 Months", label: "3 Months"}, {value: "6 Months", label: "6 Months"}, {value: "Year", label: "Year"}]}
                     onChange={(value) => setType(value?.value as string)}
                     defaultValue={{value: "Week", label: "Week"}}
+                    className="select"
                     style={{option: (provided: any, state: any) => ({ color: '#048320', fontSize: '30px'}),
                             singleValue: (provided: any, state: any) => ({color: 'red'})}}
                     />  

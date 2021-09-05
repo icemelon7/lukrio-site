@@ -16,7 +16,7 @@ const ResponsibleGamingPage = () => {
             leftWidth="40vw"
             marginRight="2vw"
             header={
-                    <div style={{marginBottom: '3vh'}} className="splash__left__header"><span style={{color: 'var(--darkBlue)'}}>Game</span> with Lukrio, <span style={{color: 'var(--teal-color)'}}>Responsibly</span></div>
+                    <div style={{marginBottom: '3vh'}} className="splash__left__header"><span style={{color: '#1e6091'}}>Game</span> with Lukrio, <span style={{color: '#51b69a'}}>Responsibly</span></div>
             }
             text="We are here to help you learn and grow as an investor. Hence, we provide features* in app to help you self-control and restrict how much you can deposit, how frequently you can play, etc."
             right={

@@ -12,7 +12,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid var(--darkBlue);
+    border: 2px solid #1e6091;
 }
 
 .founder__block__image__actual {

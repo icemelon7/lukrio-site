@@ -81,7 +81,7 @@ const HowToPlayPage = () => {
             secondMock={Lobby}
             thirdMock={Create}
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     <img src={Game} alt="Game Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__1"/>
                     Choosing a Game
                 </div>
@@ -104,7 +104,7 @@ const HowToPlayPage = () => {
             thirdMock={Create} // join game view
             thirdMockIcon="💸"
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__2"/>
                     Joining a Game
                 </div>
@@ -128,7 +128,7 @@ const HowToPlayPage = () => {
             thirdMock={BuyOrder}
             thirdMockIcon="📦"
             header={
-                <div style={{display: 'flex', alignItems: 'center', width: '100%', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', width: '100%', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
                     <AbsReturn style={{marginRight: '1vw', width: '30%', height: 'auto', objectFit: 'contain'}} className="play__point" id="play__point__3"/>
@@ -153,7 +153,7 @@ const HowToPlayPage = () => {
             thirdMock={Leaderboard}// single position view, ENSURE order of images and order of rows, and update icons
             thirdMockIcon="🗺️"
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
                     <Equities style={{marginRight: '1vw', width: '30%', height: 'auto', objectFit: 'contain'}} className="play__point" id="play__point__4"/>
@@ -178,7 +178,7 @@ const HowToPlayPage = () => {
             thirdMock={Analytics} // Balance View with modal showing Venmo and other options
             thirdMockIcon="💎"
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
                     <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__5"/>
@@ -203,7 +203,7 @@ const HowToPlayPage = () => {
             thirdMock={Error}
             thirdMockIcon="🧰"
             header={
-                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: 'var(--teal-color)'}}> 
+                <div style={{display: 'flex', alignItems: 'center', fontSize: '3vw', fontWeight: 700, color: '#51b69a'}}> 
                     {// Look at Icons for Create Game in Figma same style
                     }
                     <img src={Gambling} alt="Icon" style={{marginRight: '5vw', zoom: 0.6}} className="play__point" id="play__point__6"/>

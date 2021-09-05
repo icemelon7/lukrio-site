@@ -2,7 +2,7 @@
     display: flex;
     padding-top: 50vh;
     padding-bottom: 50vh;
-    background-color: var(--darkBlue);
+    background-color: #1e6091;
     justify-content: center;
     align-items: center;
 }
@@ -20,11 +20,11 @@
 .counter__value {
     font-size: 3.6vw;
     font-weight: 700;
-    color: var(--darkWhite);
+    color: #f3f3f3;
 }
 
 .counter__text {
     font-size: 1.6vw;
-    color: var(--darkGrey);
+    color: #7e7e7e;
     text-align: center;
 }
