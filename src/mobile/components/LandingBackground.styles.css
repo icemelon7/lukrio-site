@@ -1,8 +1,6 @@
 .landing {
-    position: relative;
     width: 100vw;
     height: auto;
-    z-index: -999;
 }
 
 #background-video {

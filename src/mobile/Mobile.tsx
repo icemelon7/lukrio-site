@@ -4,7 +4,7 @@ import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from '../desktop/components/Footer';
-import NavBar from '../desktop/components/NavBar';
+import NavBar from './components/NavBar';
 import PrivacyPage from './legal/PrivacyPage';
 import TOSPage from './legal/TOSPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -28,7 +28,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
     <div style={{overflowX: 'hidden'}}>
     <Router>
       <Switch>
-        <Route exact path="/" render={() => <NavBar isTransparent/>}/>
+        <Route exact path="/" render={() => <NavBar isRelative isTransparent/>}/>
         <Route path={["/analytics", "/lukrio", "/vision", "/leagues"]} render={() => <NavBar isTransparent />}/>
         <Route path="*" render={() => <NavBar isRelative/>}/>
       </Switch>
