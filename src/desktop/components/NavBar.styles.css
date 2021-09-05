@@ -138,6 +138,7 @@
         height: auto;
         min-height: auto;
         top: 20px;
+        z-index: 999;
     }
     
     .nav-bar__links {

@@ -8,10 +8,10 @@ import NavBar from '../desktop/components/NavBar';
 import PrivacyPage from './legal/PrivacyPage';
 import TOSPage from './legal/TOSPage';
 import NotFoundPage from '../desktop/pages/NotFoundPage';
-import AnalyticsPage from './pages/AnalyticsPage';
+import AnalyticsPage from '../desktop/pages/AnalyticsPage';
 import ReferralPage from '../desktop/pages/ReferralPage';
 import VisionPage from '../desktop/pages/VisionPage';
-import AboutPage from './pages/AboutPage';
+import AboutPage from '../desktop/pages/AboutPage';
 import RulesPage from '../desktop/support/RulesPage';
 import RestrictionsPage from '../desktop/support/RestrictionsPage';
 import ResponsibleGamingPage from '../desktop/support/ResponsibleGamingPage';
@@ -30,7 +30,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
       <Switch>
         <Route exact path="/" render={() => <NavBar isTransparent/>}/>
         <Route path={["/analytics", "/lukrio", "/vision", "/leagues"]} render={() => <NavBar isTransparent />}/>
-        <Route path="*" render={() => <NavBar isRelative/>}/>
+        <Route path="*" render={() => <NavBar isTransparent/>}/>
       </Switch>
       <Switch>
         <Route exact path="/" render={() => <LandingPage isBeta={isBeta}/>}/>

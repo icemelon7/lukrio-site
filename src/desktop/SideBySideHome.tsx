@@ -53,7 +53,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         }
     }, [activeNum, clicked]);
     return (
-    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? {maxHeight: '80vh', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
+    <div ref={detailsRef} className="Desktop--SideBySide--container" style={splashBackground ? window.innerWidth < 1024 ? {paddingTop: '10vh', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {maxHeight: '80vh', color: 'white !important', background: 'linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%)'} : {}}>
         {
             noLink ? 
             <div />
@@ -62,7 +62,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         }
         <ScrollAnimation offset={0} animateIn="animate__fadeInLeft" animateOnce className="Desktop--SideBySide--text">
             {splashBackground ? 
-            <div style={{color: '#51b69a', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
+            <div style={{color: '#51b69a', cursor: 'auto', fontSize: window.innerWidth < 1024 ? '1.7em' : '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
             :
             <a href={"/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
             }
@@ -103,7 +103,7 @@ const Row = ({activeNum, setActiveNum, setClicked, index, text, responsiveImage,
 
     return (
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={delay}>
-            <div onClick={() => {setActiveNum(index); setClicked(true)}} style={window.innerWidth < 1024 ? splashBackground ? {fontSize: '0.9em'} : {fontSize: '0.8em'}: splashBackground ? {fontSize: '2.3vw'} : {fontSize: '1.8vw'}} className={activeNum === index ? "home-row" : "home-row low-opacity"}>
+            <div onClick={() => {setActiveNum(index); setClicked(true)}} style={window.innerWidth < 1024 ? splashBackground ? {fontSize: '0.8em'} : {fontSize: '0.8em'}: splashBackground ? {fontSize: '2.3vw'} : {fontSize: '1.8vw'}} className={activeNum === index ? "home-row" : "home-row low-opacity"}>
                 <div className="circle">{index}</div>
                 <div style={window.innerWidth < 1024 ? {fontWeight: 500, width: '37vw'} : {}}>{text}</div>
             </div>

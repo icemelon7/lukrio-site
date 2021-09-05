@@ -53,3 +53,61 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 1024px) {
+    .splash {
+        background: linear-gradient(5deg, rgba(15,95,95,1) 0%, rgba(9,39,57,1) 50%);
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20vh;
+        padding-bottom: 5vh;
+        font-family: "DM Sans";
+    }
+    
+    .disclaimer {
+        position: absolute;
+        bottom: -3vh;
+        left: 0;
+        color: white;
+        font-size: 0.7vw;
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+    .splash__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 30vw;
+        margin-right: 10vw;
+        color: white;
+    }
+    
+    .splash__left__header {
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    
+    .splash__left__subheader {
+        font-size: 4vw;
+        font-weight: 600;
+        color: #51b69a;
+    }
+    
+    .splash__left__text {
+        font-size: 1.3vw;
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+    .splash__right {
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
+}
