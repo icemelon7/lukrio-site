@@ -11,7 +11,7 @@ import './AboutPage.styles.css';
 import HomeMockup from '../../assets/mockup_video.MP4';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Logo from '../components/Logo';
-import { Row } from './HowToPlayPage';
+import { Row } from '../../desktop/pages/HowToPlayPage';
 import FeatureIconDisplay from '../../desktop/views/FeatureIcon';
 
 const AboutPage = () => {

@@ -7,16 +7,16 @@ import Footer from '../desktop/components/Footer';
 import NavBar from '../desktop/components/NavBar';
 import PrivacyPage from './legal/PrivacyPage';
 import TOSPage from './legal/TOSPage';
-import NotFoundPage from './pages/NotFoundPage';
+import NotFoundPage from '../desktop/pages/NotFoundPage';
 import AnalyticsPage from './pages/AnalyticsPage';
-import ReferralPage from './pages/ReferralPage';
-import VisionPage from './pages/VisionPage';
+import ReferralPage from '../desktop/pages/ReferralPage';
+import VisionPage from '../desktop/pages/VisionPage';
 import AboutPage from './pages/AboutPage';
-import RulesPage from './support/RulesPage';
-import RestrictionsPage from './support/RestrictionsPage';
-import ResponsibleGamingPage from './support/ResponsibleGamingPage';
-import HowToPlayPage from './pages/HowToPlayPage';
-import LeaguesPage from './pages/LeaguesPage';
+import RulesPage from '../desktop/support/RulesPage';
+import RestrictionsPage from '../desktop/support/RestrictionsPage';
+import ResponsibleGamingPage from '../desktop/support/ResponsibleGamingPage';
+import HowToPlayPage from '../desktop/pages/HowToPlayPage';
+import LeaguesPage from '../desktop/pages/LeaguesPage';
 import LandingPage from './pages/LandingPage';
 
 type MobileProps = {

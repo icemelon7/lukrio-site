@@ -3,7 +3,7 @@ import LandingBackground from '../components/LandingBackground';
 import SideBySideHome from '../../desktop/SideBySideHome';
 import Analytics from '../../desktop/views/Analytics';
 import FeatureIconDisplay from '../../desktop/views/FeatureIcon';
-import Features from '../views/Features';
+import Features from '../../desktop/views/Features';
 import './LandingPage.styles.css';
 
 type LandingPageProps = {
