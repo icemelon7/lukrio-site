@@ -9,7 +9,7 @@ import { Row } from '../pages/HowToPlayPage';
 import {ReactComponent as Leagues} from '../../assets/figmaIcons/BankShake.svg';
 import {ReactComponent as Education} from '../../assets/figmaIcons/BankShake.svg';
 import {ReactComponent as Social} from '../../assets/figmaIcons/BankShake.svg';
-import Redirect from '../components/Redirect';
+import Redirect from '../../desktop/components/Redirect';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 type FeaturesProps = {

@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import LandingBackground from '../components/LandingBackground';
-import SideBySideHome from '../SideBySideHome';
+import SideBySideHome from '../../desktop/SideBySideHome';
 import Analytics from '../views/Analytics';
-import FeatureIconDisplay from '../views/FeatureIcon';
+import FeatureIconDisplay from '../../desktop/views/FeatureIcon';
 import Features from '../views/Features';
 import './LandingPage.styles.css';
 

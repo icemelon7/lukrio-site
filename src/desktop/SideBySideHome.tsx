@@ -58,13 +58,13 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             noLink ? 
             <div />
             :
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1200}><Redirect text="Learn more on how to play" url="/about/how-to-play"/></ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1200}><Redirect text="Learn more on how to play" url="/how-to-play"/></ScrollAnimation>
         }
         <ScrollAnimation offset={0} animateIn="animate__fadeInLeft" animateOnce className="Desktop--SideBySide--text">
             {splashBackground ? 
-            <div style={{color: 'var(--teal-color)', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
+            <div style={{color: '#51b69a', cursor: 'auto', fontSize: '5vw', textDecoration: 'underline'}} className="Desktop--SideBySide--header">{header}</div>
             :
-            <a href={"/about/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
+            <a href={"/how-to-play"} className={`Desktop--SideBySide--header link`}>{header}</a>
             }
             
             <div className="Desktop--SideBySide--text__main" style={responsiveImage ? splashBackground ? {color: 'white', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center'} : {}}>
@@ -79,7 +79,7 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
         {
             responsiveImage ?
             <MockupPhone 
-            style={{zoom: 0.7 * (window.innerHeight / 900), marginLeft: '10vw'}}
+            style={window.innerWidth < 1024 ? {zoom: 0.4 * (window.innerHeight / 900), marginLeft: '3vw'} : {zoom: 0.7 * (window.innerHeight / 900), marginLeft: '10vw'}}
             content={
                 <img
                 className={`animate__animated ${flick ? 'animate__fadeInDown' : ''}`}
@@ -103,9 +103,9 @@ const Row = ({activeNum, setActiveNum, setClicked, index, text, responsiveImage,
 
     return (
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={delay}>
-            <div onClick={() => {setActiveNum(index); setClicked(true)}} style={splashBackground ? {fontSize: '2.3vw'} : {fontSize: '1.8vw'}} className={activeNum === index ? "home-row" : "home-row low-opacity"}>
+            <div onClick={() => {setActiveNum(index); setClicked(true)}} style={window.innerWidth < 1024 ? splashBackground ? {fontSize: '0.9em'} : {fontSize: '0.8em'}: splashBackground ? {fontSize: '2.3vw'} : {fontSize: '1.8vw'}} className={activeNum === index ? "home-row" : "home-row low-opacity"}>
                 <div className="circle">{index}</div>
-                <div>{text}</div>
+                <div style={window.innerWidth < 1024 ? {fontWeight: 500, width: '37vw'} : {}}>{text}</div>
             </div>
         </ScrollAnimation>
         

@@ -16,7 +16,7 @@ import Search from '../../assets/mockups/search.png';
 import StockCandleChart from '../../assets/mockups/stockCandleChart.png';
 import '../../devices.css';
 import SideBySideFixed from '../components/SideBySideFixed';
-import SideBySideHome from '../SideBySideHome';
+import SideBySideHome from '../../desktop/SideBySideHome';
 import './HowToPlayPage.styles.css';
 import Game from '../../assets/playIcons/gaming.png';
 import Gambling from '../../assets/playIcons/gambling.png';

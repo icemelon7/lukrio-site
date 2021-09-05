@@ -3,7 +3,7 @@ import Splash from '../components/Splash';
 import Rocket from '../../assets/rocket.png';
 import './VisionPage.styles.css';
 import VisionRow from '../views/components/VisionRow';
-import FeatureIconDisplay from '../views/FeatureIcon';
+import FeatureIconDisplay from '../../desktop/views/FeatureIcon';
 import {ReactComponent as BankShake} from '../../assets/figmaIcons/BankShake.svg';
 import {ReactComponent as TeamWork} from '../../assets/figmaIcons/TeamWork.svg';
 import 'animate.css';

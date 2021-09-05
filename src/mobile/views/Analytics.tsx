@@ -1,5 +1,5 @@
 import React, { ComponentType, FunctionComponent } from 'react';
-import Redirect from '../components/Redirect';
+import Redirect from '../../desktop/components/Redirect';
 import './Analytics.styles.css';
 import '../../devices.css';
 import '../App.css';
