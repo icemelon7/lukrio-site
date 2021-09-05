@@ -23,6 +23,24 @@ const SideBySideFixed : FunctionComponent<SideBySideFixedProps> = ({index, heade
     return (
         <div className="side-fixed">
             {
+                window.innerWidth < 1024 ?
+                <>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
+                        {
+                            typeof header === 'string' ? 
+                            <div className="side-fixed__content__header">{header}</div>
+                            :
+                            header
+                        }
+                </ScrollAnimation>  
+                <Image firstMock={firstMock} secondMock={secondMock} thirdMock={thirdMock} firstMockIcon={firstMockIcon} secondMockIcon={secondMockIcon} thirdMockIcon={thirdMockIcon} />   
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
+                    <div className="side-fixed__content">
+                        {content}
+                    </div>    
+                </ScrollAnimation>                   
+                </>
+                :
                 imgPos === 'right'
                 ?
                 <>

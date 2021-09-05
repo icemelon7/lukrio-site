@@ -31,3 +31,9 @@
 .rotate-mockup:hover {
     transform: perspective(1000px) rotateY( 0deg) rotateX( 0deg) rotateZ( 0deg) scale(0.95) translateY(8%);
 }
+
+@media only screen and (max-width: 1024px) {
+  .mockup-icon {
+    font-size: 10px;
+  }
+}

@@ -45,7 +45,7 @@
     
     .play__content {
         padding-left: 4vw;
-        width: 40vw;
+        width: 83vw;
     }
     
     .play__row {
@@ -57,12 +57,12 @@
     
     .play__row__icon-emoji {
         font-size: 1em;
-        width: 1.3em;
+        width: 1.5em;
     }
     
     .play__row__text {
         font-size: 0.6em;
-        font-weight: 400;
+        font-weight: 500;
         font-style: italic;
         margin-left: 3vw;
     }
