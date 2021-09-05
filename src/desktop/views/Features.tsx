@@ -38,7 +38,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={1}
                 active={active}
                 setActive={setActive}
-                icon={<BarChart fill={active === 1 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain'}}/>}
+                icon={<BarChart fill={active === 1 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain'}}/>}
                 header="Leagues"
                 text="Represent your university or club"
                 />
@@ -46,7 +46,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={2}
                 active={active}
                 setActive={setActive}
-                icon={<School fill={active === 2 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain', color: 'red'}}/>}
+                icon={<School fill={active === 2 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain', color: 'red'}}/>}
                 header="Education"
                 text="Customized Portfolio Feedback"
                 />
@@ -54,7 +54,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={3}
                 active={active}
                 setActive={setActive}
-                icon={<ShareSocial fill={active === 3 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain'}} />}
+                icon={<ShareSocial fill={active === 3 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain'}} />}
                 header="Social"
                 text="Integrated Stock Pitch Feed"
                 />

@@ -163,7 +163,6 @@
     }
 
     .feature__emoji {
-
     }
 
     .feature__content {
@@ -171,7 +170,7 @@
         flex-direction: column;
         justify-content: center;
         margin-left: 2vw;
-        font-size: 1.2vw;
+        font-size: 0.4em;
         font-style: italic;
     }
 
