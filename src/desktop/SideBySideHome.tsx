@@ -7,6 +7,8 @@ import Redirect from './components/Redirect';
 import Home from '../assets/mockups/home.png';
 import PortfolioPositions from '../assets/mockups/portfolioPositions.png';
 import Leaderboard from '../assets/mockups/leaderboard.png';
+import JoinGame from '../assets/mockups/joinGame.png';
+import Balance from '../assets/mockups/balance.png'
 import 'animate.css';
 import MockupPhone from './components/mockupComponents/MockupPhone';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -41,8 +43,9 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000 + (first ? 2000 : 0));
         }
         first = false;
+        setFlick(false);
         setFlick(true);
-        flickTimer.current = setTimeout(() => setFlick(false), 1800);
+        flickTimer.current = setTimeout(() => setFlick(false), 1500);
         return () => {
             if (timer.current) {
                 clearTimeout(timer?.current as NodeJS.Timeout);
@@ -82,8 +85,8 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             style={window.innerWidth < 1024 ? {zoom: 0.4 * (window.innerHeight / 900), marginLeft: '3vw'} : {zoom: 0.7 * (window.innerHeight / 900), marginLeft: '10vw'}}
             content={
                 <img
-                className={`animate__animated ${flick ? 'animate__fadeInDown' : ''}`}
-                src={activeNum === 1 ? Home : activeNum === 2 ? PortfolioPositions : Leaderboard}
+                className={`animate__animated ${flick ? 'animate__zoomIn' : ''}`}
+                src={activeNum === 1 ? Home : activeNum === 2 ? JoinGame : activeNum === 3 ? PortfolioPositions : activeNum === 4 ? Leaderboard : activeNum === 5 ? Balance : Home}
                 alt="" style={{width: '100%', height: '100%', borderRadius: '5%'}}/>}
             isRotate
             onClick={() => activeNum === 1 ? true : false}

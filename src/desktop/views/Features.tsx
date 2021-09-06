@@ -7,8 +7,8 @@ import { LightMode } from '../../Colors';
 import Logo from '../components/Logo';
 import { Row } from '../pages/HowToPlayPage';
 import {ReactComponent as Leagues} from '../../assets/figmaIcons/BankShake.svg';
-import {ReactComponent as Education} from '../../assets/figmaIcons/BankShake.svg';
-import {ReactComponent as Social} from '../../assets/figmaIcons/BankShake.svg';
+import {ReactComponent as Education} from '../../assets/figmaIcons/Budgeting.svg';
+import {ReactComponent as Social} from '../../assets/figmaIcons/CoinWall.svg';
 import Redirect from '../components/Redirect';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -24,7 +24,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
         <div className="features-outer">
             {
                 moreLink ?
-                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="about/vision" /></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="vision" /></ScrollAnimation>
                 :
                 <div />
             }

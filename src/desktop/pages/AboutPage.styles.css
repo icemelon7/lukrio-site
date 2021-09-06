@@ -12,6 +12,10 @@
     padding-bottom: 4vh;
 }
 
+.about__idea__video {
+    border-radius: 20px;
+}
+
 .about__idea__content {
     display: flex;
     flex-direction: column;

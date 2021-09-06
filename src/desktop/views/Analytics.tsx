@@ -22,7 +22,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
         <div className="analytics">
             {
                 moreLink ? 
-                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about Lukrio analytics" url="about/analytics"/></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about Lukrio analytics" url="analytics"/></ScrollAnimation>
                 :
                 <div/>
             }
@@ -53,7 +53,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
             
             
             <div className="analytics__container">
-                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce><a href="/about/analytics" className="analytics__container__header link">Lukrio Analytics</a></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce><a href="analytics" className="analytics__container__header link">Lukrio Analytics</a></ScrollAnimation>
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={150} className="analytics__container__text">
                     Get a feel for bearish or bullish market sentiment and see what people's favourite stocks are.
                 </ScrollAnimation>
@@ -61,10 +61,10 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
                     Satisfy your curiosity or use Analytics as alternative data to make better trades.
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={400} className="analytics__container__demo">
-                        Try out live interactive demo on the left
+                        Live Interactive Demo (Left) Coming Soon!
                 </ScrollAnimation>
                 <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500}>
-                <a href="https://www.appstore.com" className="analytics__container__available">
+                <a href="referral" className="analytics__container__available">
                     Available in the
                     <Logo style={{height: '1.6vw', width: 'auto', objectFit: 'contain', marginLeft: '0.4vw', marginRight: '0.4vw'}}/>
                     App

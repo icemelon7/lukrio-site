@@ -14,7 +14,8 @@ const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
                 <Link  style={window.location.href.endsWith("/lukrio") ? {color: '#51b69a'} : undefined}className="nav-bar__links__link" to="/lukrio">About Us</Link>
                 <Link  style={window.location.href.endsWith("/vision") ? {color: '#51b69a'} : undefined}className="nav-bar__links__link" to="/vision">The Vision</Link>
                 <Link  style={window.location.href.endsWith("/analytics") ? {color: '#51b69a'} : undefined}className="nav-bar__links__link" to="/analytics">Analytics</Link>
-                <Link  style={window.location.href.endsWith("/leagues") ? {color: '#51b69a'} : undefined}className="nav-bar__links__link" to="/leagues">For Students</Link>
+                {//<Link  style={window.location.href.endsWith("/leagues") ? {color: '#51b69a'} : undefined}className="nav-bar__links__link" to="/leagues">For Students</Link>
+                }
                 <div className="nav-bar__links__button">
                     <Link className="nav-bar__links__button__link" to="/referral">Get $5!</Link>
                 </div>

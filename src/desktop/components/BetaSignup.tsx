@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useCookies } from 'react-cookie';
 import { getSignupInfo, sendBetaSignup } from '../../fetchers/betaSignup';
-import './BetaSignup.styles.css';
+import './BetaSignup.styles.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 export interface subInfo {
@@ -20,6 +20,9 @@ const BetaSignup = ({}) => {
     const [isLoading, setIsLoading] = useState(false);
     const [cookies, setCookie, removeCookie] = useCookies(['LukrioBetaId']);
     const [copied, setCopied] = useState(false);
+    let params = new URLSearchParams(window.location.search);
+    let ref = params.get('ref') as string;
+    const [refId, setRefId] = useState<string>(ref);
     let timer: NodeJS.Timeout;
   const _handleCopyClick = () => {
     setCopied(true);
@@ -42,8 +45,6 @@ const BetaSignup = ({}) => {
       return;
     }
     setIsLoading(true);
-    let params = new URLSearchParams(window.location.search);
-    let refId = params.get('ref') as string;
     try {
       let data = await sendBetaSignup(email, refId);
       setSubmitted(data);
@@ -82,6 +83,11 @@ const BetaSignup = ({}) => {
   const onChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setEmail(event.target.value);
   }
+
+  const refOnChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    setRefId(event.target.value);
+  }
+
     return (
         (submitted && submitted?.status === 200) ?
         <div className="animate__animated animate__fadeInUp Desktop--Main--result__container">
@@ -110,15 +116,37 @@ const BetaSignup = ({}) => {
         :
         <>
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={700} className="Desktop--Main--form__container">
-            <div style={{display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center'}}>
-                <input type="text" className="Desktop--Main--form__input rounded" aria-label="Email" placeholder="Email Address" value={email} onChange={onChange}></input>
+            <form action="">
+                <div style={{display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center'}}>
+                <div style={{position: 'relative'}}>
+                  <span className="input">
+                    <input style={{color: 'aqua'}} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
+                    <span></span>
+                  </span>
+                  
+                </div>
                 <button type="button"
                 className="betaSignup__button"
                 onClick={!isLoading ? onSubmit : () => true}
                 disabled={isLoading}
                 >{isLoading ? 'Sending...' : 'Sign up for the beta'}
                 </button>
-            </div>
+                </div>
+                {
+                  ref ?
+                  <div />
+                  :
+                  <div style={{position: 'relative', marginTop: '25px'}}>
+                  <span className="input">
+                  <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
+                  <span></span>
+                  </span>
+                  </div>
+                }
+                
+                
+            </form>
+                  
             <div className="Desktop--Main--form__postsubmit" style={submitted?.status as number < 400 ? {} : {color: "red"}} hidden={!submitted}>{
                 submitted?.status === 409 ?
                 "Whoops, looks like you already registered using this email!"

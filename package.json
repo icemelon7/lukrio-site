@@ -16,6 +16,7 @@
     "gsap": "^3.7.1",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
+    "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-animate-on-scroll": "^2.1.5",
@@ -44,7 +45,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
