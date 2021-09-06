@@ -1,0 +1,11 @@
+.triple-mockup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 1024px) {
+    .triple-mockup {
+        zoom: 0.5;
+    }
+}

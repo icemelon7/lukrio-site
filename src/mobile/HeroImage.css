@@ -1,0 +1,196 @@
+@media only screen and (min-width: 1065px) {
+  .Header--container {
+    display: flex;
+    padding-top: 20px;
+  }
+  
+  .Header--spacer {
+    width: 950px !important;
+  }
+  
+  .Header--logo__image {
+    width: 150px;
+    height: 53.9px;
+    position: relative;
+    top: 20px;
+  }
+
+  .Main{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url(../assets/unsplash_background.jpg);
+    background-size: 2000px;
+    height: 1000px;
+  }
+  
+  .Main--container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  .Main--text {
+    margin-right: 125px;
+    display: inline-block !important;
+    padding-top: 175px;
+    padding-left: 50px;
+    width: 600px !important;
+    text-align: start !important;
+  }
+  
+  .Main--text__title{
+    font-size: 62px !important;
+    color:white !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    width: 100% !important;
+  
+  }
+  
+  .Main--text__subtitle {
+    font-size: 20px !important;
+    color:white !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .Main--form__container {
+    display: flex;
+    flex-direction: row !important;
+  }
+  
+  .Main--form__button {
+    height: 45px !important;
+    width: 200px !important;
+    margin: 0 0 0 0 !important;
+  }
+
+  .Main--form__input {
+    margin-top: 25px !important;
+    height: 45px !important;
+    width: 350px !important;
+    padding-left: 10px !important;
+    border-width: 0px !important ;
+    margin: 0 10px 0 0 !important;
+  }
+
+  
+  .Main--mockup__image {
+    position: relative !important;
+    padding-top: 0px !important;
+    margin: 0 !important;
+    top: -60px;
+    width: 400px !important;
+    max-width: 400px !important;
+    display: inline-block !important;
+    transition: transform 0.45s;
+    transform: perspective(1400px) rotateY(
+        -20deg
+        ) rotateX(
+        10deg
+        ) rotateZ(
+        6deg
+        ) scale(0.8) translateY(6%);
+  }
+
+  .Main--mockup__image:hover {
+    transform: perspective(1000px) rotateY(
+        0deg
+        ) rotateX(
+        0deg
+        ) rotateZ(
+        0deg
+        ) scale(0.95) translateY(8%);
+    }
+}
+
+.Header--container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.Header--logo__image {
+  width: 150px;
+  height: 53.9px;
+  position: relative;
+  top: 20px;
+}
+
+
+.Header--spacer {
+    width: 0px;
+  }
+
+
+.Main{
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0) ), url(../assets/bluebackground2.jpg);
+  width: 100%;
+  height: 1050px;
+}
+
+.Main--mockup__image {
+  position: relative;
+  width: 75%;
+  max-width: 280px;
+  height: auto;
+  padding-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.Main--text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.Main--text__title{
+  padding-top: 50px;
+  font-size: 32px;
+  color:white;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+.Main--text__subtitle {
+  font-size: 16px;
+  margin: 5px;
+  color:white;
+  display: block;
+  width: 90%;
+  padding-left: 15px;
+
+}
+
+.Main--form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Main--form__button {
+  margin-top: 10px;
+  height: 45px;
+  width: 90%;
+  margin: auto;
+  background-color: #52b69a !important;
+}
+
+.Main--form__input {
+  height: 45px !important;
+  width: 90%;
+  margin: auto;
+  padding-left: 10px;
+  border-width: 0px;
+  margin-bottom: 10px;
+}
+
+.Main--form__postsubmit {
+  font-size: 16px;
+  color:white;
+  padding-top: 10px;
+}

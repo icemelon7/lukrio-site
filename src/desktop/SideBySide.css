@@ -1,0 +1,170 @@
+:root {
+    --teal-color: #51b69a;
+    --lightTeal-color: #96fee2;
+    --darkTeal: #549885;
+    --yellow: #fcec20;
+    --orange: #f7931e;
+    --grey: #e6e6e6;
+    --darkGrey: #7e7e7e;
+    --lightBlack: #5d5d5d;
+    --white: #fff;
+    --darkWhite: #f3f3f3;
+    --red: #E33F64;
+    --green: #36b26f;
+    --richBlack: #051923;
+    --darkBlue: #1e6091;
+    --lightBlue: #4aabad;
+    --darkPurple: #662D91;
+    --lightPurple: #D4145A;
+    --search: #9596a8;
+    --liquidPurple: #4d1168;
+    --linkBlue: #147EFB;
+    --slackDarkBlue: #1264a3;
+    --slackLightBlue: #e2eff4;
+    --lightRed: #FF9696;
+    --venmoBlue: #3191c7
+}
+
+.Desktop--SideBySide--container {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 99vw;
+}
+
+.Desktop--SideBySide--header {
+    line-height: normal;
+    font-size: 3vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.Desktop--SideBySide--header:hover {
+    text-decoration: none;
+    color: #51b69a;
+}
+
+.Desktop--SideBySide--text__main {
+    padding-top: 30px;
+}
+
+.Desktop--SideBySide--image__container {
+    width: auto;
+    height: auto;
+    max-width: 30vw;
+    object-fit: contain;
+    margin-left: 5vw;
+}
+
+.Desktop--SideBySide--image__container--flipped {
+    width: 375px;
+    height: 375px;
+}
+
+.home-row {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    transition: all ease 0.3s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.low-opacity {
+    opacity: 0.5;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+    background-color: #51b69a;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 2.5vw;
+}
+
+@media only screen and (max-width: 1024px) {
+    .Desktop--SideBySide--container {
+        position: relative;
+        background-color: #f6f6f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 99vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .Desktop--SideBySide--header {
+        line-height: normal;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .Desktop--SideBySide--header:hover {
+        text-decoration: none;
+        color: #51b69a;
+    }
+    
+    .Desktop--SideBySide--text__main {
+        padding-top: 5px;
+    }
+    
+    .Desktop--SideBySide--image__container {
+        width: auto;
+        height: auto;
+        max-width: 30vw;
+        object-fit: contain;
+        margin-left: 5vw;
+    }
+    
+    .Desktop--SideBySide--image__container--flipped {
+        width: 375px;
+        height: 375px;
+    }
+    
+    .home-row {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5vh;
+        margin-bottom: 1.5vh;
+        transition: all ease 0.3s;
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .low-opacity {
+        opacity: 0.5;
+    }
+    
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+        background-color: #51b69a;
+        color: white;
+        font-size: 1em;
+        font-weight: 600;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+    }    
+}

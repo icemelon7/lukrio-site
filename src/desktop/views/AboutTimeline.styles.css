@@ -1,0 +1,40 @@
+
+.about__timeline {
+    width: 100vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: rgba(9,39,57,1);
+}
+
+.about__timeline__header {
+    font-size: 3vw;
+    color: #51b69a;
+    font-weight: 700;
+    margin-bottom: 2vh;
+}
+
+.about__timeline__date__live {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.about__timeline__date {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.about__timeline__title {
+    width: auto;
+    float: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about__timeline__title:hover {
+    color: #1e6091;
+    text-decoration: none;
+}
