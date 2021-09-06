@@ -1,0 +1,18 @@
+.landing {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    z-index: -999;
+}
+
+#background-video {
+    overflow: hidden;
+    clear: both;
+    position: relative; 
+    left: 0;
+    bottom: 0;
+    max-width: 100vw;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}

@@ -13,7 +13,7 @@ const RestrictionsPage = () => {
              leftWidth="40vw"
              marginRight="2vw"
              header={
-                     <div style={{marginBottom: '3vh'}} className="splash__left__header"><span style={{color: 'var(--darkBlue)'}}>Restricted Play</span> with <span style={{color: 'var(--teal-color)'}}>Lukrio</span></div>
+                     <div style={{marginBottom: '3vh'}} className="splash__left__header"><span style={{color: '#1e6091'}}>Restricted Play</span> with <span style={{color: '#51b69a'}}>Lukrio</span></div>
              }
              text="Unfortunately due to the cash-incentivzed and non-deterministic nature of Lukrio's gameplay, we have to enforce the following age, location and fraud restrictions detailed below."
              right={

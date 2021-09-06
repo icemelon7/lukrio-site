@@ -14,8 +14,8 @@
   font-size: 30px;
   text-align: center;
   vertical-align: middle;
-  background-color: var(--teal-color);
-  border: 2px solid var(--darkBlue);
+  background-color: #51b69a;
+  border: 2px solid #1e6091;
   border-radius: 37.5px;
   z-index: 999;
 }
@@ -30,4 +30,10 @@
   
 .rotate-mockup:hover {
     transform: perspective(1000px) rotateY( 0deg) rotateX( 0deg) rotateZ( 0deg) scale(0.95) translateY(8%);
+}
+
+@media only screen and (max-width: 1024px) {
+  .mockup-icon {
+    font-size: 10px;
+  }
 }

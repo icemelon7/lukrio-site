@@ -28,6 +28,7 @@ const Analytics : FunctionComponent<AnalyticsProps> = ({moreLink}) => {
             }
             <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce className="analytics__left">
                 <MockupPhone 
+                 style={window.innerWidth < 1024 ? {zoom: 0.4 * (window.innerHeight / 900)} : {}}
                 content={<AnalyticsPhone />}
                 />
                 {

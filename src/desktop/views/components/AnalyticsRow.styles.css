@@ -11,7 +11,7 @@
 .analytics__row__line {
     width: 100%;
     height: 2px;
-    background-color: var(--darkGrey);
+    background-color: #7e7e7e;
 }
 
 .analytics__row__inner {
@@ -36,5 +36,5 @@
 }
 
 .analytics__row__bear__amount {
-    color: var(--red);
+    color: #E33F64;
 }

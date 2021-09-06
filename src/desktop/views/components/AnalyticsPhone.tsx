@@ -12,7 +12,7 @@ const AnalyticsPhone = () => {
     return (
         <div className="phone">
             <div className="phone__local">
-                {`${("" + (today.getHours() + 1)).padStart(2, ' ')}:${today.getMinutes()}`}
+                {`${("" + (today.getHours() + 1)).padStart(2, ' ')}:${("" + today.getMinutes()).padStart(2, '0')}`}
                 <StatusBar style={{width: '20%', height: 'auto', objectFit: 'contain'}}/>
             </div>
             <div className="phone-row">

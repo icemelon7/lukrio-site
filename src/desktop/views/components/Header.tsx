@@ -15,9 +15,9 @@ type HeaderProps = {
 const Header : FunctionComponent<HeaderProps> = ({text, style, isSortDown, sortCol, handle}) => {
 
     return (
-        <div style={style} className="analytics-header">
+        <div style={style} className="analytics-header" onClick={() => handle(text)}>
             <div className="analytics-header__title">{text}</div>
-            <div onClick={() => handle(text)} className="analytics-header__sort">
+            <div className="analytics-header__sort">
             {
             sortCol === text ?
             isSortDown ?

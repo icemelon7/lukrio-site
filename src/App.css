@@ -19,7 +19,7 @@ width: 0; height: 3px;
 display: block;
 margin-top: 5px;
 right: 0;
-background: var(--teal-color);
+background: #51b69a;
 transition: width .2s ease;
 -webkit-transition: width .2s ease;
 }
@@ -35,7 +35,7 @@ transition: width .2s ease;
     display: block;
     margin-top: 5px;
     right: 0;
-    background: var(--darkBlue);
+    background: #51b69a;
     transition: width .2s ease;
     -webkit-transition: width .2s ease;
 }
@@ -43,11 +43,11 @@ transition: width .2s ease;
 .altLink:hover:after {
     width: 100%;
     left: 0;
-    background: var(--darkBlue);
+    background: #1e6091;
 }
 
 .link:hover:after{
 width: 100%;
 left: 0;
-background: var(--teal-color);
+background: #51b69a;
 }

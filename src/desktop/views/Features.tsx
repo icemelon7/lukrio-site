@@ -30,7 +30,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
             }
             <div className="features">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={500} className="features__header">
-                Upcoming <Logo style={{width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features
+                Upcoming <Logo style={window.innerWidth < 1024 ? {width: 'auto', height: '1em', objectFit: 'contain', marginLeft: '3vw', marginRight: '3vw'} : {width: 'auto', height: '3vw', objectFit: 'contain', marginLeft: '0.5vw', marginRight: '0.5vw'}}/> Features
                 
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={750} className="features__selector">
@@ -38,7 +38,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={1}
                 active={active}
                 setActive={setActive}
-                icon={<BarChart fill={active === 1 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain'}}/>}
+                icon={<BarChart fill={active === 1 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain'}}/>}
                 header="Leagues"
                 text="Represent your university or club"
                 />
@@ -46,7 +46,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={2}
                 active={active}
                 setActive={setActive}
-                icon={<School fill={active === 2 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain', color: 'red'}}/>}
+                icon={<School fill={active === 2 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain', color: 'red'}}/>}
                 header="Education"
                 text="Customized Portfolio Feedback"
                 />
@@ -54,7 +54,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                 index={3}
                 active={active}
                 setActive={setActive}
-                icon={<ShareSocial fill={active === 3 ? LightMode.teal : 'black'} style={{width: '3vw', height: '3vw', objectFit: 'contain'}} />}
+                icon={<ShareSocial fill={active === 3 ? LightMode.teal : 'black'} style={{width: '7vw', height: '7vw', objectFit: 'contain'}} />}
                 header="Social"
                 text="Integrated Stock Pitch Feed"
                 />
@@ -70,7 +70,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🚀" text="Increase your recruiting chances with investing clubs and hedge funds by developing a demonstrated track record." delay={400}/>
                         </>
                     }
-                    right={<Leagues style={{width: '25vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={window.innerWidth < 1024 ? <div /> : <Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft text="Lean more about Lukrio Leagues" url="/leagues"/>}
                     />
                     :
@@ -83,7 +83,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🔮" text="Visualize the impact of your decisions through simulations showcasing different portfolio values as a result of key trades." delay={400}/>
                         </>
                     }
-                    right={<Education style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={window.innerWidth < 1024 ? <div /> : <Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft noLink text="Learn more about Lukrio Education (Coming Soon)" url="" textColor={LightMode.darkGrey}/>}
                     />
                     :
@@ -95,7 +95,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
                             <Row emoji="🎉" text="Keep it fun with our easy to use finmeme maker. Find your favourite templates within seconds and edit as you please." delay={400}/>
                         </>
                     }
-                    right={<Social style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+                    right={window.innerWidth < 1024 ? <div /> : <Leagues style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
                     redirect={<Redirect bottomLeft noLink text="Learn more about Lukrio Social (Coming Soon)" url="" textColor={LightMode.darkGrey}/>}
                     />
                 }

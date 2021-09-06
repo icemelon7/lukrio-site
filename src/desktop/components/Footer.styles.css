@@ -25,15 +25,16 @@
     --venmoBlue: #3191c7
 }
 
+
 .footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--liquidPurple);
+    background-color: #4d1168;
     color: white;
-    padding-top: 5vh;
+    padding-top: 7vh;
     padding-bottom: 5vh;
     padding-left: 17.5vw;
     padding-right: 12.5vw;
@@ -51,7 +52,7 @@
     width: 99vw;
     margin-left: -5vw;
     height: 2px;
-    background-color: var(--teal-color);
+    background-color: #51b69a;
 }
 
 .footer__section {
@@ -65,7 +66,7 @@
 .footer__section__header {
     font-size: 1.5vw;
     font-weight: 600;
-    color: var(--teal-color);
+    color: #51b69a;
     margin-bottom: 0.5vh;
 }
 
@@ -91,7 +92,7 @@
 
 .footer__section__inner__link:hover {
     text-decoration: none;
-    color: var(--teal-color);
+    color: #51b69a;
 }
 
 .footer__copyright {
@@ -135,7 +136,7 @@
     width: 2vw;
     height: 2vw;
     border-radius: 3vw;
-    background-color: var(--teal-color);
+    background-color: #51b69a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +161,7 @@
 }
 
 .footer__copyright__row__legal__link:hover {
-    color: var(--teal-color);
+    color: #51b69a;
     text-decoration: none;
 }
 
@@ -168,3 +169,145 @@
     margin-left: 1vw;
     margin-right: 1vw;
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }       
+    
+    .footer__row {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;
+    }
+
+    .footer__line {
+        width: 99vw;
+        margin-left: -5vw;
+        height: 2px;
+        background-color: #51b69a;
+    }
+    
+    .footer__section {
+        width: 47.5vw;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 5vw;
+    }
+    
+    .footer__section__header {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #51b69a;
+        margin-bottom: 0.5vh;
+    }
+    
+    .footer__section__inner__text {
+        font-size: 0.8em; 
+        font-weight: 500;
+        color: grey;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .footer__section__inner__link-container {
+        margin-top: 0.5vh;
+        margin-bottom: 0.5vh;   
+    }
+    
+    .footer__section__inner__link {
+        font-size: 0.8em;
+        font-weight: 500;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    
+    .footer__section__inner__link:hover {
+        text-decoration: none;
+        color: #51b69a;
+    }
+    
+    .footer__copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: center;
+        padding-left: 5vw;
+        width: 47.5vw;
+    }
+    
+    .footer__copyright__text {
+        margin-top: 1vh;
+        font-size: 0.35em;
+        font-weight: 500;
+    }
+    
+    .footer__copyright__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .footer__copyright__row__legal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .footer__copyright__row__socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .footer__copyright__row__socials__outer {
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 3vw;
+        background-color: #51b69a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .footer__copyright__row__socials__outer:hover {
+        background-color: var(--lightTeal-color);
+    }
+    
+    .footer__copyright__row__social__inner {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+    
+    .footer__copyright__row__legal__link {
+        color: white;
+        font-size: 0.35em;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .footer__copyright__row__legal__link:hover {
+        color: #51b69a;
+        text-decoration: none;
+    }
+    
+    .footer__copyright__row__legal__spacer {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+}
+
+

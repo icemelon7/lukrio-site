@@ -55,7 +55,7 @@
 }
 
 .nav-bar__links__link:hover {
-    color: var(--teal-color);
+    color: #51b69a;
     text-decoration: none;
 }
 
@@ -96,3 +96,108 @@
     font-weight: 500;
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 1024px) {
+
+    :root {
+    --teal-color: #51b69a;
+    --lightTeal-color: #96fee2;
+    --darkTeal: #549885;
+    --yellow: #fcec20;
+    --orange: #f7931e;
+    --grey: #e6e6e6;
+    --darkGrey: #7e7e7e;
+    --lightBlack: #5d5d5d;
+    --white: #fff;
+    --darkWhite: #f3f3f3;
+    --red: #E33F64;
+    --green: #36b26f;
+    --richBlack: #051923;
+    --darkBlue: #1e6091;
+    --lightBlue: #4aabad;
+    --darkPurple: #662D91;
+    --lightPurple: #D4145A;
+    --search: #9596a8;
+    --liquidPurple: #4d1168;
+    --linkBlue: #147EFB;
+    --slackDarkBlue: #1264a3;
+    --slackLightBlue: #e2eff4;
+    --lightRed: #FF9696;
+    --venmoBlue: #3191c7
+    }
+
+    .nav-bar {
+        width: 100%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: auto;
+        min-height: auto;
+        top: 20px;
+        z-index: 999;
+    }
+    
+    .nav-bar__links {
+        width: 80%;
+        padding-right: 2.5%;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    
+    .nav-bar__links__link {
+        color: white;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 0.3em;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-bar__links__link:hover {
+        color: #51b69a;
+        text-decoration: none;
+    }
+    
+    .nav-bar__links__button {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        margin-left: 2.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-color: aqua;
+        border-width: 2px;
+        border-radius: 25px;
+        border-style: solid;
+        color: white;
+        font-size: 0.4em;
+        font-weight: 500;
+        opacity: 0.3;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .nav-bar__links__button:hover {
+        opacity: 1;
+    }
+    
+    .nav-bar__links__button__link {
+        color: white;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    
+    .nav-bar__links__button__link:hover {
+        color: white;
+        font-size: 1vw;
+        font-weight: 500;
+        text-decoration: none;
+    }
+} 
