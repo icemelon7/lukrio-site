@@ -1,5 +1,5 @@
 import { SERVER_URL, token } from "../credentials";
-import { subInfo } from "../desktop/SignupSideBySide";
+import { subInfo } from "../desktop/components/BetaSignup";
 
 export const sendBetaSignup = (email: string, refId: string) : Promise<subInfo> => {
     return new Promise<subInfo>(async (resolve, reject) => {

@@ -4,7 +4,6 @@ import { useCookies } from 'react-cookie';
 import { getSignupInfo, sendBetaSignup } from '../../fetchers/betaSignup';
 import './BetaSignup.styles.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
-
 export interface subInfo {
     status: number;
     count: number;
@@ -12,6 +11,12 @@ export interface subInfo {
     total: number;
     refId: string;
     refSize: number;
+    current_priority: number;
+    referral_link: string;
+    registered_email: string;
+    total_referrals: number;
+    total_users: number;
+    user_id: string;
 }  
 
 const BetaSignup = ({}) => {
@@ -37,11 +42,11 @@ const BetaSignup = ({}) => {
 
   const onSubmit = async () => {
     if (email == "") {
-      setSubmitted({status: 401, count: 0, refSize: 0, email: "", total: 0, refId: ""});
+      setSubmitted({status: 401, count: 0, refSize: 0, email: "", total: 0, refId: "", current_priority: 0, referral_link: "", registered_email: "", total_users: 0, total_referrals: 0, user_id: ""});
       return;
     }
     if (!validateEmail(email)) {
-      setSubmitted({status: 400, count: 0, refSize: 0, email: "", total: 0, refId: ""});
+      setSubmitted({status: 400, count: 0, refSize: 0, email: "", total: 0, refId: "", current_priority: 0, referral_link: "", registered_email: "", total_users: 0, total_referrals: 0, user_id: ""});
       return;
     }
     setIsLoading(true);
@@ -50,7 +55,7 @@ const BetaSignup = ({}) => {
       setSubmitted(data);
       setCookie('LukrioBetaId', data.refId, { expires: new Date(2030, 1, 1)});
     } catch (e) {
-        setSubmitted({status: e.status, count: 0, refSize: 0, email: "", total: 0, refId: ""});
+      setSubmitted({status: 500, count: 0, refSize: 0, email: "", total: 0, refId: "", current_priority: 0, referral_link: "", registered_email: "", total_users: 0, total_referrals: 0, user_id: ""});
     }
   }
 
@@ -89,25 +94,28 @@ const BetaSignup = ({}) => {
   }
 
     return (
-        (submitted && submitted?.status === 200) ?
+        (submitted && (submitted?.status === 200 || submitted?.status === 201)) ?
         <div className="animate__animated animate__fadeInUp Desktop--Main--result__container">
           <div className="Desktop--Main--result__column">
             <div className="Desktop--Main--result__title">Thank You!</div>
-            <div className="Desktop--Main--result__text">We have added you to the beta sign-up queue</div>
-            <div className="Desktop--Main--result__count">{submitted.count ?? 406}</div>
-            <div className="Desktop--Main--result__title">Registered So Far</div>
+            <div className="Desktop--Main--result__text">{submitted?.status === 200 ? "We have added you to the beta sign-up queue" : "Your beta sign-up spot is saved"}</div>
+            <div className="Desktop--Main--result__count">{submitted.current_priority - 1 ?? 406}</div>
+            <div className="Desktop--Main--result__title">Users ahead of you</div>
+            <div className="Desktop--Main--result__count">{submitted.total_users ?? 2006}</div>
+            <div className="Desktop--Main--result__title">Total signups</div>
             <div className="Desktop--Main--result__text">This sign-up was made for {submitted.email}. Check your email for next steps! Is this <span onClick={_resetState} className="Desktop--Main--result__link__always">not you?</span></div>
           </div>
           <div className="Desktop--Main--result__column">
-            <div className="Desktop--Main--result__title">Interested in free money?</div>
-            <div className="Desktop--Main--result__text">Each user gets a free $5 starting balance. For each friend you refer, you get a lottery ticket to win a further $10. We will draw 25 random lottery tickets as winners for our beta.</div>
-            <div className="Desktop--Main--result__tickets">You have {submitted.refSize ?? 0} tickets (total tickets: {submitted.total ? submitted.total + 10 : 178})</div>
+            <div className="Desktop--Main--result__title">Interested in free money & earlier access?</div>
+            <div className="Desktop--Main--result__text">Each user gets a free $5 starting balance.</div>
+            <div className="Desktop--Main--result__text" style={{marginBottom: '10px'}}>Refer a friend to skip forward 5 positions and get a lottery ticket to win $10. We will draw 25 lottery tickets as winners for our beta.</div>
+            <div className="Desktop--Main--result__tickets">You have {submitted.refSize ?? 0} referral tickets (total tickets: {submitted.total ? submitted.total + 25 : 178})</div>
             <div className="Desktop--Main--result__title">Share this unique referral link:</div>
-            <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}}`}
+            <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}`}
             onCopy={_handleCopyClick}>
               <span className="Desktop--Main--result__link">https://www.lukrio.com/?ref={submitted.refId}</span>
             </CopyToClipboard>
-            <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}}`}
+            <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}`}
             onCopy={_handleCopyClick}>
               <div className="Desktop--Main--result__link">{copied ? "(Copied!)" : "(Click to copy)"}</div>
             </CopyToClipboard>
