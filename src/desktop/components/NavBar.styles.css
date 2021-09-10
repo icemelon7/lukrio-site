@@ -153,7 +153,7 @@
         color: white;
         margin-left: 2%;
         margin-right: 2%;
-        font-size: 0.3em;
+        font-size: 0.45em;
         font-weight: 500;
         transition: all 0.3s ease;
     }
@@ -173,7 +173,7 @@
         justify-content: center;
         align-items: center;
         border-color: aqua;
-        border-width: 2px;
+        border-width: 1px;
         border-radius: 25px;
         border-style: solid;
         color: white;
@@ -190,14 +190,13 @@
     
     .nav-bar__links__button__link {
         color: white;
-        font-size: 1em;
+        font-size: 8px;
         font-weight: 500;
     }
     
     .nav-bar__links__button__link:hover {
         color: white;
-        font-size: 1vw;
+        font-size: 8px;
         font-weight: 500;
-        text-decoration: none;
     }
 } 
