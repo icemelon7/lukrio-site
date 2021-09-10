@@ -21,7 +21,7 @@ const Features : FunctionComponent<FeaturesProps> = ({moreLink}) => {
     const [active, setActive] = useState<number>(1);
 
     return (
-        <div className="features-outer">
+        <div className="features-outer" style={window.innerWidth < 1024 && !moreLink ? {paddingTop: '0vh'} : {}}>
             {
                 moreLink ?
                 <ScrollAnimation animateIn="animate__fadeIn" animateOnce delay={1000}><Redirect text="Learn more about our vision" url="vision" /></ScrollAnimation>

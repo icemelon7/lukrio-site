@@ -18,11 +18,11 @@ const VisionPage = () => {
             <Splash
             header="Join a new Generation of "
             subheader="Investors"
-            text="A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience level."
+            text="A new online investing community platform, aimed at bringing together retail investors new and old, regardless of experience."
             right={<img className="vision__img" src={Rocket} alt="Vision Rocket Emoji" />}
             leftWidth='45vw'
             marginRight='0vw'
-            height="80vh"
+            height={window.innerWidth < 1024 ? '35vh' : "80vh"}
             />
             <Features />
             <AboutTimeline />
