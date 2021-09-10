@@ -38,14 +38,14 @@ const SideBySideHome : FunctionComponent<SideBySideHomeProps> = ({detailsRef, he
             setClicked(false);
             console.log("LONG");
             clearTimeout(timer?.current as NodeJS.Timeout);
-            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 6000);
+            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000);
         } else {
-            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 4000 + (first ? 2000 : 0));
+            timer.current = setTimeout(() => setActiveNum(activeNum + 1 > 5 ? 1 : activeNum + 1), 1500 + (first ? 2000 : 0));
         }
         first = false;
         setFlick(false);
         setFlick(true);
-        flickTimer.current = setTimeout(() => setFlick(false), 1500);
+        flickTimer.current = setTimeout(() => setFlick(false), 1000);
         return () => {
             if (timer.current) {
                 clearTimeout(timer?.current as NodeJS.Timeout);
