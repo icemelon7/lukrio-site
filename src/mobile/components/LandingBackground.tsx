@@ -14,7 +14,9 @@ const LandingBackground : FunctionComponent<LandingBackgroundProps> = ({isBeta})
             <video id="background-video" playsInline autoPlay muted loop>
                 <source src={video} type="video/mp4"/>
             </video>
-            <BetaSignup />
+            <a className="landing__button" href="/referral">
+                Play Now
+            </a>
         </div>
     )
 }
