@@ -96,7 +96,9 @@ const BetaSignup = ({}) => {
     return (
         (submitted && (submitted?.status === 200 || submitted?.status === 201)) ?
         <div className="animate__animated animate__fadeInUp Desktop--Main--result__container">
-          <div className="Desktop--Main--result__column">
+          {
+            window.innerWidth < 1024 ?
+            <>
             <div className="Desktop--Main--result__title">Thank You!</div>
             <div className="Desktop--Main--result__text">{submitted?.status === 200 ? "We have added you to the beta sign-up queue" : "Your beta sign-up spot is saved"}</div>
             <div className="Desktop--Main--result__count">{submitted.current_priority - 1 ?? 406}</div>
@@ -104,12 +106,10 @@ const BetaSignup = ({}) => {
             <div className="Desktop--Main--result__count">{submitted.total_users ?? 2006}</div>
             <div className="Desktop--Main--result__title">Total signups</div>
             <div className="Desktop--Main--result__text">This sign-up was made for {submitted.email}. Check your email for next steps! Is this <span onClick={_resetState} className="Desktop--Main--result__link__always">not you?</span></div>
-          </div>
-          <div className="Desktop--Main--result__column">
-            <div className="Desktop--Main--result__title">Interested in free money & earlier access?</div>
+            <div className="Desktop--Main--result__title">Free money & earlier access?</div>
             <div className="Desktop--Main--result__text">Each user gets a free $5 starting balance.</div>
             <div className="Desktop--Main--result__text" style={{marginBottom: '10px'}}>Refer a friend to skip forward 5 positions and get a lottery ticket to win $10. We will draw 25 lottery tickets as winners for our beta.</div>
-            <div className="Desktop--Main--result__tickets">You have {submitted.refSize ?? 0} referral tickets (total tickets: {submitted.total ? submitted.total + 25 : 178})</div>
+            <div className="Desktop--Main--result__tickets">You have {submitted.refSize ?? 0} ticket{submitted.refSize > 1 || submitted.refSize === 0 ? "s" : ""} (total tickets: {submitted.total ? submitted.total + 25 : 178})</div>
             <div className="Desktop--Main--result__title">Share this unique referral link:</div>
             <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}`}
             onCopy={_handleCopyClick}>
@@ -119,38 +119,98 @@ const BetaSignup = ({}) => {
             onCopy={_handleCopyClick}>
               <div className="Desktop--Main--result__link">{copied ? "(Copied!)" : "(Click to copy)"}</div>
             </CopyToClipboard>
-          </div>
+            </>
+            :
+            <>
+            <div className="Desktop--Main--result__column">
+              <div className="Desktop--Main--result__title">Thank You!</div>
+              <div className="Desktop--Main--result__text">{submitted?.status === 200 ? "We have added you to the beta sign-up queue" : "Your beta sign-up spot is saved"}</div>
+              <div className="Desktop--Main--result__count">{submitted.current_priority - 1 ?? 406}</div>
+              <div className="Desktop--Main--result__title">Users ahead of you</div>
+              <div className="Desktop--Main--result__count">{submitted.total_users ?? 2006}</div>
+              <div className="Desktop--Main--result__title">Total signups</div>
+              <div className="Desktop--Main--result__text">This sign-up was made for {submitted.email}. Check your email for next steps! Is this <span onClick={_resetState} className="Desktop--Main--result__link__always">not you?</span></div>
+            </div>
+            <div className="Desktop--Main--result__column">
+              <div className="Desktop--Main--result__title">Interested in free money & earlier access?</div>
+              <div className="Desktop--Main--result__text">Each user gets a free $5 starting balance.</div>
+              <div className="Desktop--Main--result__text" style={{marginBottom: '10px'}}>Refer a friend to skip forward 5 positions and get a lottery ticket to win $10. We will draw 25 lottery tickets as winners for our beta.</div>
+              <div className="Desktop--Main--result__tickets">You have {submitted.refSize ?? 0} referral tickets (total tickets: {submitted.total ? submitted.total + 25 : 178})</div>
+              <div className="Desktop--Main--result__title">Share this unique referral link:</div>
+              <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}`}
+              onCopy={_handleCopyClick}>
+                <span className="Desktop--Main--result__link">https://www.lukrio.com/?ref={submitted.refId}</span>
+              </CopyToClipboard>
+              <CopyToClipboard text={`https://www.lukrio.com/?ref=${submitted.refId}`}
+              onCopy={_handleCopyClick}>
+                <div className="Desktop--Main--result__link">{copied ? "(Copied!)" : "(Click to copy)"}</div>
+              </CopyToClipboard>
+            </div>
+            </>
+          }
+          
         </div>
         :
         <>
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={700} className="Desktop--Main--form__container">
             <form action="">
-                <div style={{display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center'}}>
-                <div style={{position: 'relative'}}>
-                  <span className="input">
-                    <input style={{color: 'aqua'}} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
-                    <span></span>
-                  </span>
-                  
-                </div>
-                <button type="button"
-                className="betaSignup__button"
-                onClick={!isLoading ? onSubmit : () => true}
-                disabled={isLoading}
-                >{isLoading ? 'Sending...' : 'Sign up for the beta'}
-                </button>
-                </div>
-                {
-                  ref ?
-                  <div />
-                  :
-                  <div style={{position: 'relative', marginTop: '25px'}}>
-                  <span className="input">
-                  <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
+              {window.innerWidth < 1024 ? 
+              <div style={{display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'flex-start'}}>
+              <div style={{position: 'relative'}}>
+                <span className="input">
+                  <input style={{color: 'aqua'}} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
                   <span></span>
-                  </span>
+                </span>
+              </div>
+              {
+              ref ?
+              <div />
+              :
+              <div style={{position: 'relative', marginTop: '25px'}}>
+              <span className="input">
+              <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
+              <span></span>
+              </span>
+              </div>
+              }
+              <button type="button"
+              className="betaSignup__button"
+              onClick={!isLoading ? onSubmit : () => true}
+              disabled={isLoading}
+              >{isLoading ? 'Sending...' : 'Sign up for the beta'}
+              </button>
+            </div>
+              :
+              <>
+                <div style={{display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center'}}>
+                  <div style={{position: 'relative'}}>
+                    <span className="input">
+                      <input style={{color: 'aqua'}} required id="email" type="text" aria-label="Email" placeholder="Your Email" value={email} onChange={onChange}/>  
+                      <span></span>
+                    </span>
+                    
                   </div>
-                }
+                  <button type="button"
+                  className="betaSignup__button"
+                  onClick={!isLoading ? onSubmit : () => true}
+                  disabled={isLoading}
+                  >{isLoading ? 'Sending...' : 'Sign up for the beta'}
+                  </button>
+                </div>
+              {
+                ref ?
+                <div />
+                :
+                <div style={{position: 'relative', marginTop: '25px'}}>
+                <span className="input">
+                <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
+                <span></span>
+                </span>
+                </div>
+              }
+              </>
+              }
+                
                 
                 
             </form>

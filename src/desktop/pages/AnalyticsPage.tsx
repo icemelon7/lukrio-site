@@ -14,7 +14,6 @@ const AnalyticsPage = () => {
             right={<AnalyticsFigma style={{width: '100%', height: 'auto', objectFit: 'contain'}} />}
             />
             <Analytics />
-            <Counters />
         </div>
     )
 }
