@@ -27,6 +27,9 @@ const BetaSignup = ({}) => {
     const [copied, setCopied] = useState(false);
     let params = new URLSearchParams(window.location.search);
     let ref = params.get('ref') as string;
+    if (!ref) {
+      ref = cookies?.refId;
+    }
     const [refId, setRefId] = useState<string>(ref);
     let timer: NodeJS.Timeout;
   const _handleCopyClick = () => {

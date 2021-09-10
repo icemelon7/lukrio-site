@@ -17,7 +17,7 @@ import RestrictionsPage from '../desktop/support/RestrictionsPage';
 import ResponsibleGamingPage from '../desktop/support/ResponsibleGamingPage';
 import HowToPlayPage from '../desktop/pages/HowToPlayPage';
 import LeaguesPage from '../desktop/pages/LeaguesPage';
-import LandingPage from './pages/LandingPage';
+import LandingPage from '../desktop/pages/LandingPage';
 
 type MobileProps = {
   isBeta?: boolean;

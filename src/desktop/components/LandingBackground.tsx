@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import './LandingBackground.styles.css';
 import video from '../../assets/backdrop.mp4';
-import BetaSignup from '../../desktop/components/BetaSignup';
 
 type LandingBackgroundProps = {
     isBeta?: boolean;
