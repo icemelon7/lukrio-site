@@ -31,3 +31,40 @@
     align-items: center;
     text-align: center;
 }
+
+@media only screen and (max-width: 1024px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about__idea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2vh;
+        padding-bottom: 4vh;
+    }
+    
+    .about__idea__video {
+        border-radius: 20px;
+    }
+    
+    .about__idea__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90vw;
+        margin-right: 5vw;
+    }
+    
+    .about__idea__content__header {
+        font-size: 1.3em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+}

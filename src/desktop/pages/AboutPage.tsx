@@ -24,11 +24,34 @@ const AboutPage = () => {
                 Made for <span style={{color: LightMode.teal}}>Investors</span> by <span style={{color: LightMode.darkBlue}}>Investors</span>
             </div>}
             text="At Lukrio, we belive that everyone regardless of background can be an investor through hands-on, enjoyable learning experiences."
-            right={<Cycling style={{width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
+            right={<Cycling style={window.innerWidth < 1024 ? {width: '50vw', height: 'auto', objectFit: 'contain'} : {width: '30vw', height: 'auto', objectFit: 'contain'}}/>}
             leftWidth="35vw"
             marginRight="3vw"
             />
-            <div className="about__idea">
+            {
+                window.innerWidth < 1024 ?
+                <div className="about__idea">
+                    <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce delay={100} className="about__idea__content__header">Why <Logo style={{width: 'auto', height: '1.3em', objectFit: 'contain', marginLeft: '0.8vw', marginRight: '0.4vw'}}/>? Our Mission</ScrollAnimation>
+                    <div className="about__idea__content">    
+                        <div className="about__idea__content__inner">
+                            <Row emoji="🕹️" text="Even the investing playing field and help people learn investing in a fun and effective way." delay={200}/>
+                            <Row emoji="💎" text="Create a new asset class minimally correlated with market. Make money beating real people not the market." delay={0}/>
+                            <Row emoji="🍪" text="Make investing social. Meet new friends, learn from successful mentors and represent your university or club." delay={0}/>
+                        </div>
+                    </div>
+                    <MockupPhone 
+                    content={
+                        <video className="about__idea__video" autoPlay muted playsInline loop style={{width: '100%', height: '100%'}}>
+                            <source src={HomeMockup} type="video/mp4" />
+                        </video>
+                    }
+                    isRotate
+                    delay={500}
+                    style={{zoom: '0.4 !important'}}
+                    />
+                </div>
+                :
+                <div className="about__idea">
                 <div className="about__idea__content">
                     <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce delay={100} className="about__idea__content__header">Why <Logo style={{width: 'auto', height: '2.6vw', objectFit: 'contain', marginLeft: '0.8vw', marginRight: '0.4vw'}}/>? Our Mission</ScrollAnimation>
                     <div className="about__idea__content__inner">
@@ -39,14 +62,16 @@ const AboutPage = () => {
                 </div>
                 <MockupPhone 
                 content={
-                    <video className="about__idea__video" autoPlay muted loop style={{width: '100%', height: '100%'}}>
+                    <video className="about__idea__video" autoPlay playsInline muted loop style={{width: '100%', height: '100%'}}>
                         <source src={HomeMockup} type="video/mp4" />
                     </video>
                 }
                 isRotate
                 delay={500}
                 />
-            </div>
+                </div>
+            }
+            
             <FeatureIconDisplay hideLink />
             <Founders />
         </div>

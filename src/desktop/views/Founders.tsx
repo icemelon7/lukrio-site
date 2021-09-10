@@ -15,7 +15,7 @@ const Founders = () => {
             text="Raymond is a passionate investor who started his investing journey at Wharton. Hearing fellow students discuss their portfolio returns, Raymond set out to build a platform to allow them to compete and learn from each other. Working in financial services, Raymond knows the frustration of being restricted. With Lukrio, you can still practice investing and make money beating others, not the market."
             delay={250}
             />
-            <FounderBlock 
+            {/*<FounderBlock 
             name="Jerry Xiang"
             title="Co-Founder (CMO/CFO)"
             image={<div />}
@@ -29,7 +29,7 @@ const Founders = () => {
             text=""
             delay={750}
             />
-
+            */}
         </div>
     )
 }

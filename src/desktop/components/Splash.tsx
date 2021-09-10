@@ -18,8 +18,8 @@ type SplashProps = {
 const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer, height}) => {
 
     return (
-        <div className="splash" style={{paddingTop: paddingTop ?? '15vh', height: height ?? 'auto'}}>
-            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: leftWidth ?? '30vw', marginRight: marginRight ?? '10vw'}} className="splash__left">
+        <div className="splash" style={{paddingTop: paddingTop ?? window.innerWidth < 1024 ? '10vh' : '15vh', height: height ?? 'auto'}}>
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: leftWidth ?? window.innerWidth < 1024 ? '40vw' : '30vw', marginRight: marginRight ?? window.innerWidth < 1024 ? '3vw' : '10vw'}} className="splash__left">
                 {disclaimer ?? undefined}
                 {
                     typeof header === 'string' ? 

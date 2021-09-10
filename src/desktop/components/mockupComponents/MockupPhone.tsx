@@ -14,7 +14,6 @@ type MockupPhoneProps = {
 }
 
 const MockupPhone : FunctionComponent<MockupPhoneProps> = ({content, delay, icon, isRotate, onClick, style, zIndex}) => {
-
     if (delay) {
         return (
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce delay={delay} style={zIndex ? {zIndex: zIndex} : {}}>

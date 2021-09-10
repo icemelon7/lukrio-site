@@ -61,7 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 20vh;
+        padding-top: 10vh;
         padding-bottom: 5vh;
         font-family: "DM Sans";
     }
@@ -82,13 +82,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        width: 30vw;
+        width: 50vw;
         margin-right: 10vw;
         color: white;
     }
     
     .splash__left__header {
-        font-size: 4vw;
+        font-size: 1.3em;
         font-weight: 700;
     }
     
@@ -99,13 +99,13 @@
     }
     
     .splash__left__text {
-        font-size: 1.3vw;
+        font-size: 0.5em;
         font-weight: 500;
         font-style: italic;
     }
     
     .splash__right {
-        width: 30vw;
+        width: 45vw;
         display: flex;
         align-items: center;
         justify-content: center;
