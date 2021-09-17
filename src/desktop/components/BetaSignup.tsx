@@ -20,6 +20,7 @@ export interface subInfo {
 }  
 
 const BetaSignup = ({}) => {
+    const [showReferral, setShowReferral] = useState<boolean>(false);
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState<subInfo>();
     const [isLoading, setIsLoading] = useState(false);
@@ -169,12 +170,28 @@ const BetaSignup = ({}) => {
               ref ?
               <div />
               :
-              <div style={{position: 'relative', marginTop: '25px'}}>
+              showReferral ?
+              <div style={{display: 'flex', alignItems: 'center', marginTop: '25px'}}>
+              <div style={{position: 'relative'}}>
               <span className="input">
               <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
               <span></span>
               </span>
               </div>
+              <button type="button"
+              className="betaSignup__button"
+              onClick={() => setShowReferral(false)}
+              disabled={!showReferral}
+              >No referral code?
+              </button>
+              </div>
+              :
+              <button type="button"
+              className="betaSignup__button"
+              onClick={() => setShowReferral(true)}
+              disabled={showReferral}
+              >Did a friend refer you?
+              </button>
               }
               <button type="button"
               className="betaSignup__button"
@@ -204,12 +221,29 @@ const BetaSignup = ({}) => {
                 ref ?
                 <div />
                 :
-                <div style={{position: 'relative', marginTop: '25px'}}>
+                showReferral ?
+                <div style={{display: 'flex', alignItems: 'center', marginTop: '25px'}}>
+                <div style={{position: 'relative'}}>
                 <span className="input">
                 <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
                 <span></span>
                 </span>
                 </div>
+                <button type="button"
+                className="betaSignup__button"
+                onClick={() => setShowReferral(false)}
+                disabled={!showReferral}
+                >No referral code?
+                </button>
+                </div>
+                :
+                <button type="button"
+                style={{marginTop: '15px', marginBottom: '15px', marginLeft: '0px'}}
+                className="betaSignup__button"
+                onClick={() => setShowReferral(true)}
+                disabled={showReferral}
+                >Did a friend refer you?
+                </button>
               }
               </>
               }
