@@ -12,12 +12,13 @@ type TripleMockupProps = {
     thirdMock: string; 
     thirdMockIcon?: string;
     isRotate?: boolean;
+    graphic?: boolean;
 }
 
-const TripleMockup : FunctionComponent<TripleMockupProps> = ({firstMock, firstMockIcon, secondMock, secondMockIcon, thirdMock, thirdMockIcon, isRotate}) => {
+const TripleMockup : FunctionComponent<TripleMockupProps> = ({firstMock, firstMockIcon, secondMock, secondMockIcon, thirdMock, thirdMockIcon, isRotate, graphic}) => {
 
     return (
-        <div className="triple-mockup">
+        <div className="triple-mockup" style={graphic ? {paddingLeft: '50px', width: '100vw', paddingTop: '50px', paddingBottom: '50px', zoom: 1.3} : {}}>
             <MockupPhone 
             content={<img src={firstMock} alt={firstMock} style={{width: '100%', height: '100%', borderRadius: '20px'}}/>}
             style={{paddingTop: '100px'}}

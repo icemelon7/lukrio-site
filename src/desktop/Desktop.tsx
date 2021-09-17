@@ -17,6 +17,10 @@ import RestrictionsPage from './support/RestrictionsPage';
 import ResponsibleGamingPage from './support/ResponsibleGamingPage';
 import HowToPlayPage from './pages/HowToPlayPage';
 import LeaguesPage from './pages/LeaguesPage';
+import TripleMockup from './components/mockupComponents/TripleMockup';
+import Lobby from '../assets/mockups/lobby.png';
+import Chart from '../assets/mockups/stockCandleChart.png';
+import PortfolioChart from '../assets/mockups/portfolioChart.png';
 
 type DesktopProps = {
   isBeta?: boolean;
@@ -45,6 +49,8 @@ const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
           <Route exact path="/rules" render={() => <RulesPage />}/>
           <Route exact path="/restrictions" render={() => <RestrictionsPage/>}/>
           <Route exact path="/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>
+          {//<Route exact path="/graphic" render={() => <TripleMockup graphic firstMock={Lobby} secondMock={Chart} thirdMock={PortfolioChart} firstMockIcon="🕹️" secondMockIcon="🚀" thirdMockIcon="👑"/>}/>
+          }
           <Route path="*" render={() => <NotFoundPage />}/>
         </Switch>
         <Footer isBeta={isBeta}/>
