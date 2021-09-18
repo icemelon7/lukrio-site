@@ -59,7 +59,7 @@ const Footer : FunctionComponent<FooterProps> = ({isBeta}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="footer__copyright__text">© 2021 Lukrio (Lucrative Technologies LLC). All Rights Reserved.</div>
+                    <div className="footer__copyright__text">© 2021 Lukrio. All Rights Reserved.</div>
                 </div>
             </div>
             
