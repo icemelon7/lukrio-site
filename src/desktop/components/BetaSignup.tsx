@@ -171,19 +171,20 @@ const BetaSignup = ({}) => {
               <div />
               :
               showReferral ?
-              <div style={{display: 'flex', alignItems: 'center', marginTop: '25px'}}>
+              <div style={{display: 'flex', alignItems: 'center', marginTop: '15px'}}>
               <div style={{position: 'relative'}}>
               <span className="input">
               <input style={{color: 'aqua'}} required id="referral" placeholder="Referral ID (Optional)" type="text" aria-label="Email" value={refId} onChange={refOnChange}/> 
               <span></span>
               </span>
               </div>
-              <button type="button"
-              className="betaSignup__button"
-              onClick={() => setShowReferral(false)}
-              disabled={!showReferral}
-              >No referral code?
-              </button>
+              {//<button type="button"
+              //className="betaSignup__button"
+              //onClick={() => setShowReferral(false)}
+              //disabled={!showReferral}
+              //</div>>No referral code?
+              //</div></button>
+              }
               </div>
               :
               <button type="button"
