@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Mobile.css';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from '../desktop/components/Footer';
@@ -18,12 +19,22 @@ import ResponsibleGamingPage from '../desktop/support/ResponsibleGamingPage';
 import HowToPlayPage from '../desktop/pages/HowToPlayPage';
 import LeaguesPage from '../desktop/pages/LeaguesPage';
 import LandingPage from '../desktop/pages/LandingPage';
+import RouteChangeTracker from '../RouteChangeTracker';
 
 type MobileProps = {
   isBeta?: boolean;
 }
 
 const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
+
+  useEffect(() => {
+    ReactGA.pageview('/');
+    ReactGA.event({
+      category: "Visit",
+      action: "Mobile"
+    });
+  }, []);
+  
   return (
     <div style={{overflowX: 'hidden'}}>
     <Router>
@@ -48,6 +59,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
         <Route path="*" render={() => <NotFoundPage />}/>
       </Switch>
       <Footer isBeta={isBeta}/>
+      <RouteChangeTracker />
     </Router>
   </div>
   );

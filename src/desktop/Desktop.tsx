@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
@@ -21,12 +22,21 @@ import TripleMockup from './components/mockupComponents/TripleMockup';
 import Lobby from '../assets/mockups/lobby.png';
 import Chart from '../assets/mockups/stockCandleChart.png';
 import PortfolioChart from '../assets/mockups/portfolioChart.png';
+import RouteChangeTracker from '../RouteChangeTracker';
 
 type DesktopProps = {
   isBeta?: boolean;
 }
 
 const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
+
+  useEffect(() => {
+    ReactGA.pageview('/');
+    ReactGA.event({
+      category: "Visit",
+      action: "Desktop"
+    });
+  }, []);
 
   return (
     <div style={{overflowX: 'hidden'}}>
@@ -54,6 +64,7 @@ const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
           <Route path="*" render={() => <NotFoundPage />}/>
         </Switch>
         <Footer isBeta={isBeta}/>
+        <RouteChangeTracker />
       </Router>
     </div>
     
