@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import ReactGA from 'react-ga';
 import Desktop from './desktop/Desktop';
 import Mobile from './mobile/Mobile';
 import {CookiesProvider} from 'react-cookie';
 import "@fontsource/dm-sans";
+
+ReactGA.initialize('UA-208931914-1');
 
 function App() {
 
