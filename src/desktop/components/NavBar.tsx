@@ -5,7 +5,7 @@ import "./NavBar.styles.css";
 
 const NavBar = (props: {isRelative?: boolean, isTransparent?: boolean}) => {
     return (
-        <div style={{backgroundColor: props.isTransparent ? 'transparent' : '#092739', position: props.isRelative ? 'relative' : 'absolute'}} className="nav-bar">
+        <div style={{backgroundColor: props.isTransparent ? 'transparent' : '#092739', position: props.isRelative ? 'relative' : 'absolute', paddingBottom: window.innerWidth < 1024 && !props.isTransparent ? '20px' : 0}} className="nav-bar">
             <Logo isLink style={window.innerWidth < 1024 ? {width: '20vw'} : {width: '15vw'}}/>
             <div className="nav-bar__links">
                 {//<Link style={window.location.href.endsWith("/referral") ? {color: '#51b69a'} : undefined} className="nav-bar__links__link" to="/referral">Get $5!</Link>

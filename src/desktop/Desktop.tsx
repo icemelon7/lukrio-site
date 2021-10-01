@@ -55,7 +55,7 @@ const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
           <Route exact path="/lukrio" render={() => <AboutPage />}/>
           <Route exact path="/leagues" render={() => <LeaguesPage />}/>
           <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
-          <Route exact path="/tos" render={() => <TOSPage/>}/>
+          <Route exact path="/tou" render={() => <TOSPage/>}/>
           <Route exact path="/rules" render={() => <RulesPage />}/>
           <Route exact path="/restrictions" render={() => <RestrictionsPage/>}/>
           <Route exact path="/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>

@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from '../desktop/components/Footer';
 import NavBar from '../desktop/components/NavBar';
-import PrivacyPage from './legal/PrivacyPage';
-import TOSPage from './legal/TOSPage';
 import NotFoundPage from '../desktop/pages/NotFoundPage';
 import AnalyticsPage from '../desktop/pages/AnalyticsPage';
 import ReferralPage from '../desktop/pages/ReferralPage';
@@ -20,6 +18,8 @@ import HowToPlayPage from '../desktop/pages/HowToPlayPage';
 import LeaguesPage from '../desktop/pages/LeaguesPage';
 import LandingPage from '../desktop/pages/LandingPage';
 import RouteChangeTracker from '../RouteChangeTracker';
+import PrivacyPage from '../desktop/legal/PrivacyPage';
+import TOSPage from '../desktop/legal/TOSPage';
 
 type MobileProps = {
   isBeta?: boolean;
@@ -41,7 +41,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
       <Switch>
         <Route exact path="/" render={() => <NavBar isTransparent/>}/>
         <Route path={["/analytics", "/lukrio", "/vision", "/leagues"]} render={() => <NavBar isTransparent />}/>
-        <Route path="*" render={() => <NavBar isTransparent/>}/>
+        <Route path="*" render={() => <NavBar />}/>
       </Switch>
       <Switch>
         <Route exact path="/" render={() => <LandingPage isBeta={isBeta}/>}/>
@@ -52,7 +52,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
         <Route exact path="/lukrio" render={() => <AboutPage />}/>
         <Route exact path="/leagues" render={() => <LeaguesPage />}/>
         <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
-        <Route exact path="/tos" render={() => <TOSPage/>}/>
+        <Route exact path="/tou" render={() => <TOSPage/>}/>
         <Route exact path="/rules" render={() => <RulesPage />}/>
         <Route exact path="/restrictions" render={() => <RestrictionsPage/>}/>
         <Route exact path="/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>
