@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1024px) {
+    .verify {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .verify__text {
+        display: flex;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .verify {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .verify__text {
+        display: flex;
+        flex-direction: column;
+    }
+}

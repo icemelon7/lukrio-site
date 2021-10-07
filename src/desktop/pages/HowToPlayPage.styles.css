@@ -57,6 +57,7 @@
     
     .play__row__icon-emoji {
         font-size: 1em;
+        font-style: normal !important;
         width: 1.5em;
     }
     

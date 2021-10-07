@@ -20,6 +20,7 @@ import LandingPage from '../desktop/pages/LandingPage';
 import RouteChangeTracker from '../RouteChangeTracker';
 import PrivacyPage from '../desktop/legal/PrivacyPage';
 import TOSPage from '../desktop/legal/TOSPage';
+import VerifyPage from '../desktop/pages/VerifyPage';
 
 type MobileProps = {
   isBeta?: boolean;
@@ -51,6 +52,7 @@ const Mobile : FunctionComponent<MobileProps> = ({isBeta}) => {
         <Route exact path="/vision" render={() => <VisionPage/>}/>
         <Route exact path="/lukrio" render={() => <AboutPage />}/>
         <Route exact path="/leagues" render={() => <LeaguesPage />}/>
+        <Route exact path="/verify" render={() => <VerifyPage />}/>
         <Route exact path="/privacy" render={() => <PrivacyPage/>}/>
         <Route exact path="/tou" render={() => <TOSPage/>}/>
         <Route exact path="/rules" render={() => <RulesPage />}/>

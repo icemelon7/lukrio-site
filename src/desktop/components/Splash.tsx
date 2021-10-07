@@ -13,17 +13,18 @@ type SplashProps = {
     disclaimer?: JSX.Element;
     paddingTop?: string;
     height?: number | string;
+    mobileDisplay?: boolean;
 }
 
-const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer, height}) => {
+const Splash: FunctionComponent<SplashProps> = ({header, subheader, text, right, leftWidth, marginRight, paddingTop, disclaimer, height, mobileDisplay}) => {
 
     return (
-        <div className="splash" style={{paddingTop: paddingTop ?? window.innerWidth < 1024 ? '10vh' : '15vh', height: height ?? 'auto'}}>
-            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: leftWidth ?? window.innerWidth < 1024 ? '40vw' : '30vw', marginRight: marginRight ?? window.innerWidth < 1024 ? '3vw' : '10vw'}} className="splash__left">
+        <div className="splash" style={{flexDirection: mobileDisplay ? "column" : "row", paddingTop: paddingTop ?? window.innerWidth < 1024 ? '10vh' : '15vh', height: height ?? 'auto'}}>
+            <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce style={{width: mobileDisplay ? '85vw' : leftWidth ?? window.innerWidth < 1024 ? '40vw' : '30vw', marginRight: marginRight ?? window.innerWidth < 1024 ? '3vw' : '10vw'}} className="splash__left">
                 {disclaimer ?? undefined}
                 {
                     typeof header === 'string' ? 
-                    <div className="splash__left__header">{header}{
+                    <div style={mobileDisplay ? {fontSize: '7vw'} : {}} className="splash__left__header">{header}{
                         subheader ?
                         <span className="splash__left__subheader">{subheader}</span>
                         :

@@ -23,6 +23,7 @@ import Lobby from '../assets/mockups/lobby.png';
 import Chart from '../assets/mockups/stockCandleChart.png';
 import PortfolioChart from '../assets/mockups/portfolioChart.png';
 import RouteChangeTracker from '../RouteChangeTracker';
+import VerifyPage from './pages/VerifyPage';
 
 type DesktopProps = {
   isBeta?: boolean;
@@ -59,6 +60,7 @@ const Desktop : FunctionComponent<DesktopProps> = ({isBeta}) => {
           <Route exact path="/rules" render={() => <RulesPage />}/>
           <Route exact path="/restrictions" render={() => <RestrictionsPage/>}/>
           <Route exact path="/responsible-gaming" render={() => <ResponsibleGamingPage/>}/>
+          <Route exact path="/verify" render={() => <VerifyPage/>}/>
           {//<Route exact path="/graphic" render={() => <TripleMockup graphic firstMock={Lobby} secondMock={Chart} thirdMock={PortfolioChart} firstMockIcon="🕹️" secondMockIcon="🚀" thirdMockIcon="👑"/>}/>
           }
           <Route path="*" render={() => <NotFoundPage />}/>
