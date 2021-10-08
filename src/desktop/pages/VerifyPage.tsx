@@ -13,7 +13,7 @@ const VerifyPage : FunctionComponent<{}> = () => {
     let params = new URLSearchParams(window.location.search);
     let TOTPCode = params.get('code') as string;
     let username = params.get('username') as string;
-    const [status, setStatus] = useState<number>(100);
+    const [status, setStatus] = useState<number>(403);
     
     useEffect(() => {
         _verify();
@@ -24,27 +24,36 @@ const VerifyPage : FunctionComponent<{}> = () => {
             window.location.href = "/404"
         } else {
             let result = await verifyUsingCode(TOTPCode, username);
+            console.log(result);
             setStatus(result);
+            console.log(TOTPCode, username);
         }
     }
 
     return (
         <div className="verify">
             {
+                status === 100 ?
+                "Trying to verify your email"
+                :
                 status === 200 || status === 201 ? 
                 <Splash
                 mobileDisplay={window.innerWidth < 1024}
                 header="📧 Email Verified! "
                 subheader={"Thank you! 🥳"}
                 text={
-                    
                     status === 200 ? 
                     <div className="verify__text">
-                        <Row emoji="💎" text="We match up to $20 of your first deposit!" delay={100}/>
-                        <Row emoji="🚀" text={<Redirect fontSize={'1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontSize: '0.6em !important', fontWeight: '500'}} text="Learn more about how to play" url="/how-to-play"/>} delay={200}/>
-                        
-                        <Row emoji="🤝" text={<Redirect fontSize={'1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontSize: '0.6em !important', fontWeight: '500'}} text="Refer your friends and get free $5 to play" url="/referral"/>} delay={300}/>
-                    </div> : "Free $5 Student Starting Balance Applied"
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="💎" text="We match up to $20 of your first deposit!" delay={100}/>
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="🚀" text={<Redirect fontSize={window.innerWidth < 1024 ? '7vw' : '1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontWeight: '500'}} text="Learn more about how to play" url="/how-to-play"/>} delay={300}/>
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="🤝" text={<Redirect fontSize={window.innerWidth < 1024 ? '7vw' : '1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontWeight: '500'}} text="Refer your friends and get free $5 to play" url="/referral"/>} delay={300}/>
+                    </div>
+                    : 
+                    <div className="verify__text">
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="💎" text="Free $5 Starting Balance Applied!" delay={100}/>
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="🚀" text={<Redirect fontSize={window.innerWidth < 1024 ? '7vw' : '1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontWeight: '500'}} text="Learn more about how to play" url="/how-to-play"/>} delay={300}/>
+                        <Row fontSize={window.innerWidth < 1024 ? '7vw' : undefined} emoji="🤝" text={<Redirect fontSize={window.innerWidth < 1024 ? '7vw' : '1.3vw'} style={{color: 'white', fontStyle: 'italic', position: 'relative', marginLeft: '3vw', fontWeight: '500'}} text="Refer your friends and get free $5 to play" url="/referral"/>} delay={300}/>
+                    </div>
                 }
                 right={<TripleMockupCycle/>
                 }
@@ -56,8 +65,19 @@ const VerifyPage : FunctionComponent<{}> = () => {
                 <Splash
                 mobileDisplay={window.innerWidth < 1024}
                 header="Whoops, something went wrong... "
-                subheader={`${status}`}
-                text=""
+                subheader={``}
+                text={
+                    status === 403 ? 
+                    `Hmm...Verification Code ${TOTPCode} incorrect`
+                    :
+                    status === 404 ?
+                    `Hmm...Could not find user with username: ${username}`
+                    :
+                    status === 409 ?
+                    `User is already verified`
+                    :
+                    `Internal Server Error...Try again later`
+                }
                 right={<TripleMockupCycle/>
                 }
                 leftWidth="60vw"

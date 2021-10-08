@@ -16,6 +16,7 @@ export const verifyUsingCode = async (code: string, username: string): Promise<n
             let response = await fetch(`${SERVER_URL}/user/verify`,requestOptions);
             return resolve(response.status);
         } catch (e) {
+            console.error(e);
             return resolve(500);
         }
     })

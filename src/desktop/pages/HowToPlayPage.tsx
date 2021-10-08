@@ -244,9 +244,10 @@ type RowProps = {
     text: string | JSX.Element;
     delay: number;
     multi?: boolean;
+    fontSize?: number | string;
 }
 
-export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji, multi}) => {
+export const Row : FunctionComponent<RowProps> = ({icon, text, delay, emoji, multi, fontSize}) => {
 return (
         <ScrollAnimation offset={0} animateIn="animate__fadeInUp" animateOnce={multi ? false : true} delay={delay} className="play__row">
             {
@@ -257,11 +258,11 @@ return (
                 :
                 icon
                 :
-                <div className="play__row__icon-emoji">{emoji}</div>
+                <div style={fontSize ? {fontSize: fontSize} : {}} className="play__row__icon-emoji">{emoji}</div>
             }
             {
                 typeof text === 'string' ?
-                <div className="play__row__text">{text}</div>
+                <div style={fontSize ? {fontSize} : {}}className="play__row__text">{text}</div>
                 :
                 text
             }
