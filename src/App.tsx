@@ -27,7 +27,6 @@ function App() {
     console.log(window.innerWidth);
     setWidth(window.innerWidth);
   }
-  return <div/>
   if (width >= 1024) {
     return <CookiesProvider><Desktop isBeta={isBeta} /></CookiesProvider>
   } else {
